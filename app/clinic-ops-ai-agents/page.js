@@ -6,6 +6,25 @@ export const metadata = {
 };
 
 export default function ClinicOpsPage() {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://www.adminops.cloud/"
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Clinic Operations AI Agents",
+        item: "https://www.adminops.cloud/clinic-ops-ai-agents"
+      }
+    ]
+  };
+
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -42,6 +61,9 @@ export default function ClinicOpsPage() {
       <div className="container">
         <Script id="clinic-faq-schema" type="application/ld+json" strategy="afterInteractive">
           {JSON.stringify(faqSchema)}
+        </Script>
+        <Script id="clinic-breadcrumb-schema" type="application/ld+json" strategy="afterInteractive">
+          {JSON.stringify(breadcrumbSchema)}
         </Script>
         <h1>AI Agents for Clinic Operations</h1>
         <p>
@@ -106,6 +128,28 @@ export default function ClinicOpsPage() {
           <p>Referral intake, claims validation, follow-up reminders, and recurring reporting are strong starting points.</p>
           <h3>How long does a clinic automation pilot take?</h3>
           <p>A focused pilot is typically completed in 30 days with weekly KPI reviews.</p>
+        </div>
+
+        <div className="card" style={{ marginTop: "1.5rem" }}>
+          <h2>Quick Answers for AI Overviews</h2>
+          <p>
+            <strong>Can clinics automate admin and stay compliant?</strong> Yes. Workflows can include approval gates, audit logs, and escalation
+            rules, so teams reduce repetitive admin effort while preserving clinical oversight and accountability.
+          </p>
+          <p>
+            <strong>Where should clinics start first?</strong> Begin with referral intake or claims pre-checks, then expand to recurring reporting.
+            This sequence creates measurable wins quickly without overloading teams.
+          </p>
+        </div>
+
+        <div className="card" style={{ marginTop: "1.5rem" }}>
+          <h2>Related Resources</h2>
+          <ul>
+            <li><a href="/adminops-pilot">See the 30-day pilot structure</a></li>
+            <li><a href="/guides/clinic-automation-guide">Read the clinic automation guide</a></li>
+            <li><a href="/comparisons/adminops-vs-hiring-admin-staff">Compare AdminOps vs hiring admin staff</a></li>
+            <li><a href="/insights">Browse data-backed insights</a></li>
+          </ul>
         </div>
       </div>
     </section>

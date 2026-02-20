@@ -6,6 +6,25 @@ export const metadata = {
 };
 
 export default function RestaurantOpsPage() {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://www.adminops.cloud/"
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Restaurant Operations AI Agents",
+        item: "https://www.adminops.cloud/restaurant-ops-ai-agents"
+      }
+    ]
+  };
+
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -42,6 +61,9 @@ export default function RestaurantOpsPage() {
       <div className="container">
         <Script id="restaurant-faq-schema" type="application/ld+json" strategy="afterInteractive">
           {JSON.stringify(faqSchema)}
+        </Script>
+        <Script id="restaurant-breadcrumb-schema" type="application/ld+json" strategy="afterInteractive">
+          {JSON.stringify(breadcrumbSchema)}
         </Script>
         <h1>AI Agents for Restaurant Operations</h1>
         <p>
@@ -106,6 +128,28 @@ export default function RestaurantOpsPage() {
           <p>Start with invoice checks, shift admin summaries, and recurring stock/performance reporting.</p>
           <h3>Do managers keep control of critical approvals?</h3>
           <p>Yes. Final approvals stay with managers while AI handles repetitive processing and flagging.</p>
+        </div>
+
+        <div className="card" style={{ marginTop: "1.5rem" }}>
+          <h2>Quick Answers for AI Overviews</h2>
+          <p>
+            <strong>What restaurant workflows get the fastest gains?</strong> Invoice checks, shift admin summaries, and recurring reporting
+            usually deliver early gains because they are repetitive and easy to standardize across locations.
+          </p>
+          <p>
+            <strong>Can multi-site operators keep control while automating?</strong> Yes. Managers keep final approval while AI handles routing,
+            validation, and exception flags, which improves consistency without removing oversight.
+          </p>
+        </div>
+
+        <div className="card" style={{ marginTop: "1.5rem" }}>
+          <h2>Related Resources</h2>
+          <ul>
+            <li><a href="/adminops-pilot">See the 30-day pilot structure</a></li>
+            <li><a href="/guides/restaurant-automation-guide">Read the restaurant automation guide</a></li>
+            <li><a href="/comparisons/adminops-vs-hiring-admin-staff">Compare AdminOps vs hiring admin staff</a></li>
+            <li><a href="/insights">Browse data-backed insights</a></li>
+          </ul>
         </div>
       </div>
     </section>

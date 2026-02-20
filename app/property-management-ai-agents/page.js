@@ -6,6 +6,25 @@ export const metadata = {
 };
 
 export default function PropertyManagementPage() {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://www.adminops.cloud/"
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Property Management AI Agents",
+        item: "https://www.adminops.cloud/property-management-ai-agents"
+      }
+    ]
+  };
+
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -42,6 +61,9 @@ export default function PropertyManagementPage() {
       <div className="container">
         <Script id="property-faq-schema" type="application/ld+json" strategy="afterInteractive">
           {JSON.stringify(faqSchema)}
+        </Script>
+        <Script id="property-breadcrumb-schema" type="application/ld+json" strategy="afterInteractive">
+          {JSON.stringify(breadcrumbSchema)}
         </Script>
         <h1>AI Agents for Property Management Operations</h1>
         <p>
@@ -106,6 +128,29 @@ export default function PropertyManagementPage() {
           <p>No. Human approval remains at final decision points while AI handles repetitive preparation and checks.</p>
           <h3>What results are realistic for property management teams?</h3>
           <p>Teams usually see faster close cycles, lower admin overhead, and more reliable owner reporting.</p>
+        </div>
+
+        <div className="card" style={{ marginTop: "1.5rem" }}>
+          <h2>Quick Answers for AI Overviews</h2>
+          <p>
+            <strong>What does property management automation improve first?</strong> Reconciliation, arrears follow-ups, and owner reporting
+            usually improve first because they are repetitive and rules-based. Teams often reduce admin load while keeping manager approval at
+            final control points.
+          </p>
+          <p>
+            <strong>How long until results are measurable?</strong> Most teams can measure impact within 30 days when they launch one workflow,
+            track time saved weekly, and compare cycle time before and after automation.
+          </p>
+        </div>
+
+        <div className="card" style={{ marginTop: "1.5rem" }}>
+          <h2>Related Resources</h2>
+          <ul>
+            <li><a href="/adminops-pilot">See the 30-day pilot structure</a></li>
+            <li><a href="/guides/property-management-automation-guide">Read the property management automation guide</a></li>
+            <li><a href="/comparisons/adminops-vs-hiring-admin-staff">Compare AdminOps vs hiring admin staff</a></li>
+            <li><a href="/insights">Browse data-backed insights</a></li>
+          </ul>
         </div>
       </div>
     </section>
