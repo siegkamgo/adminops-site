@@ -108,8 +108,13 @@ export default function RootLayout({ children }) {
         <SiteHeader />
         <main>{children}</main>
         <footer className="footer">
-          <div className="container">
-            <strong>AdminOps</strong> · Automate 60–80% of routine admin work in 30 days · info@adminops.cloud
+          <div className="container footer-links">
+            <div><strong>AdminOps</strong> · Automate 60–80% of routine admin work in 30 days</div>
+            <div className="footer-nav">
+              <a href="/blog/property-management-computer-use-agents">Blog</a>
+              <a href="/insights">Insights</a>
+              <a href="mailto:info@adminops.cloud">info@adminops.cloud</a>
+            </div>
           </div>
         </footer>
       </body>
