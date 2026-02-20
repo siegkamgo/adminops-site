@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none">
+  <rect width="1200" height="630" fill="#F5F3FF"/>
+  <text x="60" y="80" fill="#4C1D95" font-family="Arial" font-size="34" font-weight="700">Approval Policy Matrix</text>
+  <rect x="80" y="140" width="1040" height="390" rx="12" fill="#fff" stroke="#C4B5FD" stroke-width="2"/>
+  <text x="130" y="200" fill="#312E81" font-family="Arial" font-size="20" font-weight="700">Threshold</text>
+  <text x="430" y="200" fill="#312E81" font-family="Arial" font-size="20" font-weight="700">Owner</text>
+  <text x="760" y="200" fill="#312E81" font-family="Arial" font-size="20" font-weight="700">Control</text>
+  <text x="130" y="270" fill="#374151" font-family="Arial" font-size="18">Low Risk</text>
+  <text x="430" y="270" fill="#374151" font-family="Arial" font-size="18">Ops Lead</text>
+  <text x="760" y="270" fill="#374151" font-family="Arial" font-size="18">Auto-route + logging</text>
+  <text x="130" y="340" fill="#374151" font-family="Arial" font-size="18">Medium Risk</text>
+  <text x="430" y="340" fill="#374151" font-family="Arial" font-size="18">Supervisor</text>
+  <text x="760" y="340" fill="#374151" font-family="Arial" font-size="18">Human check required</text>
+  <text x="130" y="410" fill="#374151" font-family="Arial" font-size="18">High Risk</text>
+  <text x="430" y="410" fill="#374151" font-family="Arial" font-size="18">Manager + Finance</text>
+  <text x="760" y="410" fill="#374151" font-family="Arial" font-size="18">Dual approval + escalation</text>
+</svg>

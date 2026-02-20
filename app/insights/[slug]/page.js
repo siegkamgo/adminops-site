@@ -54,6 +54,22 @@ function extractFaqEntries(insight) {
     .filter(Boolean);
 }
 
+function parseInternalLinkItem(item) {
+  if (typeof item !== "string") {
+    return null;
+  }
+
+  const match = item.match(/^(.*):\s(\/[^\s]+)$/);
+  if (!match) {
+    return null;
+  }
+
+  return {
+    label: match[1].trim(),
+    href: match[2].trim()
+  };
+}
+
 function extractHowToSteps(insight) {
   const playbookSection = insight.sections.find((section) =>
     section.title?.toLowerCase().includes("how to implement")
@@ -224,9 +240,44 @@ export default function InsightDetailPage({ params, searchParams }) {
             {section.list?.length ? (
               <ul>
                 {section.list.map((item) => (
-                  <li key={item}>{item}</li>
+                  <li key={item}>
+                    {(() => {
+                      const parsedLink = parseInternalLinkItem(item);
+                      if (!parsedLink) {
+                        return item;
+                      }
+
+                      return (
+                        <>
+                          {parsedLink.label}: <Link href={parsedLink.href}>{parsedLink.href}</Link>
+                        </>
+                      );
+                    })()}
+                  </li>
                 ))}
               </ul>
+            ) : null}
+            {section.images?.length ? (
+              <div
+                style={{
+                  display: "grid",
+                  gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
+                  gap: "0.75rem",
+                  marginTop: "0.75rem"
+                }}
+              >
+                {section.images.map((image) => (
+                  <figure key={`${section.title}-${image.src}`} className="card" style={{ margin: 0 }}>
+                    <img
+                      src={image.src}
+                      alt={image.alt}
+                      loading="lazy"
+                      style={{ width: "100%", height: "auto", borderRadius: "0.5rem" }}
+                    />
+                    {image.caption ? <figcaption style={{ marginTop: "0.5rem" }}>{image.caption}</figcaption> : null}
+                  </figure>
+                ))}
+              </div>
             ) : null}
           </section>
         ))}

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none">
+  <rect width="1200" height="630" fill="#FFF7ED"/>
+  <text x="60" y="80" fill="#9A3412" font-family="Arial, sans-serif" font-size="34" font-weight="700">Exception Routing Decision Tree</text>
+  <rect x="120" y="150" width="280" height="90" rx="12" fill="#FED7AA"/>
+  <text x="170" y="205" fill="#7C2D12" font-family="Arial" font-size="20">Incoming Exception</text>
+  <rect x="500" y="120" width="260" height="80" rx="12" fill="#FDBA74"/>
+  <text x="545" y="168" fill="#7C2D12" font-family="Arial" font-size="18">Low Risk Queue</text>
+  <rect x="500" y="240" width="260" height="80" rx="12" fill="#FB923C"/>
+  <text x="535" y="288" fill="#7C2D12" font-family="Arial" font-size="18">Medium Risk Review</text>
+  <rect x="500" y="360" width="260" height="80" rx="12" fill="#EA580C"/>
+  <text x="545" y="408" fill="#fff" font-family="Arial" font-size="18">High Risk Escalation</text>
+  <path d="M400 195H500" stroke="#7C2D12" stroke-width="3"/>
+  <path d="M400 195V280H500" stroke="#7C2D12" stroke-width="3"/>
+  <path d="M400 195V400H500" stroke="#7C2D12" stroke-width="3"/>
+</svg>

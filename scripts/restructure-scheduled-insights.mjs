@@ -23,6 +23,39 @@ const coreLinks = {
   ]
 };
 
+const visuals = {
+  workflow: {
+    src: "/images/insights/workflow-map.svg",
+    alt: "Workflow map from input to reporting for AdminOps agent operations",
+    caption: "Workflow map: input -> validation -> routing -> approval -> posting -> reporting"
+  },
+  exceptions: {
+    src: "/images/insights/exception-routing.svg",
+    alt: "Exception routing decision tree showing low, medium, and high-risk handling",
+    caption: "Exception routing model with SLA-based escalation"
+  },
+  approvals: {
+    src: "/images/insights/approval-matrix.svg",
+    alt: "Approval policy matrix with thresholds, owners, and controls",
+    caption: "Approval matrix for policy-driven human oversight"
+  },
+  kpi: {
+    src: "/images/insights/kpi-dashboard.svg",
+    alt: "KPI dashboard mockup with cycle time, touchless rate, and exception rate",
+    caption: "KPI dashboard outline for weekly operations review"
+  },
+  manualVsAuto: {
+    src: "/images/insights/manual-vs-automated.svg",
+    alt: "Comparison of manual process bottlenecks versus automated workflow outcomes",
+    caption: "Manual vs automated workflow outcomes"
+  },
+  timeline: {
+    src: "/images/insights/implementation-timeline.svg",
+    alt: "Thirty-day implementation timeline showing audit, build, run, and optimization phases",
+    caption: "30-day rollout timeline for controlled automation"
+  }
+};
+
 const briefBySlug = {
   "property-managers-computer-use-agent-invoice-reconciliation": {
     title: "How can property managers automate invoice reconciliation with a computer use agent?",
@@ -170,8 +203,8 @@ const briefBySlug = {
   }
 };
 
-function section(title, paragraphs, list = []) {
-  return { title, paragraphs, list };
+function section(title, paragraphs, list = [], images = []) {
+  return { title, paragraphs, list, images };
 }
 
 function buildSections({ type, targetKeyword, quickAnswer, problem, solution, steps, links }) {
@@ -186,7 +219,8 @@ function buildSections({ type, targetKeyword, quickAnswer, problem, solution, st
         `Content type: ${type}`,
         "Format: answer first, then implementation depth",
         "Goal: reduce admin load, errors, and cycle time"
-      ]
+      ],
+      [visuals.manualVsAuto]
     ),
     section(
       `What problem does ${targetKeyword} solve?`,
@@ -206,7 +240,8 @@ function buildSections({ type, targetKeyword, quickAnswer, problem, solution, st
         "Process Agent: policy checks and routing",
         "Reconciliation Agent: matching and exception handling",
         "Reporting Agent: KPI and close visibility"
-      ]
+      ],
+      [visuals.workflow, visuals.approvals]
     ),
     section(
       `How to implement ${targetKeyword}`,
@@ -214,7 +249,8 @@ function buildSections({ type, targetKeyword, quickAnswer, problem, solution, st
         `${targetKeyword} implementation should start narrow with one high-volume workflow and weekly KPI reviews.`,
         "Run supervised automation first, then increase automation depth after exception rates stabilize."
       ],
-      steps.map((value, index) => `Step ${index + 1}: ${value}`)
+      steps.map((value, index) => `Step ${index + 1}: ${value}`),
+      [visuals.timeline]
     ),
     section(
       "Manual vs automated: what changes",
@@ -227,7 +263,8 @@ function buildSections({ type, targetKeyword, quickAnswer, problem, solution, st
         "Automated: SLA-based routing and exception-first triage",
         "Manual: hidden backlog",
         "Automated: measurable queue health and cycle-time trends"
-      ]
+      ],
+      [visuals.manualVsAuto, visuals.exceptions]
     ),
     section(
       "Internal links to continue your research",
@@ -235,7 +272,8 @@ function buildSections({ type, targetKeyword, quickAnswer, problem, solution, st
         "Use these pages next to evaluate delivery model, implementation scope, and workflow fit.",
         "Each article should link to two to three core pages to reinforce topical authority and conversion paths."
       ],
-      links
+      links,
+      [visuals.workflow]
     ),
     section(
       "FAQ",
@@ -257,7 +295,8 @@ function buildSections({ type, targetKeyword, quickAnswer, problem, solution, st
         "Top CTA: Get an AdminOps automation audit / 30-day pilot",
         "Mid CTA: See how an agent stack would handle this workflow",
         "End CTA: Book a demo / request a workflow blueprint"
-      ]
+      ],
+      [visuals.kpi]
     )
   ];
 }

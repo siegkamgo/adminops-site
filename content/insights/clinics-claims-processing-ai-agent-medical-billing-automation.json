@@ -45,6 +45,13 @@
         "Content type: Review",
         "Format: answer first, then implementation depth",
         "Goal: reduce admin load, errors, and cycle time"
+      ],
+      "images": [
+        {
+          "src": "/images/insights/manual-vs-automated.svg",
+          "alt": "Comparison of manual process bottlenecks versus automated workflow outcomes",
+          "caption": "Manual vs automated workflow outcomes"
+        }
       ]
     },
     {
@@ -53,7 +60,8 @@
         "claims processing ai agent for medical billing automation solves recurring operational friction where teams repeat the same checks, copy data between systems, and lose time to exception chasing.",
         "Claims rework increases when completeness checks and payer-rule validation are handled manually."
       ],
-      "list": []
+      "list": [],
+      "images": []
     },
     {
       "title": "What is the solution approach?",
@@ -66,6 +74,18 @@
         "Process Agent: policy checks and routing",
         "Reconciliation Agent: matching and exception handling",
         "Reporting Agent: KPI and close visibility"
+      ],
+      "images": [
+        {
+          "src": "/images/insights/workflow-map.svg",
+          "alt": "Workflow map from input to reporting for AdminOps agent operations",
+          "caption": "Workflow map: input -> validation -> routing -> approval -> posting -> reporting"
+        },
+        {
+          "src": "/images/insights/approval-matrix.svg",
+          "alt": "Approval policy matrix with thresholds, owners, and controls",
+          "caption": "Approval matrix for policy-driven human oversight"
+        }
       ]
     },
     {
@@ -80,6 +100,13 @@
         "Step 3: Separate clean claims from exception claims",
         "Step 4: Require approval on high-risk submissions",
         "Step 5: Track first-pass acceptance and rework hours"
+      ],
+      "images": [
+        {
+          "src": "/images/insights/implementation-timeline.svg",
+          "alt": "Thirty-day implementation timeline showing audit, build, run, and optimization phases",
+          "caption": "30-day rollout timeline for controlled automation"
+        }
       ]
     },
     {
@@ -93,6 +120,18 @@
         "Automated: SLA-based routing and exception-first triage",
         "Manual: hidden backlog",
         "Automated: measurable queue health and cycle-time trends"
+      ],
+      "images": [
+        {
+          "src": "/images/insights/manual-vs-automated.svg",
+          "alt": "Comparison of manual process bottlenecks versus automated workflow outcomes",
+          "caption": "Manual vs automated workflow outcomes"
+        },
+        {
+          "src": "/images/insights/exception-routing.svg",
+          "alt": "Exception routing decision tree showing low, medium, and high-risk handling",
+          "caption": "Exception routing model with SLA-based escalation"
+        }
       ]
     },
     {
@@ -105,6 +144,13 @@
         "Pilot offer: /adminops-pilot",
         "Clinic operations service page: /clinic-ops-ai-agents",
         "Clinic automation guide: /guides/clinic-automation-guide"
+      ],
+      "images": [
+        {
+          "src": "/images/insights/workflow-map.svg",
+          "alt": "Workflow map from input to reporting for AdminOps agent operations",
+          "caption": "Workflow map: input -> validation -> routing -> approval -> posting -> reporting"
+        }
       ]
     },
     {
@@ -116,7 +162,8 @@
         "What metrics should we track first? Start with cycle time, touchless rate, and exception rate.",
         "When should we not automate? Do not automate unstable workflows without clear ownership and baseline SOPs."
       ],
-      "list": []
+      "list": [],
+      "images": []
     },
     {
       "title": "CTA",
@@ -128,6 +175,13 @@
         "Top CTA: Get an AdminOps automation audit / 30-day pilot",
         "Mid CTA: See how an agent stack would handle this workflow",
         "End CTA: Book a demo / request a workflow blueprint"
+      ],
+      "images": [
+        {
+          "src": "/images/insights/kpi-dashboard.svg",
+          "alt": "KPI dashboard mockup with cycle time, touchless rate, and exception rate",
+          "caption": "KPI dashboard outline for weekly operations review"
+        }
       ]
     }
   ],

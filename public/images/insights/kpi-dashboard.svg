@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none">
+  <rect width="1200" height="630" fill="#ECFDF5"/>
+  <text x="60" y="80" fill="#065F46" font-family="Arial" font-size="34" font-weight="700">KPI Dashboard Outline</text>
+  <rect x="80" y="130" width="320" height="140" rx="14" fill="#D1FAE5"/>
+  <text x="120" y="190" fill="#064E3B" font-family="Arial" font-size="20">Cycle Time</text>
+  <text x="120" y="225" fill="#065F46" font-family="Arial" font-size="30" font-weight="700">-42%</text>
+  <rect x="440" y="130" width="320" height="140" rx="14" fill="#A7F3D0"/>
+  <text x="480" y="190" fill="#064E3B" font-family="Arial" font-size="20">Touchless Rate</text>
+  <text x="480" y="225" fill="#065F46" font-family="Arial" font-size="30" font-weight="700">68%</text>
+  <rect x="800" y="130" width="320" height="140" rx="14" fill="#6EE7B7"/>
+  <text x="840" y="190" fill="#064E3B" font-family="Arial" font-size="20">Exception Rate</text>
+  <text x="840" y="225" fill="#065F46" font-family="Arial" font-size="30" font-weight="700">11%</text>
+  <rect x="80" y="310" width="1040" height="240" rx="14" fill="#fff" stroke="#34D399"/>
+  <polyline points="140,500 260,450 380,460 500,390 620,410 740,350 860,370 980,320" stroke="#059669" stroke-width="6" fill="none"/>
+</svg>
