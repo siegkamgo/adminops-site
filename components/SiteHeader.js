@@ -1,13 +1,11 @@
 import Link from "next/link";
 
 const navItems = [
-  { href: "/", label: "Home" },
-  { href: "/property-management-ai-agents", label: "Property" },
-  { href: "/clinic-ops-ai-agents", label: "Clinic" },
-  { href: "/restaurant-ops-ai-agents", label: "Restaurant" },
+  { href: "/restaurant-ops-ai-agents", label: "Restaurants" },
+  { href: "/property-management-ai-agents", label: "Property Managers" },
+  { href: "/clinic-ops-ai-agents", label: "Clinics" },
   { href: "/adminops-pilot", label: "Pilot" },
-  { href: "/blog/property-management-admin-automation", label: "Blog" },
-  { href: "/analytics-setup", label: "Analytics" }
+  { href: "/blog/property-management-admin-automation", label: "Insights" }
 ];
 
 export default function SiteHeader() {
