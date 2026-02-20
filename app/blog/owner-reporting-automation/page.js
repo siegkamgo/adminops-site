@@ -17,6 +17,38 @@ export const metadata = {
 };
 
 export default function BlogPostPage() {
+  
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "How long does it take to automate this workflow?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Most teams launch one workflow in about 30 days, starting with a pilot and clear approval checkpoints."
+        }
+      },
+      {
+        "@type": "Question",
+        name: "Does this replace staff?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "No. AdminOps removes repetitive admin steps so managers can focus on approvals and exceptions."
+        }
+      },
+      {
+        "@type": "Question",
+        name: "Will AdminOps work with our current systems?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes. AdminOps works alongside existing property management and accounting systems."
+        }
+      }
+    ]
+  };
+
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -38,6 +70,7 @@ export default function BlogPostPage() {
   return (
     <section className="section">
       <article className="container article">
+        <Script id="faq-schema" type="application/ld+json" strategy="afterInteractive">{JSON.stringify(faqSchema)}</Script>
         <Script id="article-schema" type="application/ld+json" strategy="afterInteractive">
           {JSON.stringify(articleSchema)}
         </Script>
