@@ -221,3 +221,13 @@ li {
     padding: 1rem 0;
   }
 }
+
+.image-placeholder {
+  background: #f2f4f7;
+  border: 1px dashed #d0d5dd;
+  color: #667085;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 0.75rem;
+  font-size: 0.95rem;
+}
