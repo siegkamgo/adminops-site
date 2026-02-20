@@ -1,5 +1,6 @@
 export default function sitemap() {
   const baseUrl = "https://adminops.cloud";
+  const contentUpdatedAt = process.env.NEXT_PUBLIC_SITE_UPDATED_AT || "2026-02-20";
 
   const routes = [
     "",
@@ -13,7 +14,7 @@ export default function sitemap() {
 
   return routes.map((route) => ({
     url: `${baseUrl}${route}`,
-    lastModified: new Date(),
+    lastModified: route.includes("/blog/") ? "2026-02-20" : contentUpdatedAt,
     changeFrequency: route.includes("/blog/") ? "weekly" : "monthly",
     priority: route === "" ? 1 : route.includes("/blog/") ? 0.8 : 0.9
   }));

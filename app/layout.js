@@ -9,18 +9,54 @@ export const metadata = {
     template: "%s | AdminOps"
   },
   description: "Automate 60–80% of routine admin work in 30 days. AI agents handle repetitive workflows while your team keeps final approval.",
+  alternates: {
+    canonical: "https://adminops.cloud"
+  },
   openGraph: {
     title: "AdminOps",
     description: "Automate 60–80% of routine admin work in 30 days.",
     url: "https://adminops.cloud",
     siteName: "AdminOps",
     type: "website"
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "AdminOps",
+    description: "Automate 60–80% of routine admin work in 30 days."
   }
 };
 
 export default function RootLayout({ children }) {
   const gaId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
   const plausibleDomain = process.env.NEXT_PUBLIC_PLAUSIBLE_DOMAIN;
+  const orgSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "AdminOps",
+    url: "https://adminops.cloud",
+    logo: "https://adminops.cloud/logo.png",
+    email: "info@adminops.cloud",
+    contactPoint: [
+      {
+        "@type": "ContactPoint",
+        contactType: "sales",
+        email: "info@adminops.cloud",
+        availableLanguage: ["English"]
+      }
+    ],
+    sameAs: ["https://www.cal.eu/sieg-kamgo/30min"]
+  };
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "AdminOps",
+    url: "https://adminops.cloud",
+    potentialAction: {
+      "@type": "ReserveAction",
+      target: "https://www.cal.eu/sieg-kamgo/30min",
+      name: "Book a free strategy call"
+    }
+  };
 
   return (
     <html lang="en">
@@ -42,6 +78,13 @@ export default function RootLayout({ children }) {
             strategy="afterInteractive"
           />
         ) : null}
+
+        <Script id="org-schema" type="application/ld+json" strategy="afterInteractive">
+          {JSON.stringify(orgSchema)}
+        </Script>
+        <Script id="website-schema" type="application/ld+json" strategy="afterInteractive">
+          {JSON.stringify(websiteSchema)}
+        </Script>
 
         <SiteHeader />
         <main>{children}</main>
