@@ -1,0 +1,105 @@
+{
+  "generatedAt": "2026-02-20T20:23:22.611Z",
+  "timezone": "UTC",
+  "planName": "AdminOps 2-Week Agent-Automation Publishing Calendar",
+  "objective": "Drive high-intent SEO traffic and GEO visibility by combining ops-problem terms with computer-use/AI-agent solution content.",
+  "cadence": "4 posts per week for 2 weeks",
+  "items": [
+    {
+      "day": 1,
+      "publishDate": "2026-02-23",
+      "slug": "property-managers-computer-use-agent-invoice-reconciliation",
+      "title": "Computer Use Agent for Invoice Reconciliation: A 30-Day Ops Playbook",
+      "primaryKeyword": "computer use agent for invoice reconciliation",
+      "segment": "Property Managers",
+      "status": "scheduled",
+      "topCta": "Get an AdminOps automation audit / 30-day pilot",
+      "midCta": "See how an agent stack would handle this workflow",
+      "endCta": "Book a demo / request a workflow blueprint"
+    },
+    {
+      "day": 2,
+      "publishDate": "2026-02-24",
+      "slug": "property-managers-accounts-payable-automation-computer-use-agents",
+      "title": "Accounts Payable Automation with Computer Use Agents for SMB Ops",
+      "primaryKeyword": "accounts payable automation software with computer use agents",
+      "segment": "Property Managers",
+      "status": "scheduled",
+      "topCta": "Get an AdminOps automation audit / 30-day pilot",
+      "midCta": "See how an agent stack would handle this workflow",
+      "endCta": "Book a demo / request a workflow blueprint"
+    },
+    {
+      "day": 3,
+      "publishDate": "2026-02-26",
+      "slug": "property-managers-computer-use-agents-workflow-automation",
+      "title": "Property Management Workflow Automation with Computer Use AI Agents",
+      "primaryKeyword": "computer use ai agents for property management workflow automation",
+      "segment": "Property Managers",
+      "status": "scheduled",
+      "topCta": "Get an AdminOps automation audit / 30-day pilot",
+      "midCta": "See how an agent stack would handle this workflow",
+      "endCta": "Book a demo / request a workflow blueprint"
+    },
+    {
+      "day": 4,
+      "publishDate": "2026-02-27",
+      "slug": "property-managers-browser-automation-ai-agent-rent-reconciliation",
+      "title": "Browser Automation AI Agent for Rent Reconciliation and Exception Control",
+      "primaryKeyword": "browser automation ai agent for rent reconciliation",
+      "segment": "Property Managers",
+      "status": "scheduled",
+      "topCta": "Get an AdminOps automation audit / 30-day pilot",
+      "midCta": "See how an agent stack would handle this workflow",
+      "endCta": "Book a demo / request a workflow blueprint"
+    },
+    {
+      "day": 5,
+      "publishDate": "2026-03-02",
+      "slug": "clinics-clinic-workflow-automation-ai-agents-playbook",
+      "title": "Clinic Workflow Automation with AI Agents: Problem-to-Playbook Guide",
+      "primaryKeyword": "clinic workflow automation with ai agents",
+      "segment": "Clinics",
+      "status": "scheduled",
+      "topCta": "Get an AdminOps automation audit / 30-day pilot",
+      "midCta": "See how an agent stack would handle this workflow",
+      "endCta": "Book a demo / request a workflow blueprint"
+    },
+    {
+      "day": 6,
+      "publishDate": "2026-03-03",
+      "slug": "clinics-claims-processing-ai-agent-medical-billing-automation",
+      "title": "Claims Processing AI Agent for Medical Billing Automation in SMB Clinics",
+      "primaryKeyword": "claims processing ai agent for medical billing automation",
+      "segment": "Clinics",
+      "status": "scheduled",
+      "topCta": "Get an AdminOps automation audit / 30-day pilot",
+      "midCta": "See how an agent stack would handle this workflow",
+      "endCta": "Book a demo / request a workflow blueprint"
+    },
+    {
+      "day": 7,
+      "publishDate": "2026-03-05",
+      "slug": "restaurants-back-office-ai-agents-inventory-reporting",
+      "title": "Restaurant Back-Office AI Agents for Inventory and Reporting Automation",
+      "primaryKeyword": "restaurant back office ai agent for inventory reporting automation",
+      "segment": "Restaurants",
+      "status": "scheduled",
+      "topCta": "Get an AdminOps automation audit / 30-day pilot",
+      "midCta": "See how an agent stack would handle this workflow",
+      "endCta": "Book a demo / request a workflow blueprint"
+    },
+    {
+      "day": 8,
+      "publishDate": "2026-03-06",
+      "slug": "property-managers-data-entry-email-triage-ai-agents",
+      "title": "Data Entry and Email Triage AI Agents for SMB Operations Teams",
+      "primaryKeyword": "data entry and email triage ai agents for ops automation",
+      "segment": "Property Managers",
+      "status": "scheduled",
+      "topCta": "Get an AdminOps automation audit / 30-day pilot",
+      "midCta": "See how an agent stack would handle this workflow",
+      "endCta": "Book a demo / request a workflow blueprint"
+    }
+  ]
+}
