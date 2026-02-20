@@ -29,12 +29,15 @@ export const metadata = {
 export default function RootLayout({ children }) {
   const gaId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
   const plausibleDomain = process.env.NEXT_PUBLIC_PLAUSIBLE_DOMAIN;
+  const baseUrl = "https://adminops.cloud";
+  const callUrl = "https://www.cal.eu/sieg-kamgo/30min";
   const orgSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
+    "@id": `${baseUrl}#organization`,
     name: "AdminOps",
-    url: "https://adminops.cloud",
-    logo: "https://adminops.cloud/logo.png",
+    url: baseUrl,
+    logo: `${baseUrl}/logo.png`,
     email: "info@adminops.cloud",
     contactPoint: [
       {
@@ -44,17 +47,56 @@ export default function RootLayout({ children }) {
         availableLanguage: ["English"]
       }
     ],
-    sameAs: ["https://www.cal.eu/sieg-kamgo/30min"]
+    sameAs: [
+      callUrl,
+      `${baseUrl}/insights`,
+      `${baseUrl}/insights/rss.xml`,
+      `${baseUrl}/llms.txt`
+    ]
   };
   const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
+    "@id": `${baseUrl}#website`,
     name: "AdminOps",
-    url: "https://adminops.cloud",
+    url: baseUrl,
+    inLanguage: "en-US",
+    publisher: {
+      "@id": `${baseUrl}#organization`
+    },
     potentialAction: {
       "@type": "ReserveAction",
-      target: "https://www.cal.eu/sieg-kamgo/30min",
+      target: callUrl,
       name: "Book a free strategy call"
+    },
+    hasPart: [
+      {
+        "@type": "CollectionPage",
+        name: "Insights",
+        url: `${baseUrl}/insights`
+      },
+      {
+        "@type": "DataFeed",
+        name: "AdminOps Insights RSS",
+        url: `${baseUrl}/insights/rss.xml`
+      },
+      {
+        "@type": "WebPage",
+        name: "LLMs Content Manifest",
+        url: `${baseUrl}/llms.txt`
+      }
+    ]
+  };
+  const dataFeedSchema = {
+    "@context": "https://schema.org",
+    "@type": "DataFeed",
+    "@id": `${baseUrl}/insights/rss.xml#datafeed`,
+    name: "AdminOps Insights RSS Feed",
+    description: "Syndicated feed of published AdminOps insight articles.",
+    url: `${baseUrl}/insights/rss.xml`,
+    inLanguage: "en-US",
+    creator: {
+      "@id": `${baseUrl}#organization`
     }
   };
 
@@ -103,6 +145,9 @@ export default function RootLayout({ children }) {
         </Script>
         <Script id="website-schema" type="application/ld+json" strategy="afterInteractive">
           {JSON.stringify(websiteSchema)}
+        </Script>
+        <Script id="datafeed-schema" type="application/ld+json" strategy="afterInteractive">
+          {JSON.stringify(dataFeedSchema)}
         </Script>
 
         <SiteHeader />
