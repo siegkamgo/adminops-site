@@ -1,12 +1,48 @@
+import Script from "next/script";
+
 export const metadata = {
   title: "Property Management AI Agents",
   description: "Reduce reconciliation and admin workload across leasing, maintenance, and rent operations with AdminOps AI agents."
 };
 
 export default function PropertyManagementPage() {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "How quickly can we automate property admin workflows?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Most teams can launch one focused workflow in 30 days using a pilot model with clear KPIs and weekly optimization."
+        }
+      },
+      {
+        "@type": "Question",
+        name: "Will AI replace manager approval in reconciliation?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "No. AdminOps keeps managers in final approval control while AI handles repetitive processing, matching, and exception detection."
+        }
+      },
+      {
+        "@type": "Question",
+        name: "What results are realistic for property management teams?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Typical outcomes include faster monthly close, lower repetitive admin load, and cleaner owner reporting with fewer manual errors."
+        }
+      }
+    ]
+  };
+
   return (
     <section className="section">
       <div className="container">
+        <Script id="property-faq-schema" type="application/ld+json" strategy="afterInteractive">
+          {JSON.stringify(faqSchema)}
+        </Script>
         <h1>AI Agents for Property Management Operations</h1>
         <p>
           Property managers lose hours each week to reconciliations, tenant follow-ups, maintenance coordination, and report assembly.
@@ -50,9 +86,26 @@ export default function PropertyManagementPage() {
           <p>
             Start with one high-friction workflow in our 30-day pilot and expand once the numbers are proven.
           </p>
-          <a className="btn btn-primary" href="https://www.cal.eu/sieg-kamgo/30min" target="_blank" rel="noreferrer">
+          <a
+            className="btn btn-primary"
+            href="https://www.cal.eu/sieg-kamgo/30min"
+            target="_blank"
+            rel="noreferrer"
+            data-track="book-call"
+            data-cta-location="property-money-page"
+          >
             Book a free strategy call
           </a>
+        </div>
+
+        <div className="card" style={{ marginTop: "1.5rem" }}>
+          <h2>FAQs</h2>
+          <h3>How quickly can we automate property admin workflows?</h3>
+          <p>Most teams can launch one focused workflow in 30 days with KPI tracking from week one.</p>
+          <h3>Will AI replace manager approval in reconciliation?</h3>
+          <p>No. Human approval remains at final decision points while AI handles repetitive preparation and checks.</p>
+          <h3>What results are realistic for property management teams?</h3>
+          <p>Teams usually see faster close cycles, lower admin overhead, and more reliable owner reporting.</p>
         </div>
       </div>
     </section>

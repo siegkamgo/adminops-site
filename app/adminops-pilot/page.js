@@ -59,7 +59,16 @@ export default function PilotPage() {
             Book a call to identify the fastest workflow to automate and the KPI targets that matter for your team.
           </p>
           <div className="cta-row">
-            <a className="btn btn-primary" href="https://www.cal.eu/sieg-kamgo/30min" target="_blank" rel="noreferrer">Book a free strategy call</a>
+            <a
+              className="btn btn-primary"
+              href="https://www.cal.eu/sieg-kamgo/30min"
+              target="_blank"
+              rel="noreferrer"
+              data-track="book-call"
+              data-cta-location="pilot-page"
+            >
+              Book a free strategy call
+            </a>
             <a className="btn btn-secondary" href="mailto:info@adminops.cloud">info@adminops.cloud</a>
           </div>
         </div>

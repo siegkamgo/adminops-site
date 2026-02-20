@@ -79,6 +79,25 @@ export default function RootLayout({ children }) {
           />
         ) : null}
 
+        <Script id="cta-tracking" strategy="afterInteractive">
+          {`document.addEventListener('click', function(event) {
+  const trigger = event.target.closest('[data-track="book-call"]');
+  if (!trigger) return;
+  const location = trigger.getAttribute('data-cta-location') || window.location.pathname;
+  if (typeof window.gtag === 'function') {
+    window.gtag('event', 'book_strategy_call_click', {
+      cta_location: location,
+      link_url: trigger.getAttribute('href') || ''
+    });
+  }
+  if (typeof window.plausible === 'function') {
+    window.plausible('Book Strategy Call Click', {
+      props: { cta_location: location }
+    });
+  }
+});`}
+        </Script>
+
         <Script id="org-schema" type="application/ld+json" strategy="afterInteractive">
           {JSON.stringify(orgSchema)}
         </Script>

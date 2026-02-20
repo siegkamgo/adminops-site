@@ -25,7 +25,14 @@ export default function SiteHeader() {
             </Link>
           ))}
         </nav>
-        <a className="btn btn-primary" href="https://www.cal.eu/sieg-kamgo/30min" target="_blank" rel="noreferrer">
+        <a
+          className="btn btn-primary"
+          href="https://www.cal.eu/sieg-kamgo/30min"
+          target="_blank"
+          rel="noreferrer"
+          data-track="book-call"
+          data-cta-location="header"
+        >
           Book a free strategy call
         </a>
       </div>

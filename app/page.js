@@ -12,7 +12,14 @@ export default function HomePage() {
             You get cleaner operations, fewer errors, and faster reporting without adding headcount.
           </p>
           <div className="cta-row">
-            <a className="btn btn-primary" href="https://www.cal.eu/sieg-kamgo/30min" target="_blank" rel="noreferrer">
+            <a
+              className="btn btn-primary"
+              href="https://www.cal.eu/sieg-kamgo/30min"
+              target="_blank"
+              rel="noreferrer"
+              data-track="book-call"
+              data-cta-location="home-hero"
+            >
               Book a free strategy call
             </a>
             <Link className="btn btn-secondary" href="/adminops-pilot">
@@ -162,7 +169,16 @@ export default function HomePage() {
             Tell us your most repetitive admin workflow. We will show you where automation can deliver visible gains in 30 days.
           </p>
           <div className="cta-row">
-            <a className="btn btn-primary" href="https://www.cal.eu/sieg-kamgo/30min" target="_blank" rel="noreferrer">Book a free strategy call</a>
+            <a
+              className="btn btn-primary"
+              href="https://www.cal.eu/sieg-kamgo/30min"
+              target="_blank"
+              rel="noreferrer"
+              data-track="book-call"
+              data-cta-location="home-footer-cta"
+            >
+              Book a free strategy call
+            </a>
             <a className="btn btn-secondary" href="mailto:info@adminops.cloud">info@adminops.cloud</a>
           </div>
         </div>

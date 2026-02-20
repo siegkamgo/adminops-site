@@ -249,7 +249,14 @@ export default function BlogPostPage() {
             We will map your current reconciliation workflow, estimate realistic ROI targets, and show you how to launch a low-risk pilot
             for UK and US property operations.
           </p>
-          <a className="btn btn-primary" href="https://www.cal.eu/sieg-kamgo/30min" target="_blank" rel="noreferrer">
+          <a
+            className="btn btn-primary"
+            href="https://www.cal.eu/sieg-kamgo/30min"
+            target="_blank"
+            rel="noreferrer"
+            data-track="book-call"
+            data-cta-location="blog-property-post"
+          >
             Book a free strategy call
           </a>
         </div>
