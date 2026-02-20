@@ -6,6 +6,29 @@ export const metadata = {
 };
 
 export default function PropertyManagementPage() {
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Property Management AI Agent Automation",
+    serviceType: "Back-office operations automation for property management teams",
+    provider: {
+      "@type": "Organization",
+      name: "AdminOps",
+      url: "https://adminops.cloud"
+    },
+    areaServed: ["United Kingdom", "United States"],
+    audience: {
+      "@type": "BusinessAudience",
+      audienceType: "Property managers, operations managers, finance/admin leads"
+    },
+    offers: {
+      "@type": "Offer",
+      url: "https://adminops.cloud/adminops-pilot",
+      category: "30-day automation pilot"
+    },
+    url: "https://adminops.cloud/property-management-ai-agents"
+  };
+
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -61,6 +84,9 @@ export default function PropertyManagementPage() {
       <div className="container">
         <Script id="property-faq-schema" type="application/ld+json" strategy="afterInteractive">
           {JSON.stringify(faqSchema)}
+        </Script>
+        <Script id="property-service-schema" type="application/ld+json" strategy="afterInteractive">
+          {JSON.stringify(serviceSchema)}
         </Script>
         <Script id="property-breadcrumb-schema" type="application/ld+json" strategy="afterInteractive">
           {JSON.stringify(breadcrumbSchema)}

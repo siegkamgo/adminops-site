@@ -6,6 +6,29 @@ export const metadata = {
 };
 
 export default function ClinicOpsPage() {
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Clinic Operations AI Agent Automation",
+    serviceType: "Clinic back-office workflow automation",
+    provider: {
+      "@type": "Organization",
+      name: "AdminOps",
+      url: "https://adminops.cloud"
+    },
+    areaServed: ["United Kingdom", "United States"],
+    audience: {
+      "@type": "BusinessAudience",
+      audienceType: "Clinic owners, operations managers, finance/admin leads"
+    },
+    offers: {
+      "@type": "Offer",
+      url: "https://adminops.cloud/adminops-pilot",
+      category: "30-day automation pilot"
+    },
+    url: "https://adminops.cloud/clinic-ops-ai-agents"
+  };
+
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -61,6 +84,9 @@ export default function ClinicOpsPage() {
       <div className="container">
         <Script id="clinic-faq-schema" type="application/ld+json" strategy="afterInteractive">
           {JSON.stringify(faqSchema)}
+        </Script>
+        <Script id="clinic-service-schema" type="application/ld+json" strategy="afterInteractive">
+          {JSON.stringify(serviceSchema)}
         </Script>
         <Script id="clinic-breadcrumb-schema" type="application/ld+json" strategy="afterInteractive">
           {JSON.stringify(breadcrumbSchema)}
