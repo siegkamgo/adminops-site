@@ -2,7 +2,8 @@ import Script from "next/script";
 
 export const metadata = {
   title: "Property Management AI Agents",
-  description: "Reduce reconciliation and admin workload across leasing, maintenance, and rent operations with AdminOps AI agents."
+  description:
+    "Automate property management admin workflows with AI agents to cut reconciliation delays, reduce errors, and speed owner reporting in 30 days."
 };
 
 export default function PropertyManagementPage() {
@@ -25,6 +26,10 @@ export default function PropertyManagementPage() {
       "@type": "Offer",
       url: "https://adminops.cloud/adminops-pilot",
       category: "30-day automation pilot"
+    },
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: ["#property-heading", "#property-summary"]
     },
     url: "https://adminops.cloud/property-management-ai-agents"
   };
@@ -91,8 +96,8 @@ export default function PropertyManagementPage() {
         <Script id="property-breadcrumb-schema" type="application/ld+json" strategy="afterInteractive">
           {JSON.stringify(breadcrumbSchema)}
         </Script>
-        <h1>AI Agents for Property Management Operations</h1>
-        <p>
+        <h1 id="property-heading">AI Agents for Property Management Operations</h1>
+        <p id="property-summary">
           Property managers lose hours each week to reconciliations, tenant follow-ups, maintenance coordination, and report assembly.
           AdminOps automates these repetitive workflows while keeping managers in control of final approvals.
         </p>

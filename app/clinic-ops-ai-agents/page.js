@@ -2,7 +2,8 @@ import Script from "next/script";
 
 export const metadata = {
   title: "Clinic Operations AI Agents",
-  description: "Automate repetitive clinic administration while preserving compliance and human oversight."
+  description:
+    "Automate clinic admin workflows with AI agents to reduce queue time, improve billing accuracy, and keep compliance-ready approval controls."
 };
 
 export default function ClinicOpsPage() {
@@ -25,6 +26,10 @@ export default function ClinicOpsPage() {
       "@type": "Offer",
       url: "https://adminops.cloud/adminops-pilot",
       category: "30-day automation pilot"
+    },
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: ["#clinic-heading", "#clinic-summary"]
     },
     url: "https://adminops.cloud/clinic-ops-ai-agents"
   };
@@ -91,8 +96,8 @@ export default function ClinicOpsPage() {
         <Script id="clinic-breadcrumb-schema" type="application/ld+json" strategy="afterInteractive">
           {JSON.stringify(breadcrumbSchema)}
         </Script>
-        <h1>AI Agents for Clinic Operations</h1>
-        <p>
+        <h1 id="clinic-heading">AI Agents for Clinic Operations</h1>
+        <p id="clinic-summary">
           Clinics need speed and precision across patient administration, referral handling, and billing workflows.
           AdminOps agents reduce manual burden while clinical leaders keep final control and accountability.
         </p>

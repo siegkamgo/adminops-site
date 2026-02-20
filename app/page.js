@@ -1,13 +1,34 @@
 import Link from "next/link";
+import Script from "next/script";
+
+export const metadata = {
+  title: "AdminOps | AI Agents for Admin Automation",
+  description:
+    "Automate 60–80% of routine admin work in 30 days with AI agents, human approval controls, and measurable ops KPIs. Book a free strategy call."
+};
 
 export default function HomePage() {
+  const speakableSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: "AdminOps Homepage",
+    url: "https://adminops.cloud/",
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: ["#home-hero-heading", "#home-hero-summary"]
+    }
+  };
+
   return (
     <>
       <section className="hero">
         <div className="container">
+          <Script id="home-speakable-schema" type="application/ld+json" strategy="afterInteractive">
+            {JSON.stringify(speakableSchema)}
+          </Script>
           <span className="badge">AdminOps · AI + Human Approval</span>
-          <h1>Automate 60–80% of routine admin work in 30 days.</h1>
-          <p>
+          <h1 id="home-hero-heading">Automate 60–80% of routine admin work in 30 days.</h1>
+          <p id="home-hero-summary">
             AdminOps builds AI agents that handle repetitive admin workflows end-to-end while your team keeps final approval.
             You get cleaner operations, fewer errors, and faster reporting without adding headcount.
           </p>

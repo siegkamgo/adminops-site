@@ -38,6 +38,10 @@ export default function BlogPostPage() {
         url: "https://adminops.cloud/logo.png"
       }
     },
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: ["#blog-property-heading", "#blog-property-summary"]
+    },
     mainEntityOfPage: "https://adminops.cloud/blog/property-management-admin-automation"
   };
   const faqSchema = {
@@ -81,8 +85,8 @@ export default function BlogPostPage() {
           {JSON.stringify(faqSchema)}
         </Script>
         <p className="badge">Target keyword: property management admin automation</p>
-        <h1>Property Management Admin Automation: How AI Agents Cut Reconciliation Time by 70%</h1>
-        <p>
+        <h1 id="blog-property-heading">Property Management Admin Automation: How AI Agents Cut Reconciliation Time by 70%</h1>
+        <p id="blog-property-summary">
           Property managers have no shortage of software. Yet across portfolios in both the UK and US, operations leaders still report the
           same bottleneck: too many repetitive admin tasks stitched together by manual checks, spreadsheet workarounds, and inbox follow-ups.
           Leasing teams, maintenance coordinators, and finance staff all do essential work, but they often spend disproportionate time on

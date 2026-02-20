@@ -2,7 +2,8 @@ import Script from "next/script";
 
 export const metadata = {
   title: "Restaurant Operations AI Agents",
-  description: "Use AdminOps AI agents to automate restaurant back-office admin, reduce errors, and speed up reporting."
+  description:
+    "Use AI agents to automate restaurant back-office admin, reduce reporting errors, and improve multi-site operational consistency."
 };
 
 export default function RestaurantOpsPage() {
@@ -25,6 +26,10 @@ export default function RestaurantOpsPage() {
       "@type": "Offer",
       url: "https://adminops.cloud/adminops-pilot",
       category: "30-day automation pilot"
+    },
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: ["#restaurant-heading", "#restaurant-summary"]
     },
     url: "https://adminops.cloud/restaurant-ops-ai-agents"
   };
@@ -91,8 +96,8 @@ export default function RestaurantOpsPage() {
         <Script id="restaurant-breadcrumb-schema" type="application/ld+json" strategy="afterInteractive">
           {JSON.stringify(breadcrumbSchema)}
         </Script>
-        <h1>AI Agents for Restaurant Operations</h1>
-        <p>
+        <h1 id="restaurant-heading">AI Agents for Restaurant Operations</h1>
+        <p id="restaurant-summary">
           Restaurant teams should focus on service, not repetitive back-office admin.
           AdminOps automates invoice processing, rota admin, and reporting workflows so operators can scale with less friction.
         </p>

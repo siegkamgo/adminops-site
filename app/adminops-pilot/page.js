@@ -1,14 +1,31 @@
+import Script from "next/script";
+
 export const metadata = {
   title: "AdminOps Pilot",
-  description: "Launch a 30-day AdminOps pilot to automate one high-friction workflow and prove measurable ROI."
+  description:
+    "Launch a 30-day AdminOps pilot to automate one high-friction workflow, reduce admin load, and prove measurable ROI with weekly KPI tracking."
 };
 
 export default function PilotPage() {
+  const speakableSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: "AdminOps 30-Day Pilot",
+    url: "https://adminops.cloud/adminops-pilot",
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: ["#pilot-heading", "#pilot-summary"]
+    }
+  };
+
   return (
     <section className="section">
       <div className="container">
-        <h1>AdminOps 30-Day Pilot</h1>
-        <p>
+        <Script id="pilot-speakable-schema" type="application/ld+json" strategy="afterInteractive">
+          {JSON.stringify(speakableSchema)}
+        </Script>
+        <h1 id="pilot-heading">AdminOps 30-Day Pilot</h1>
+        <p id="pilot-summary">
           The pilot is designed to prove value quickly: one high-friction workflow, one month, one clear ROI scorecard.
           You keep final approval at every critical step.
         </p>
