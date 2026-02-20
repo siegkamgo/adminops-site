@@ -91,6 +91,15 @@ Generated files:
 - Protected by HTTP Basic Auth via `middleware.js`
 - The page allows generating and saving insights directly into `content/insights`
 - If `SEO_AGENT_SECRET` is set, paste it into the UI token field
+- The page also supports one-click daily workflow control and run-status refresh
+
+To enable one-click workflow control from the admin dashboard, set:
+
+- `GITHUB_ACTIONS_PAT` (GitHub token with Actions read/write on this repo)
+- `GITHUB_REPO_OWNER`
+- `GITHUB_REPO_NAME`
+- `GITHUB_WORKFLOW_FILE` (default `seo-agent.yml`)
+- `GITHUB_WORKFLOW_REF` (default `main`)
 
 ### Fully automated daily publishing
 

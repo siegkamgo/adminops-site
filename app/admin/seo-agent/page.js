@@ -14,7 +14,12 @@ export default function AdminSeoAgentPage() {
   const [token, setToken] = useState("");
   const [save, setSave] = useState(true);
   const [loading, setLoading] = useState(false);
+  const [workflowLoading, setWorkflowLoading] = useState(false);
+  const [statusLoading, setStatusLoading] = useState(false);
   const [error, setError] = useState("");
+  const [workflowError, setWorkflowError] = useState("");
+  const [workflowResult, setWorkflowResult] = useState(null);
+  const [runs, setRuns] = useState([]);
   const [result, setResult] = useState(null);
 
   const curlPreview = useMemo(() => {
@@ -50,11 +55,94 @@ export default function AdminSeoAgentPage() {
     }
   }
 
+  async function runDailyWorkflowNow() {
+    setWorkflowError("");
+    setWorkflowLoading(true);
+    try {
+      const response = await fetch("/api/seo-agent/run", { method: "POST" });
+      const data = await response.json();
+      if (!response.ok) {
+        throw new Error(data.error || "Failed to dispatch workflow");
+      }
+      setWorkflowResult(data);
+      await loadWorkflowStatus();
+    } catch (runError) {
+      setWorkflowError(runError.message || "Unknown error");
+    } finally {
+      setWorkflowLoading(false);
+    }
+  }
+
+  async function loadWorkflowStatus() {
+    setWorkflowError("");
+    setStatusLoading(true);
+    try {
+      const response = await fetch("/api/seo-agent/status", { method: "GET" });
+      const data = await response.json();
+      if (!response.ok) {
+        throw new Error(data.error || "Failed to load workflow status");
+      }
+      setRuns(data.runs || []);
+    } catch (statusError) {
+      setWorkflowError(statusError.message || "Unknown error");
+    } finally {
+      setStatusLoading(false);
+    }
+  }
+
   return (
     <section className="section">
       <div className="container article">
         <h1>Admin · SEO Agent</h1>
         <p>Run DataForSEO keyword research and generate publishable insight content from real search data.</p>
+
+        <div className="card" style={{ marginTop: "1rem" }}>
+          <h2>Daily Autopilot Control</h2>
+          <p>Use one-click controls to trigger the GitHub daily SEO workflow and monitor latest runs.</p>
+          <div className="cta-row">
+            <button className="btn btn-primary" type="button" onClick={runDailyWorkflowNow} disabled={workflowLoading || statusLoading}>
+              {workflowLoading ? "Starting workflow..." : "Run Daily Workflow Now"}
+            </button>
+            <button className="btn btn-secondary" type="button" onClick={loadWorkflowStatus} disabled={workflowLoading || statusLoading}>
+              {statusLoading ? "Refreshing..." : "Refresh Workflow Status"}
+            </button>
+          </div>
+          {workflowResult?.actionsUrl ? (
+            <p style={{ marginTop: "0.75rem" }}>
+              <a href={workflowResult.actionsUrl} target="_blank" rel="noreferrer">Open GitHub workflow page</a>
+            </p>
+          ) : null}
+          {workflowError ? <p style={{ color: "#b42318" }}>{workflowError}</p> : null}
+
+          {runs.length ? (
+            <div style={{ marginTop: "1rem", overflowX: "auto" }}>
+              <table style={{ width: "100%", borderCollapse: "collapse" }}>
+                <thead>
+                  <tr>
+                    <th style={{ textAlign: "left", padding: "0.5rem" }}>Created</th>
+                    <th style={{ textAlign: "left", padding: "0.5rem" }}>Status</th>
+                    <th style={{ textAlign: "left", padding: "0.5rem" }}>Conclusion</th>
+                    <th style={{ textAlign: "left", padding: "0.5rem" }}>Event</th>
+                    <th style={{ textAlign: "left", padding: "0.5rem" }}>Run</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {runs.map((run) => (
+                    <tr key={run.id}>
+                      <td style={{ padding: "0.5rem", borderTop: "1px solid #d0d5dd" }}>{new Date(run.createdAt).toLocaleString()}</td>
+                      <td style={{ padding: "0.5rem", borderTop: "1px solid #d0d5dd" }}>{run.status}</td>
+                      <td style={{ padding: "0.5rem", borderTop: "1px solid #d0d5dd" }}>{run.conclusion || "-"}</td>
+                      <td style={{ padding: "0.5rem", borderTop: "1px solid #d0d5dd" }}>{run.event}</td>
+                      <td style={{ padding: "0.5rem", borderTop: "1px solid #d0d5dd" }}>
+                        <a href={run.htmlUrl} target="_blank" rel="noreferrer">View run</a>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          ) : null}
+        </div>
 
         <form className="card" onSubmit={onSubmit} style={{ marginTop: "1rem" }}>
           <h2>Generation Inputs</h2>
