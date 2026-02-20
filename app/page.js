@@ -163,6 +163,38 @@ export default function HomePage() {
       </section>
 
       <section className="section">
+        <div className="container">
+          <h2>Resources for Buyers</h2>
+          <div className="grid-3">
+            <article className="card">
+              <h3>Comparison Pages</h3>
+              <ul>
+                <li><Link href="/comparisons/adminops-vs-hiring-admin-staff">AdminOps vs Hiring Admin Staff</Link></li>
+                <li><Link href="/comparisons/adminops-vs-rpa-tools">AdminOps vs Generic RPA Tools</Link></li>
+                <li><Link href="/comparisons/adminops-vs-virtual-assistants">AdminOps vs Virtual Assistants</Link></li>
+              </ul>
+            </article>
+            <article className="card">
+              <h3>Segment Guides</h3>
+              <ul>
+                <li><Link href="/guides/property-management-automation-guide">Property Management Guide</Link></li>
+                <li><Link href="/guides/clinic-automation-guide">Clinic Operations Guide</Link></li>
+                <li><Link href="/guides/restaurant-automation-guide">Restaurant Operations Guide</Link></li>
+              </ul>
+            </article>
+            <article className="card">
+              <h3>Core Conversion Pages</h3>
+              <ul>
+                <li><Link href="/adminops-pilot">30-Day Pilot Offer</Link></li>
+                <li><Link href="/property-management-ai-agents">Property Management Solution</Link></li>
+                <li><Link href="/blog/property-management-admin-automation">Featured SEO Article</Link></li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
         <div className="container card">
           <h2>Start with a Free Strategy Call</h2>
           <p>

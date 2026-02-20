@@ -16,6 +16,12 @@ AdminOps provides AI agents that automate repetitive admin workflows while human
 - https://adminops.cloud/clinic-ops-ai-agents
 - https://adminops.cloud/restaurant-ops-ai-agents
 - https://adminops.cloud/blog/property-management-admin-automation
+- https://adminops.cloud/comparisons/adminops-vs-hiring-admin-staff
+- https://adminops.cloud/comparisons/adminops-vs-rpa-tools
+- https://adminops.cloud/comparisons/adminops-vs-virtual-assistants
+- https://adminops.cloud/guides/property-management-automation-guide
+- https://adminops.cloud/guides/clinic-automation-guide
+- https://adminops.cloud/guides/restaurant-automation-guide
 
 ## Contact
 - Email: info@adminops.cloud

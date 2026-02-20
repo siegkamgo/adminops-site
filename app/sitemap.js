@@ -9,7 +9,13 @@ export default function sitemap() {
     "/property-management-ai-agents",
     "/clinic-ops-ai-agents",
     "/restaurant-ops-ai-agents",
-    "/blog/property-management-admin-automation"
+    "/blog/property-management-admin-automation",
+    "/comparisons/adminops-vs-hiring-admin-staff",
+    "/comparisons/adminops-vs-rpa-tools",
+    "/comparisons/adminops-vs-virtual-assistants",
+    "/guides/property-management-automation-guide",
+    "/guides/clinic-automation-guide",
+    "/guides/restaurant-automation-guide"
   ];
 
   return routes.map((route) => ({
