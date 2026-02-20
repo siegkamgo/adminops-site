@@ -32,7 +32,43 @@ export default function Page() {
         <div className="card" style={{ marginTop: "1rem" }}>
           <div className="image-placeholder">Featured image: property management accounting guide</div>
         </div>
+        <p className="image-caption">Suggested image: workflow automation for property management teams</p>
 
+        
+        <h2>Comparison table</h2>
+        <div className="card" style={{ overflowX: "auto" }}>
+          <table style={{ width: "100%", borderCollapse: "collapse" }}>
+            <thead>
+              <tr>
+                <th style={{ textAlign: "left", padding: "0.5rem" }}>Step</th>
+                <th style={{ textAlign: "left", padding: "0.5rem" }}>Manual</th>
+                <th style={{ textAlign: "left", padding: "0.5rem" }}>AdminOps Agents</th>
+              </tr>
+            </thead>
+            <tbody>
+              {[
+                ["Invoice capture", "Email + spreadsheets", "Auto capture"],
+                ["Matching", "Manual", "Auto match"],
+                ["Exceptions", "Ad‑hoc", "Queued"],
+                ["Reporting", "Manual", "Auto draft"]
+              ].map((row) => (
+                <tr key={row[0]}>
+                  <td style={{ padding: "0.5rem", borderTop: "1px solid #d0d5dd" }}>{row[0]}</td>
+                  <td style={{ padding: "0.5rem", borderTop: "1px solid #d0d5dd" }}>{row[1]}</td>
+                  <td style={{ padding: "0.5rem", borderTop: "1px solid #d0d5dd" }}>{row[2]}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <h2>KPIs to track</h2>
+        <ul>
+          <li>Days to close</li>
+          <li>Exception resolution time</li>
+          <li>Error rate before vs after</li>
+          <li>Admin hours saved per property</li>
+        </ul>
         <h2>Workflow checklist</h2>
         <ul>
           <li>Define invoice intake sources</li>

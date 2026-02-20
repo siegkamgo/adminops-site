@@ -32,6 +32,7 @@ export default function Page() {
         <div className="card" style={{ marginTop: "1rem" }}>
           <div className="image-placeholder">Featured image: property management admin workflow</div>
         </div>
+        <p className="image-caption">Suggested image: workflow automation for property management teams</p>
 
         <h2>Quick comparison</h2>
         <div className="card" style={{ overflowX: "auto" }}>
@@ -59,6 +60,7 @@ export default function Page() {
             </tbody>
           </table>
         </div>
+        <p className="image-caption">Suggested image: workflow automation for property management teams</p>
 
         <h2>Use cases</h2>
         <ul>

@@ -32,7 +32,43 @@ export default function Page() {
         <div className="card" style={{ marginTop: "1rem" }}>
           <div className="image-placeholder">Featured image: property management automation</div>
         </div>
+        <p className="image-caption">Suggested image: workflow automation for property management teams</p>
 
+        
+        <h2>Comparison table</h2>
+        <div className="card" style={{ overflowX: "auto" }}>
+          <table style={{ width: "100%", borderCollapse: "collapse" }}>
+            <thead>
+              <tr>
+                <th style={{ textAlign: "left", padding: "0.5rem" }}>Workflow</th>
+                <th style={{ textAlign: "left", padding: "0.5rem" }}>Before</th>
+                <th style={{ textAlign: "left", padding: "0.5rem" }}>With AdminOps</th>
+              </tr>
+            </thead>
+            <tbody>
+              {[
+                ["Rent reconciliation", "Manual", "Exception-first"],
+                ["Invoice processing", "Manual", "Automated"],
+                ["Owner reporting", "Manual", "Auto draft"],
+                ["Maintenance follow‑ups", "Manual", "Automated"]
+              ].map((row) => (
+                <tr key={row[0]}>
+                  <td style={{ padding: "0.5rem", borderTop: "1px solid #d0d5dd" }}>{row[0]}</td>
+                  <td style={{ padding: "0.5rem", borderTop: "1px solid #d0d5dd" }}>{row[1]}</td>
+                  <td style={{ padding: "0.5rem", borderTop: "1px solid #d0d5dd" }}>{row[2]}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <h2>Implementation steps</h2>
+        <ol>
+          <li>Pick one workflow with high admin load.</li>
+          <li>Define approval gates and exception thresholds.</li>
+          <li>Run in parallel for 2 weeks and tune.</li>
+          <li>Expand to the next workflow.</li>
+        </ol>
         <h2>Best first workflows</h2>
         <ul>
           <li>Rent reconciliation</li>
