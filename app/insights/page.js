@@ -1,14 +1,35 @@
 import Link from "next/link";
 import Script from "next/script";
-import { listPublishedInsights } from "../../lib/insights-store";
+import { listInsights, listPublishedInsights } from "../../lib/insights-store";
 
 export const metadata = {
   title: "Insights",
   description: "Data-backed SEO and operations insights generated from live search data research."
 };
 
-export default function InsightsIndexPage() {
-  const insights = listPublishedInsights();
+function getSearchParamValue(searchParams, key) {
+  const value = searchParams?.[key];
+  if (Array.isArray(value)) {
+    return value[0];
+  }
+  return value;
+}
+
+function isPreviewAuthorized(searchParams) {
+  const expectedToken = process.env.INSIGHTS_PREVIEW_TOKEN;
+  if (!expectedToken) {
+    return false;
+  }
+
+  const previewValue = String(getSearchParamValue(searchParams, "preview") || "").toLowerCase();
+  const token = getSearchParamValue(searchParams, "token");
+
+  return (previewValue === "1" || previewValue === "true") && token === expectedToken;
+}
+
+export default function InsightsIndexPage({ searchParams }) {
+  const previewMode = isPreviewAuthorized(searchParams);
+  const insights = previewMode ? listInsights() : listPublishedInsights();
   const itemListSchema = {
     "@context": "https://schema.org",
     "@type": "ItemList",
@@ -28,6 +49,9 @@ export default function InsightsIndexPage() {
         </Script>
         <h1>Insights</h1>
         <p>Data-backed articles generated from live keyword research to support SEO and AI Overview visibility.</p>
+        {previewMode ? (
+          <p><strong>Preview mode enabled:</strong> future-dated insights are visible.</p>
+        ) : null}
 
         {insights.length === 0 ? (
           <div className="card">

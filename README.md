@@ -106,6 +106,17 @@ curl -X POST https://your-domain/api/seo-agent/research \
 - If `SEO_AGENT_SECRET` is set, paste it into the UI token field
 - The page also supports one-click daily workflow control and run-status refresh
 
+### Preview scheduled insights before publish
+
+You can securely preview future-dated insights before they auto-publish.
+
+1. Set `INSIGHTS_PREVIEW_TOKEN` in your environment.
+2. Use one of these URLs:
+	- Index preview: `/insights?preview=1&token=<INSIGHTS_PREVIEW_TOKEN>`
+	- Detail preview: `/insights/<slug>?preview=1&token=<INSIGHTS_PREVIEW_TOKEN>`
+
+Without a valid token, future-dated insights remain hidden until `publishDate`.
+
 To enable one-click workflow control from the admin dashboard, set:
 
 - `GITHUB_ACTIONS_PAT` (GitHub token with Actions read/write on this repo)

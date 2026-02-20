@@ -1,6 +1,26 @@
 import Link from "next/link";
 import Script from "next/script";
-import { getPublishedInsightBySlug, listPublishedInsights } from "../../../lib/insights-store";
+import { getInsightBySlug, getPublishedInsightBySlug, listPublishedInsights } from "../../../lib/insights-store";
+
+function getSearchParamValue(searchParams, key) {
+  const value = searchParams?.[key];
+  if (Array.isArray(value)) {
+    return value[0];
+  }
+  return value;
+}
+
+function isPreviewAuthorized(searchParams) {
+  const expectedToken = process.env.INSIGHTS_PREVIEW_TOKEN;
+  if (!expectedToken) {
+    return false;
+  }
+
+  const previewValue = String(getSearchParamValue(searchParams, "preview") || "").toLowerCase();
+  const token = getSearchParamValue(searchParams, "token");
+
+  return (previewValue === "1" || previewValue === "true") && token === expectedToken;
+}
 
 function extractFaqEntries(insight) {
   const faqSection = insight.sections.find((section) => section.title?.toLowerCase().includes("faq"));
@@ -150,8 +170,11 @@ export async function generateMetadata({ params }) {
   };
 }
 
-export default function InsightDetailPage({ params }) {
-  const insight = getPublishedInsightBySlug(params.slug);
+export default function InsightDetailPage({ params, searchParams }) {
+  const previewMode = isPreviewAuthorized(searchParams);
+  const insight = previewMode
+    ? getInsightBySlug(params.slug)
+    : getPublishedInsightBySlug(params.slug);
 
   if (!insight) {
     return (
@@ -187,6 +210,7 @@ export default function InsightDetailPage({ params }) {
           </Script>
         ) : null}
         <p className="badge">Target keyword: {insight.targetKeyword}</p>
+        {previewMode ? <p><strong>Preview mode enabled:</strong> viewing unpublished content.</p> : null}
         <h1>{insight.title}</h1>
         <p><strong>Published:</strong> {insight.publishDate}</p>
         <p>{insight.metaDescription}</p>
