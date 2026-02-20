@@ -50,6 +50,7 @@ No admin UI auth variables are required for this mode.
 - `SEO_AGENT_LOCATION_CODE` (example `2826` for UK, `2840` for US)
 - `SEO_AGENT_LANGUAGE_CODE` (example `en`)
 - `SEO_AGENT_SECRET` (optional, secures API endpoint)
+- `OPENCLAW_API_KEY` (optional plain key for agent access to research endpoint)
 - `ADMIN_BASIC_AUTH_USER` (required for private admin UI)
 - `ADMIN_BASIC_AUTH_PASS` (required for private admin UI)
 
@@ -73,7 +74,10 @@ Generated files:
 ### Trigger keyword research from API
 
 - Endpoint: `POST /api/seo-agent/research`
-- Optional auth header: `x-seo-agent-token: <SEO_AGENT_SECRET>`
+- Optional auth (uses `OPENCLAW_API_KEY` first, else `SEO_AGENT_SECRET`):
+	- `Authorization: Bearer <your_key>`
+	- or `x-agent-api-key: <your_key>`
+	- or `x-seo-agent-token: <your_key>`
 - Payload example:
 
 ```json
@@ -83,6 +87,15 @@ Generated files:
 	"locationCode": 2840,
 	"languageCode": "en"
 }
+```
+
+Example with bearer token:
+
+```bash
+curl -X POST https://your-domain/api/seo-agent/research \
+	-H "Content-Type: application/json" \
+	-H "Authorization: Bearer your_plain_agent_key" \
+	-d '{"seedKeyword":"clinic operations automation","segment":"Clinics","locationCode":2840,"languageCode":"en"}'
 ```
 
 ### Private admin UI

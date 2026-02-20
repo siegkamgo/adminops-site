@@ -2,13 +2,26 @@ import { NextResponse } from "next/server";
 import { buildInsightFromSeed } from "../../../../lib/seo-agent.js";
 import { saveInsight } from "../../../../lib/insights-store.js";
 
+function getProvidedToken(request) {
+  const bearer = request.headers.get("authorization");
+  if (bearer && bearer.toLowerCase().startsWith("bearer ")) {
+    return bearer.slice(7).trim();
+  }
+
+  return (
+    request.headers.get("x-agent-api-key") ||
+    request.headers.get("x-seo-agent-token") ||
+    ""
+  );
+}
+
 export async function POST(request) {
   try {
     const body = await request.json();
-    const expectedToken = process.env.SEO_AGENT_SECRET;
+    const expectedToken = process.env.OPENCLAW_API_KEY || process.env.SEO_AGENT_SECRET;
 
     if (expectedToken) {
-      const authToken = request.headers.get("x-seo-agent-token");
+      const authToken = getProvidedToken(request);
       if (authToken !== expectedToken) {
         return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
       }
