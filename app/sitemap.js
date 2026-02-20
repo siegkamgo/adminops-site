@@ -3,7 +3,10 @@ import { listPublishedInsights } from "../lib/insights-store";
 export default function sitemap() {
   const baseUrl = "https://adminops.cloud";
   const contentUpdatedAt = process.env.NEXT_PUBLIC_SITE_UPDATED_AT || "2026-02-20";
-  const dynamicInsightRoutes = listPublishedInsights().map((item) => `/insights/${item.slug}`);
+  const dynamicInsightRoutes = listPublishedInsights().map((item) => ({
+    route: `/insights/${item.slug}`,
+    lastModified: item.publishDate || contentUpdatedAt
+  }));
 
   const routes = [
     "",
@@ -20,12 +23,16 @@ export default function sitemap() {
     "/guides/property-management-automation-guide",
     "/guides/clinic-automation-guide",
     "/guides/restaurant-automation-guide",
-    ...dynamicInsightRoutes
+    ...dynamicInsightRoutes.map((item) => item.route)
   ];
+
+  const insightLastModifiedByRoute = new Map(dynamicInsightRoutes.map((item) => [item.route, item.lastModified]));
 
   return routes.map((route) => ({
     url: `${baseUrl}${route}`,
-    lastModified: route.includes("/blog/") ? "2026-02-20" : contentUpdatedAt,
+    lastModified:
+      insightLastModifiedByRoute.get(route) ||
+      (route.includes("/blog/") ? "2026-02-20" : contentUpdatedAt),
     changeFrequency: route.includes("/blog/") ? "weekly" : "monthly",
     priority: route === "" ? 1 : route.includes("/blog/") ? 0.8 : 0.9
   }));
