@@ -34,6 +34,25 @@ function extractFaqEntries(insight) {
     .filter(Boolean);
 }
 
+function extractHowToSteps(insight) {
+  const playbookSection = insight.sections.find((section) =>
+    section.title?.toLowerCase().includes("how to implement")
+  );
+
+  if (!playbookSection?.list?.length) {
+    return [];
+  }
+
+  return playbookSection.list
+    .map((item) => item.replace(/^Step\s*\d+\s*:\s*/i, "").trim())
+    .filter(Boolean)
+    .map((text) => ({
+      "@type": "HowToStep",
+      name: text,
+      text
+    }));
+}
+
 function buildSchemas(insight) {
   const insightUrl = `https://adminops.cloud/insights/${insight.slug}`;
 
@@ -94,7 +113,19 @@ function buildSchemas(insight) {
       }
     : null;
 
-  return { articleSchema, breadcrumbSchema, faqSchema };
+  const howToSteps = extractHowToSteps(insight);
+  const howToSchema = howToSteps.length
+    ? {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        name: `${insight.title} Implementation Steps`,
+        description: insight.metaDescription,
+        step: howToSteps,
+        totalTime: "P30D"
+      }
+    : null;
+
+  return { articleSchema, breadcrumbSchema, faqSchema, howToSchema };
 }
 
 export async function generateStaticParams() {
@@ -134,7 +165,7 @@ export default function InsightDetailPage({ params }) {
     );
   }
 
-  const { articleSchema, breadcrumbSchema, faqSchema } = buildSchemas(insight);
+  const { articleSchema, breadcrumbSchema, faqSchema, howToSchema } = buildSchemas(insight);
 
   return (
     <section className="section">
@@ -148,6 +179,11 @@ export default function InsightDetailPage({ params }) {
         {faqSchema ? (
           <Script id="insight-faq-schema" type="application/ld+json" strategy="afterInteractive">
             {JSON.stringify(faqSchema)}
+          </Script>
+        ) : null}
+        {howToSchema ? (
+          <Script id="insight-howto-schema" type="application/ld+json" strategy="afterInteractive">
+            {JSON.stringify(howToSchema)}
           </Script>
         ) : null}
         <p className="badge">Target keyword: {insight.targetKeyword}</p>
