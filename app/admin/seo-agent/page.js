@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 const defaultPayload = {
   seedKeyword: "property management admin automation",
@@ -20,6 +20,9 @@ export default function AdminSeoAgentPage() {
   const [workflowError, setWorkflowError] = useState("");
   const [workflowResult, setWorkflowResult] = useState(null);
   const [runs, setRuns] = useState([]);
+  const [scheduleLoading, setScheduleLoading] = useState(false);
+  const [scheduleError, setScheduleError] = useState("");
+  const [scheduledItems, setScheduledItems] = useState([]);
   const [result, setResult] = useState(null);
 
   const curlPreview = useMemo(() => {
@@ -90,6 +93,27 @@ export default function AdminSeoAgentPage() {
     }
   }
 
+  async function loadScheduledInsights() {
+    setScheduleError("");
+    setScheduleLoading(true);
+    try {
+      const response = await fetch("/api/seo-agent/scheduled", { method: "GET" });
+      const data = await response.json();
+      if (!response.ok) {
+        throw new Error(data.error || "Failed to load scheduled insights");
+      }
+      setScheduledItems(data.items || []);
+    } catch (scheduledError) {
+      setScheduleError(scheduledError.message || "Unknown error");
+    } finally {
+      setScheduleLoading(false);
+    }
+  }
+
+  useEffect(() => {
+    loadScheduledInsights();
+  }, []);
+
   return (
     <section className="section">
       <div className="container article">
@@ -142,6 +166,54 @@ export default function AdminSeoAgentPage() {
               </table>
             </div>
           ) : null}
+        </div>
+
+        <div className="card" style={{ marginTop: "1rem" }}>
+          <h2>Scheduled Insights Preview Links</h2>
+          <p>See which insights are scheduled, already live, and open secure preview links for future-dated posts.</p>
+          <div className="cta-row">
+            <button className="btn btn-secondary" type="button" onClick={loadScheduledInsights} disabled={scheduleLoading}>
+              {scheduleLoading ? "Refreshing..." : "Refresh Scheduled Insights"}
+            </button>
+          </div>
+          {scheduleError ? <p style={{ color: "#b42318" }}>{scheduleError}</p> : null}
+
+          {scheduledItems.length ? (
+            <div style={{ marginTop: "1rem", overflowX: "auto" }}>
+              <table style={{ width: "100%", borderCollapse: "collapse" }}>
+                <thead>
+                  <tr>
+                    <th style={{ textAlign: "left", padding: "0.5rem" }}>Date</th>
+                    <th style={{ textAlign: "left", padding: "0.5rem" }}>Title</th>
+                    <th style={{ textAlign: "left", padding: "0.5rem" }}>Segment</th>
+                    <th style={{ textAlign: "left", padding: "0.5rem" }}>Status</th>
+                    <th style={{ textAlign: "left", padding: "0.5rem" }}>Links</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {scheduledItems.map((item) => (
+                    <tr key={item.slug}>
+                      <td style={{ padding: "0.5rem", borderTop: "1px solid #d0d5dd" }}>{item.publishDate}</td>
+                      <td style={{ padding: "0.5rem", borderTop: "1px solid #d0d5dd" }}>{item.title}</td>
+                      <td style={{ padding: "0.5rem", borderTop: "1px solid #d0d5dd" }}>{item.segment}</td>
+                      <td style={{ padding: "0.5rem", borderTop: "1px solid #d0d5dd" }}>{item.isPublished ? "Published" : "Scheduled"}</td>
+                      <td style={{ padding: "0.5rem", borderTop: "1px solid #d0d5dd" }}>
+                        <a href={item.insightPath} target="_blank" rel="noreferrer">Open</a>
+                        {item.previewPath ? (
+                          <>
+                            {" · "}
+                            <a href={item.previewPath} target="_blank" rel="noreferrer">Preview</a>
+                          </>
+                        ) : null}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          ) : (
+            <p style={{ marginTop: "0.75rem" }}>No scheduled items found yet.</p>
+          )}
         </div>
 
         <form className="card" onSubmit={onSubmit} style={{ marginTop: "1rem" }}>
