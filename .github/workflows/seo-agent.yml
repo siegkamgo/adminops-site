@@ -2,15 +2,6 @@ name: SEO Agent (DataForSEO)
 
 on:
   workflow_dispatch:
-    inputs:
-      seed:
-        description: "Seed keyword"
-        required: false
-        default: "property management admin automation"
-      segment:
-        description: "Target segment label"
-        required: false
-        default: "Property Managers"
   schedule:
     - cron: "0 7 * * 1"
 
@@ -38,11 +29,9 @@ jobs:
           DATAFORSEO_LOGIN: ${{ secrets.DATAFORSEO_LOGIN }}
           DATAFORSEO_PASSWORD: ${{ secrets.DATAFORSEO_PASSWORD }}
         run: |
-          SEED="${{ github.event.inputs.seed }}"
-          SEGMENT="${{ github.event.inputs.segment }}"
-          if [ -z "$SEED" ]; then SEED="property management admin automation"; fi
-          if [ -z "$SEGMENT" ]; then SEGMENT="Property Managers"; fi
-          npm run seo:agent -- --seed "$SEED" --segment "$SEGMENT" --location 2826 --language en
+          npm run seo:agent -- --seed "restaurant admin automation" --segment "Restaurants" --location 2840 --language en
+          npm run seo:agent -- --seed "property management admin automation" --segment "Property Managers" --location 2826 --language en
+          npm run seo:agent -- --seed "clinic operations admin automation" --segment "Clinics" --location 2840 --language en
 
       - name: Commit and push if changed
         run: |

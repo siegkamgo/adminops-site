@@ -28,6 +28,21 @@ Brand website for AdminOps at adminops.cloud, including landing page, segment-sp
 
 This project includes an automation pipeline that uses real DataForSEO search data to generate publishable insight articles.
 
+### Simplest auto mode (recommended)
+
+If you want fully automatic content creation with minimal setup:
+
+1. Add only these GitHub repository secrets:
+	- `DATAFORSEO_LOGIN`
+	- `DATAFORSEO_PASSWORD`
+2. Enable the existing workflow `.github/workflows/seo-agent.yml`
+3. Done — it runs weekly and generates insights for:
+	- Restaurants
+	- Property Managers
+	- Clinics
+
+No admin UI auth variables are required for this mode.
+
 ### Required environment variables
 
 - `DATAFORSEO_LOGIN`
