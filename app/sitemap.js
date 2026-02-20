@@ -1,9 +1,9 @@
-import { listInsights } from "../lib/insights-store";
+import { listPublishedInsights } from "../lib/insights-store";
 
 export default function sitemap() {
   const baseUrl = "https://adminops.cloud";
   const contentUpdatedAt = process.env.NEXT_PUBLIC_SITE_UPDATED_AT || "2026-02-20";
-  const dynamicInsightRoutes = listInsights().map((item) => `/insights/${item.slug}`);
+  const dynamicInsightRoutes = listPublishedInsights().map((item) => `/insights/${item.slug}`);
 
   const routes = [
     "",

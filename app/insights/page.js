@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { listInsights } from "../../lib/insights-store";
+import { listPublishedInsights } from "../../lib/insights-store";
 
 export const metadata = {
   title: "Insights",
@@ -7,7 +7,7 @@ export const metadata = {
 };
 
 export default function InsightsIndexPage() {
-  const insights = listInsights();
+  const insights = listPublishedInsights();
 
   return (
     <section className="section">

@@ -1,13 +1,13 @@
 import Link from "next/link";
-import { getInsightBySlug, listInsights } from "../../../lib/insights-store";
+import { getPublishedInsightBySlug, listPublishedInsights } from "../../../lib/insights-store";
 
 export async function generateStaticParams() {
-  const insights = listInsights();
+  const insights = listPublishedInsights();
   return insights.map((insight) => ({ slug: insight.slug }));
 }
 
 export async function generateMetadata({ params }) {
-  const insight = getInsightBySlug(params.slug);
+  const insight = getPublishedInsightBySlug(params.slug);
   if (!insight) {
     return {
       title: "Insight Not Found"
@@ -24,7 +24,7 @@ export async function generateMetadata({ params }) {
 }
 
 export default function InsightDetailPage({ params }) {
-  const insight = getInsightBySlug(params.slug);
+  const insight = getPublishedInsightBySlug(params.slug);
 
   if (!insight) {
     return (
