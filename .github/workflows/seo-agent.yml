@@ -1,0 +1,57 @@
+name: SEO Agent (DataForSEO)
+
+on:
+  workflow_dispatch:
+    inputs:
+      seed:
+        description: "Seed keyword"
+        required: false
+        default: "property management admin automation"
+      segment:
+        description: "Target segment label"
+        required: false
+        default: "Property Managers"
+  schedule:
+    - cron: "0 7 * * 1"
+
+permissions:
+  contents: write
+
+jobs:
+  generate-insight:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+
+      - name: Install
+        run: npm ci
+
+      - name: Generate insight
+        env:
+          DATAFORSEO_LOGIN: ${{ secrets.DATAFORSEO_LOGIN }}
+          DATAFORSEO_PASSWORD: ${{ secrets.DATAFORSEO_PASSWORD }}
+        run: |
+          SEED="${{ github.event.inputs.seed }}"
+          SEGMENT="${{ github.event.inputs.segment }}"
+          if [ -z "$SEED" ]; then SEED="property management admin automation"; fi
+          if [ -z "$SEGMENT" ]; then SEGMENT="Property Managers"; fi
+          npm run seo:agent -- --seed "$SEED" --segment "$SEGMENT" --location 2826 --language en
+
+      - name: Commit and push if changed
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add content/insights
+            git commit -m "chore: generate data-backed insight"
+            git push
+          else
+            echo "No changes to commit"
+          fi

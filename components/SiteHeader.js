@@ -5,7 +5,7 @@ const navItems = [
   { href: "/property-management-ai-agents", label: "Property Managers" },
   { href: "/clinic-ops-ai-agents", label: "Clinics" },
   { href: "/adminops-pilot", label: "Pilot" },
-  { href: "/blog/property-management-admin-automation", label: "Insights" }
+  { href: "/insights", label: "Insights" }
 ];
 
 export default function SiteHeader() {

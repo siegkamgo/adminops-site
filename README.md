@@ -20,7 +20,58 @@ Brand website for AdminOps at adminops.cloud, including landing page, segment-sp
 - `/restaurant-ops-ai-agents` Segment page
 - `/adminops-pilot` Offer page for 30-day pilot
 - `/blog/property-management-admin-automation` SEO + GEO article (UK + US angle)
+- `/insights` Generated insights index (data-backed content)
+- `/insights/[slug]` Generated insight detail page
 - `/analytics-setup` GA4, GSC, Plausible/Fathom setup instructions
+
+## DataForSEO SEO Agent Automation
+
+This project includes an automation pipeline that uses real DataForSEO search data to generate publishable insight articles.
+
+### Required environment variables
+
+- `DATAFORSEO_LOGIN`
+- `DATAFORSEO_PASSWORD`
+- `SEO_AGENT_LOCATION_CODE` (example `2826` for UK, `2840` for US)
+- `SEO_AGENT_LANGUAGE_CODE` (example `en`)
+- `SEO_AGENT_SECRET` (optional, secures API endpoint)
+
+### Generate an insight locally
+
+```bash
+npm run seo:agent -- --seed "property management admin automation" --segment "Property Managers" --location 2826 --language en
+```
+
+Generated files:
+
+- `content/insights/<slug>.json`
+- `content/insights/_reports/<slug>.json`
+
+### Trigger keyword research from API
+
+- Endpoint: `POST /api/seo-agent/research`
+- Optional auth header: `x-seo-agent-token: <SEO_AGENT_SECRET>`
+- Payload example:
+
+```json
+{
+	"seedKeyword": "clinic operations automation",
+	"segment": "Clinics",
+	"locationCode": 2840,
+	"languageCode": "en"
+}
+```
+
+### Fully automated weekly publishing
+
+GitHub Action workflow: `.github/workflows/seo-agent.yml`
+
+Set these GitHub repository secrets:
+
+- `DATAFORSEO_LOGIN`
+- `DATAFORSEO_PASSWORD`
+
+Then run manually with **Actions → SEO Agent (DataForSEO) → Run workflow**, or let the weekly schedule publish automatically.
 
 ## Suggested File Structure
 
