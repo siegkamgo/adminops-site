@@ -1,6 +1,7 @@
 import Script from "next/script";
 import "./globals.css";
 import SiteHeader from "../components/SiteHeader";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata = {
   metadataBase: new URL("https://adminops.cloud"),
@@ -117,6 +118,7 @@ export default function RootLayout({ children }) {
             </div>
           </div>
         </footer>
+        <Analytics />
       </body>
     </html>
   );
