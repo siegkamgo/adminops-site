@@ -28,7 +28,25 @@ jobs:
         env:
           DATAFORSEO_LOGIN: ${{ secrets.DATAFORSEO_LOGIN }}
           DATAFORSEO_PASSWORD: ${{ secrets.DATAFORSEO_PASSWORD }}
+          DATAFORSEO_API_LOGIN: ${{ secrets.DATAFORSEO_API_LOGIN }}
+          DATAFORSEO_API_PASSWORD: ${{ secrets.DATAFORSEO_API_PASSWORD }}
         run: |
+          DFS_LOGIN="$DATAFORSEO_LOGIN"
+          DFS_PASSWORD="$DATAFORSEO_PASSWORD"
+
+          if [ -z "$DFS_LOGIN" ]; then DFS_LOGIN="$DATAFORSEO_API_LOGIN"; fi
+          if [ -z "$DFS_PASSWORD" ]; then DFS_PASSWORD="$DATAFORSEO_API_PASSWORD"; fi
+
+          if [ -z "$DFS_LOGIN" ] || [ -z "$DFS_PASSWORD" ]; then
+            echo "Missing DataForSEO credentials in GitHub Actions secrets."
+            echo "Set either DATAFORSEO_LOGIN + DATAFORSEO_PASSWORD"
+            echo "or DATAFORSEO_API_LOGIN + DATAFORSEO_API_PASSWORD"
+            exit 1
+          fi
+
+          export DATAFORSEO_LOGIN="$DFS_LOGIN"
+          export DATAFORSEO_PASSWORD="$DFS_PASSWORD"
+
           npm run seo:agent -- --seed "restaurant admin automation" --segment "Restaurants" --location 2840 --language en --daily true
           npm run seo:agent -- --seed "property management admin automation" --segment "Property Managers" --location 2826 --language en --daily true
           npm run seo:agent -- --seed "clinic operations admin automation" --segment "Clinics" --location 2840 --language en --daily true
