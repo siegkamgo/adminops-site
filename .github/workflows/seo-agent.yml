@@ -38,6 +38,10 @@ jobs:
 
           if [ -n "$DFS_API_KEY" ]; then
             export DATAFORSEO_API_KEY="$DFS_API_KEY"
+            if [[ "$DFS_API_KEY" == *":"* ]]; then
+              DFS_LOGIN="${DFS_API_KEY%%:*}"
+              DFS_PASSWORD="${DFS_API_KEY#*:}"
+            fi
           fi
 
           if [ -z "$DFS_LOGIN" ]; then DFS_LOGIN="$DATAFORSEO_API_LOGIN"; fi
