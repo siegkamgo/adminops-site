@@ -1,0 +1,74 @@
+{
+  "slug": "restaurant-admin-automation",
+  "title": "Restaurant Admin Automation: Faster Reconciliation, Cleaner Supplier Invoices",
+  "metaDescription": "How restaurant operators use AI agents to reconcile daily sales, process supplier invoices, and audit delivery platform fees with human approval controls.",
+  "targetKeyword": "restaurant admin automation",
+  "segment": "Restaurants",
+  "seedKeyword": "restaurant admin automation",
+  "locationCode": 2840,
+  "languageCode": "en",
+  "publishDate": "2026-02-20",
+  "keywordRows": [
+    {
+      "keyword": "restaurant admin automation",
+      "searchVolume": 240,
+      "cpc": 8.9,
+      "competition": 0.58,
+      "competitionLevel": "MEDIUM",
+      "keywordDifficulty": 22
+    },
+    {
+      "keyword": "restaurant invoice processing",
+      "searchVolume": 160,
+      "cpc": 9.6,
+      "competition": 0.61,
+      "competitionLevel": "MEDIUM",
+      "keywordDifficulty": 26
+    },
+    {
+      "keyword": "delivery platform fee audit",
+      "searchVolume": 110,
+      "cpc": 7.4,
+      "competition": 0.47,
+      "competitionLevel": "MEDIUM",
+      "keywordDifficulty": 19
+    }
+  ],
+  "sections": [
+    {
+      "title": "Why admin work slows restaurant growth",
+      "paragraphs": [
+        "Restaurant teams lose hours reconciling daily sales, chasing supplier invoices, and untangling delivery platform fees.",
+        "AI agents reduce the manual workload by structuring the data, flagging exceptions, and producing approval-ready summaries."
+      ],
+      "list": [
+        "Daily sales reconciliation (POS + bank + delivery platforms)",
+        "Supplier invoice capture + coding",
+        "Delivery platform commission audits"
+      ]
+    },
+    {
+      "title": "Where automation delivers quick wins",
+      "paragraphs": [
+        "Operators see the fastest ROI when they start with daily reconciliation and supplier invoice workflows.",
+        "Once approval gates are reliable, teams expand to weekly reporting and staff scheduling support."
+      ],
+      "list": [
+        "Daily close + Z-report checks",
+        "Invoice matching by vendor",
+        "Weekly margin and fee summaries"
+      ]
+    },
+    {
+      "title": "Keep human control while scaling",
+      "paragraphs": [
+        "AdminOps keeps a human approval step for payouts, supplier payments, and reporting sign-off.",
+        "That control layer makes the system safe for multi-location operators and franchise groups."
+      ]
+    }
+  ],
+  "cta": {
+    "label": "Book a free strategy call",
+    "href": "https://www.cal.eu/sieg-kamgo/30min"
+  }
+}
