@@ -36,7 +36,7 @@ If you want fully automatic content creation with minimal setup:
 	- `DATAFORSEO_LOGIN`
 	- `DATAFORSEO_PASSWORD`
 2. Enable the existing workflow `.github/workflows/seo-agent.yml`
-3. Done — it runs weekly and generates insights for:
+3. Done — it runs daily and generates/publishes insights for:
 	- Restaurants
 	- Property Managers
 	- Clinics
@@ -57,6 +57,12 @@ No admin UI auth variables are required for this mode.
 
 ```bash
 npm run seo:agent -- --seed "property management admin automation" --segment "Property Managers" --location 2826 --language en
+```
+
+Generate a new dated article (daily publishing mode):
+
+```bash
+npm run seo:agent -- --seed "property management admin automation" --segment "Property Managers" --location 2826 --language en --daily true
 ```
 
 Generated files:
@@ -86,7 +92,7 @@ Generated files:
 - The page allows generating and saving insights directly into `content/insights`
 - If `SEO_AGENT_SECRET` is set, paste it into the UI token field
 
-### Fully automated weekly publishing
+### Fully automated daily publishing
 
 GitHub Action workflow: `.github/workflows/seo-agent.yml`
 
@@ -95,7 +101,7 @@ Set these GitHub repository secrets:
 - `DATAFORSEO_LOGIN`
 - `DATAFORSEO_PASSWORD`
 
-Then run manually with **Actions → SEO Agent (DataForSEO) → Run workflow**, or let the weekly schedule publish automatically.
+Then run manually with **Actions → SEO Agent (DataForSEO) → Run workflow**, or let the daily schedule publish automatically.
 
 ## Suggested File Structure
 

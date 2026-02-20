@@ -3,7 +3,7 @@ name: SEO Agent (DataForSEO)
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 7 * * 1"
+    - cron: "0 7 * * *"
 
 permissions:
   contents: write
@@ -29,9 +29,9 @@ jobs:
           DATAFORSEO_LOGIN: ${{ secrets.DATAFORSEO_LOGIN }}
           DATAFORSEO_PASSWORD: ${{ secrets.DATAFORSEO_PASSWORD }}
         run: |
-          npm run seo:agent -- --seed "restaurant admin automation" --segment "Restaurants" --location 2840 --language en
-          npm run seo:agent -- --seed "property management admin automation" --segment "Property Managers" --location 2826 --language en
-          npm run seo:agent -- --seed "clinic operations admin automation" --segment "Clinics" --location 2840 --language en
+          npm run seo:agent -- --seed "restaurant admin automation" --segment "Restaurants" --location 2840 --language en --daily true
+          npm run seo:agent -- --seed "property management admin automation" --segment "Property Managers" --location 2826 --language en --daily true
+          npm run seo:agent -- --seed "clinic operations admin automation" --segment "Clinics" --location 2840 --language en --daily true
 
       - name: Commit and push if changed
         run: |

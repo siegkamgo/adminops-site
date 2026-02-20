@@ -29,12 +29,14 @@ async function run() {
   const segment = args.segment || "Property Managers";
   const locationCode = Number(args.location || process.env.SEO_AGENT_LOCATION_CODE || 2840);
   const languageCode = args.language || process.env.SEO_AGENT_LANGUAGE_CODE || "en";
+  const dailyMode = String(args.daily || "false").toLowerCase() === "true";
 
   const insight = await buildInsightFromSeed({
     seedKeyword,
     segment,
     locationCode,
-    languageCode
+    languageCode,
+    dailyMode
   });
 
   saveInsight(insight);
@@ -50,6 +52,7 @@ async function run() {
         segment,
         locationCode,
         languageCode,
+        dailyMode,
         topKeywords: insight.keywordRows.slice(0, 10)
       },
       null,
