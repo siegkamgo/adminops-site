@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { buildInsightFromSeed } from "../../../../lib/seo-agent.js";
+import { saveInsight } from "../../../../lib/insights-store.js";
 
 export async function POST(request) {
   try {
@@ -20,7 +21,17 @@ export async function POST(request) {
       languageCode: body.languageCode || process.env.SEO_AGENT_LANGUAGE_CODE || "en"
     });
 
-    return NextResponse.json({ insight });
+    let savedPath = null;
+    const shouldSave = body.save === true;
+    if (shouldSave) {
+      savedPath = saveInsight(insight);
+    }
+
+    return NextResponse.json({
+      insight,
+      saved: shouldSave,
+      savedPath
+    });
   } catch (error) {
     return NextResponse.json(
       {

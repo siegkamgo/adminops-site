@@ -35,6 +35,8 @@ This project includes an automation pipeline that uses real DataForSEO search da
 - `SEO_AGENT_LOCATION_CODE` (example `2826` for UK, `2840` for US)
 - `SEO_AGENT_LANGUAGE_CODE` (example `en`)
 - `SEO_AGENT_SECRET` (optional, secures API endpoint)
+- `ADMIN_BASIC_AUTH_USER` (required for private admin UI)
+- `ADMIN_BASIC_AUTH_PASS` (required for private admin UI)
 
 ### Generate an insight locally
 
@@ -61,6 +63,13 @@ Generated files:
 	"languageCode": "en"
 }
 ```
+
+### Private admin UI
+
+- Route: `/admin/seo-agent`
+- Protected by HTTP Basic Auth via `middleware.js`
+- The page allows generating and saving insights directly into `content/insights`
+- If `SEO_AGENT_SECRET` is set, paste it into the UI token field
 
 ### Fully automated weekly publishing
 
