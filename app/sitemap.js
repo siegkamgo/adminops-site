@@ -17,6 +17,7 @@ export default function sitemap() {
     "/restaurant-ops-ai-agents",
     "/blog/property-management-admin-automation",
     "/insights",
+    "/insights/rss.xml",
     "/comparisons/adminops-vs-hiring-admin-staff",
     "/comparisons/adminops-vs-rpa-tools",
     "/comparisons/adminops-vs-virtual-assistants",

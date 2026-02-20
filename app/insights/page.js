@@ -49,6 +49,9 @@ export default function InsightsIndexPage({ searchParams }) {
         </Script>
         <h1>Insights</h1>
         <p>Data-backed articles generated from live keyword research to support SEO and AI Overview visibility.</p>
+        <p>
+          Subscribe: <Link href="/insights/rss.xml">RSS feed</Link>
+        </p>
         {previewMode ? (
           <p><strong>Preview mode enabled:</strong> future-dated insights are visible.</p>
         ) : null}

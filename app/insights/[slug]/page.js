@@ -2,6 +2,65 @@ import Link from "next/link";
 import Script from "next/script";
 import { getInsightBySlug, getPublishedInsightBySlug, listPublishedInsights } from "../../../lib/insights-store";
 
+function tokenizeText(value) {
+  return String(value || "")
+    .toLowerCase()
+    .split(/[^a-z0-9]+/)
+    .filter((part) => part.length > 2);
+}
+
+function scoreRelatedness(currentInsight, candidateInsight) {
+  let score = 0;
+
+  if (currentInsight.segment && candidateInsight.segment && currentInsight.segment === candidateInsight.segment) {
+    score += 4;
+  }
+
+  if (currentInsight.targetKeyword && candidateInsight.targetKeyword) {
+    const currentKeyword = String(currentInsight.targetKeyword).toLowerCase();
+    const candidateKeyword = String(candidateInsight.targetKeyword).toLowerCase();
+
+    if (currentKeyword === candidateKeyword) {
+      score += 5;
+    } else if (currentKeyword.includes(candidateKeyword) || candidateKeyword.includes(currentKeyword)) {
+      score += 2;
+    }
+  }
+
+  const currentTokens = new Set([
+    ...tokenizeText(currentInsight.title),
+    ...tokenizeText(currentInsight.targetKeyword)
+  ]);
+
+  const candidateTokens = [
+    ...tokenizeText(candidateInsight.title),
+    ...tokenizeText(candidateInsight.targetKeyword)
+  ];
+
+  candidateTokens.forEach((token) => {
+    if (currentTokens.has(token)) {
+      score += 1;
+    }
+  });
+
+  return score;
+}
+
+function getRelatedInsights(currentInsight, limit = 3) {
+  const published = listPublishedInsights();
+
+  return published
+    .filter((item) => item.slug !== currentInsight.slug)
+    .map((item) => ({
+      insight: item,
+      score: scoreRelatedness(currentInsight, item)
+    }))
+    .filter((item) => item.score > 0)
+    .sort((a, b) => b.score - a.score)
+    .slice(0, limit)
+    .map((item) => item.insight);
+}
+
 function getSearchParamValue(searchParams, key) {
   const value = searchParams?.[key];
   if (Array.isArray(value)) {
@@ -180,6 +239,17 @@ export async function generateMetadata({ params }) {
   return {
     title: insight.title,
     description: insight.metaDescription,
+    openGraph: {
+      title: insight.title,
+      description: insight.metaDescription,
+      type: "article",
+      url: `https://adminops.cloud/insights/${insight.slug}`
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: insight.title,
+      description: insight.metaDescription
+    },
     alternates: {
       canonical: `https://adminops.cloud/insights/${insight.slug}`
     }
@@ -205,6 +275,7 @@ export default function InsightDetailPage({ params, searchParams }) {
   }
 
   const { articleSchema, breadcrumbSchema, faqSchema, howToSchema } = buildSchemas(insight);
+  const relatedInsights = getRelatedInsights(insight);
 
   return (
     <section className="section">
@@ -319,6 +390,19 @@ export default function InsightDetailPage({ params, searchParams }) {
             {insight.cta.label}
           </a>
         </div>
+
+        {relatedInsights.length ? (
+          <div className="card" style={{ marginTop: "1.5rem" }}>
+            <h3>Related insights</h3>
+            <ul>
+              {relatedInsights.map((related) => (
+                <li key={related.slug}>
+                  <Link href={`/insights/${related.slug}`}>{related.title}</Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ) : null}
       </article>
     </section>
   );
