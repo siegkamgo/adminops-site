@@ -53,6 +53,13 @@ export default function BlogPostPage() {
           without changing their core systems.
         </p>
 
+        <h2>The short answer</h2>
+        <ul>
+          <li>Automate data pulls and matching.</li>
+          <li>Route exceptions for approval.</li>
+          <li>Generate approval‑ready summaries.</li>
+        </ul>
+
         <h2>Why reconciliation eats so many admin hours</h2>
         <p>
           Reconciliation requires cross‑checking rent rolls, bank deposits, payment processors, and manual adjustments.
@@ -73,6 +80,33 @@ export default function BlogPostPage() {
           trails and GDPR‑aligned data handling. Both benefit from clear approval checkpoints and system logs.
         </p>
 
+        <h2>Tools comparison</h2>
+        <div className="card" style={{ overflowX: "auto" }}>
+          <table style={{ width: "100%", borderCollapse: "collapse" }}>
+            <thead>
+              <tr>
+                <th style={{ textAlign: "left", padding: "0.5rem" }}>Step</th>
+                <th style={{ textAlign: "left", padding: "0.5rem" }}>Manual</th>
+                <th style={{ textAlign: "left", padding: "0.5rem" }}>AdminOps</th>
+              </tr>
+            </thead>
+            <tbody>
+              {[
+                ["Data pulls", "Manual", "Automated"],
+                ["Matching", "Manual", "Auto match"],
+                ["Exceptions", "Manual", "Queue + summary"],
+                ["Reporting", "Manual", "Auto draft"]
+              ].map((row) => (
+                <tr key={row[0]}>
+                  <td style={{ padding: "0.5rem", borderTop: "1px solid #d0d5dd" }}>{row[0]}</td>
+                  <td style={{ padding: "0.5rem", borderTop: "1px solid #d0d5dd" }}>{row[1]}</td>
+                  <td style={{ padding: "0.5rem", borderTop: "1px solid #d0d5dd" }}>{row[2]}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
         <h2>Template workflow to copy</h2>
         <ol>
           <li>Define the data sources and field mapping</li>
@@ -80,6 +114,20 @@ export default function BlogPostPage() {
           <li>Run the agent daily or weekly</li>
           <li>Approve exceptions and export reports</li>
         </ol>
+
+        <h2>Common mistakes</h2>
+        <ul>
+          <li>No clear matching rules.</li>
+          <li>Missing exception escalation.</li>
+          <li>No audit trail for approvals.</li>
+        </ul>
+
+        <h2>FAQs</h2>
+        <ul>
+          <li><strong>How long to deploy?</strong> Typical pilots run in ~30 days.</li>
+          <li><strong>Does this replace staff?</strong> No, it removes repetitive admin work.</li>
+          <li><strong>Will it work with my PMS?</strong> Yes, AdminOps works alongside existing systems.</li>
+        </ul>
 
         <div className="card" style={{ marginTop: "1.5rem" }}>
           <h3>Want this automated in 30 days?</h3>
