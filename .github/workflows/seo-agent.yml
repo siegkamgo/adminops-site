@@ -26,20 +26,27 @@ jobs:
 
       - name: Generate insight
         env:
+          DATAFORSEO_API_KEY: ${{ secrets.DATAFORSEO_API_KEY }}
           DATAFORSEO_LOGIN: ${{ secrets.DATAFORSEO_LOGIN }}
           DATAFORSEO_PASSWORD: ${{ secrets.DATAFORSEO_PASSWORD }}
           DATAFORSEO_API_LOGIN: ${{ secrets.DATAFORSEO_API_LOGIN }}
           DATAFORSEO_API_PASSWORD: ${{ secrets.DATAFORSEO_API_PASSWORD }}
         run: |
+          DFS_API_KEY="$DATAFORSEO_API_KEY"
           DFS_LOGIN="$DATAFORSEO_LOGIN"
           DFS_PASSWORD="$DATAFORSEO_PASSWORD"
+
+          if [ -n "$DFS_API_KEY" ]; then
+            export DATAFORSEO_API_KEY="$DFS_API_KEY"
+          fi
 
           if [ -z "$DFS_LOGIN" ]; then DFS_LOGIN="$DATAFORSEO_API_LOGIN"; fi
           if [ -z "$DFS_PASSWORD" ]; then DFS_PASSWORD="$DATAFORSEO_API_PASSWORD"; fi
 
-          if [ -z "$DFS_LOGIN" ] || [ -z "$DFS_PASSWORD" ]; then
+          if [ -z "$DFS_API_KEY" ] && { [ -z "$DFS_LOGIN" ] || [ -z "$DFS_PASSWORD" ]; }; then
             echo "Missing DataForSEO credentials in GitHub Actions secrets."
-            echo "Set either DATAFORSEO_LOGIN + DATAFORSEO_PASSWORD"
+            echo "Set DATAFORSEO_API_KEY (format: login:password), or"
+            echo "DATAFORSEO_LOGIN + DATAFORSEO_PASSWORD, or"
             echo "or DATAFORSEO_API_LOGIN + DATAFORSEO_API_PASSWORD"
             exit 1
           fi

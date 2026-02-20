@@ -33,8 +33,7 @@ This project includes an automation pipeline that uses real DataForSEO search da
 If you want fully automatic content creation with minimal setup:
 
 1. Add only these GitHub repository secrets:
-	- `DATAFORSEO_LOGIN`
-	- `DATAFORSEO_PASSWORD`
+	- `DATAFORSEO_API_KEY` (format: `login:password`)
 2. Enable the existing workflow `.github/workflows/seo-agent.yml`
 3. Done — it runs daily and generates/publishes insights for:
 	- Restaurants
@@ -47,6 +46,7 @@ No admin UI auth variables are required for this mode.
 
 - `DATAFORSEO_LOGIN`
 - `DATAFORSEO_PASSWORD`
+- `DATAFORSEO_API_KEY` (optional single-secret alternative, format `login:password`)
 - `SEO_AGENT_LOCATION_CODE` (example `2826` for UK, `2840` for US)
 - `SEO_AGENT_LANGUAGE_CODE` (example `en`)
 - `SEO_AGENT_SECRET` (optional, secures API endpoint)
