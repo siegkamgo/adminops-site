@@ -160,6 +160,9 @@ export default function RootLayout({ children }) {
               <a href="/accounts-receivable-automation">AR Automation</a>
               <a href="/inventory-vendor-ops-automation">Inventory Ops</a>
               <a href="/customer-support-triage-automation">Support Triage</a>
+              <a href="/work-order-triage-automation">Work Orders</a>
+              <a href="/lightweight-support-triage">Lightweight Triage</a>
+              <a href="/msp-workflow-autopilot">MSP Autopilot</a>
               <a href="/blog/property-management-computer-use-agents">Blog</a>
               <a href="/insights">Insights</a>
               <a href="mailto:info@adminops.cloud">info@adminops.cloud</a>
