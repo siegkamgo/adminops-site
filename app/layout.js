@@ -113,6 +113,7 @@ export default function RootLayout({ children }) {
             <div className="footer-nav">
               <a href="/accounts-payable-automation">AP Automation</a>
               <a href="/accounts-receivable-automation">AR Automation</a>
+              <a href="/inventory-vendor-ops-automation">Inventory Ops</a>
               <a href="/blog/property-management-computer-use-agents">Blog</a>
               <a href="/insights">Insights</a>
               <a href="mailto:info@adminops.cloud">info@adminops.cloud</a>
