@@ -157,6 +157,8 @@ export default function RootLayout({ children }) {
             <div><strong>AdminOps</strong> · Automate 60–80% of routine admin work in 30 days</div>
             <div className="footer-nav">
               <a href="/accounts-payable-automation">AP Automation</a>
+              <a href="/accounts-receivable-automation">AR Automation</a>
+              <a href="/inventory-vendor-ops-automation">Inventory Ops</a>
               <a href="/blog/property-management-computer-use-agents">Blog</a>
               <a href="/insights">Insights</a>
               <a href="mailto:info@adminops.cloud">info@adminops.cloud</a>
