@@ -150,6 +150,30 @@ function extractHowToSteps(insight) {
     }));
 }
 
+function getHumanLeadParagraph(insight) {
+  const candidateParagraphs = insight.sections
+    .flatMap((section) => section.paragraphs || [])
+    .map((paragraph) => String(paragraph || "").trim())
+    .filter(Boolean);
+
+  const segmentToken = String(insight.segment || "").split(" ")[0]?.toLowerCase();
+  const keyword = String(insight.targetKeyword || "").toLowerCase();
+
+  const preferred = candidateParagraphs.find((paragraph) => {
+    const lower = paragraph.toLowerCase();
+    const startsWithUppercase = /^[A-Z]/.test(paragraph);
+    const segmentMatch = segmentToken ? lower.includes(segmentToken) : false;
+    const avoidsKeywordPrefix = keyword ? !lower.startsWith(keyword) : true;
+    return startsWithUppercase && (segmentMatch || avoidsKeywordPrefix);
+  });
+
+  if (preferred) {
+    return preferred;
+  }
+
+  return insight.metaDescription;
+}
+
 function buildSchemas(insight) {
   const insightUrl = `https://adminops.cloud/insights/${insight.slug}`;
 
@@ -278,6 +302,7 @@ export default function InsightDetailPage({ params, searchParams }) {
 
   const { articleSchema, breadcrumbSchema, faqSchema, howToSchema } = buildSchemas(insight);
   const relatedInsights = getRelatedInsights(insight);
+  const leadParagraph = getHumanLeadParagraph(insight);
 
   return (
     <section className="section">
@@ -301,7 +326,7 @@ export default function InsightDetailPage({ params, searchParams }) {
         {previewMode ? <p><strong>Preview mode enabled:</strong> viewing unpublished content.</p> : null}
         <h1>{insight.title}</h1>
         <p><strong>Published:</strong> {insight.publishDate}</p>
-        <p>{insight.metaDescription}</p>
+        <p>{leadParagraph}</p>
 
         {insight.sections.map((section) => (
           <section key={section.title}>
