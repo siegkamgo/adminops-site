@@ -298,7 +298,6 @@ export default function InsightDetailPage({ params, searchParams }) {
             {JSON.stringify(howToSchema)}
           </Script>
         ) : null}
-        <p className="badge">Target keyword: {insight.targetKeyword}</p>
         {previewMode ? <p><strong>Preview mode enabled:</strong> viewing unpublished content.</p> : null}
         <h1>{insight.title}</h1>
         <p><strong>Published:</strong> {insight.publishDate}</p>
@@ -354,30 +353,6 @@ export default function InsightDetailPage({ params, searchParams }) {
             ) : null}
           </section>
         ))}
-
-        <h2>Top keywords from this research run</h2>
-        <div className="card" style={{ overflowX: "auto" }}>
-          <table style={{ width: "100%", borderCollapse: "collapse" }}>
-            <thead>
-              <tr>
-                <th style={{ textAlign: "left", padding: "0.5rem" }}>Keyword</th>
-                <th style={{ textAlign: "left", padding: "0.5rem" }}>Search volume</th>
-                <th style={{ textAlign: "left", padding: "0.5rem" }}>CPC</th>
-                <th style={{ textAlign: "left", padding: "0.5rem" }}>Competition</th>
-              </tr>
-            </thead>
-            <tbody>
-              {insight.keywordRows.map((row) => (
-                <tr key={row.keyword}>
-                  <td style={{ padding: "0.5rem", borderTop: "1px solid #d0d5dd" }}>{row.keyword}</td>
-                  <td style={{ padding: "0.5rem", borderTop: "1px solid #d0d5dd" }}>{row.searchVolume ?? "-"}</td>
-                  <td style={{ padding: "0.5rem", borderTop: "1px solid #d0d5dd" }}>{row.cpc ?? "-"}</td>
-                  <td style={{ padding: "0.5rem", borderTop: "1px solid #d0d5dd" }}>{row.competition ?? row.competitionLevel ?? "-"}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
 
         <div className="card" style={{ marginTop: "1.5rem" }}>
           <h3>CTA: Book a free strategy call</h3>
