@@ -2,6 +2,8 @@ import Link from "next/link";
 import Script from "next/script";
 import { listInsights, listPublishedInsights } from "../../lib/insights-store";
 
+export const revalidate = 3600;
+
 export const metadata = {
   title: "Insights",
   description: "Data-backed SEO and operations insights generated from live search data research."

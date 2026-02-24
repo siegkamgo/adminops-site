@@ -2,6 +2,8 @@ import Link from "next/link";
 import Script from "next/script";
 import { getInsightBySlug, getPublishedInsightBySlug, listPublishedInsights } from "../../../lib/insights-store";
 
+export const revalidate = 3600;
+
 function tokenizeText(value) {
   return String(value || "")
     .toLowerCase()

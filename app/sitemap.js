@@ -1,6 +1,8 @@
 import { execSync } from "node:child_process";
 import { listPublishedInsights } from "../lib/insights-store";
 
+export const revalidate = 3600;
+
 function getGitLastModified(relativePath) {
   try {
     const output = execSync(`git log -1 --format=%cs -- "${relativePath}"`, {
