@@ -174,6 +174,44 @@ function getHumanLeadParagraph(insight) {
   return insight.metaDescription;
 }
 
+function toSectionId(value, index) {
+  const normalized = String(value || "section")
+    .toLowerCase()
+    .replace(/[^a-z0-9\s-]/g, "")
+    .trim()
+    .replace(/\s+/g, "-");
+
+  return `${normalized || "section"}-${index + 1}`;
+}
+
+function getKeyTakeaways(insight) {
+  const firstLists = insight.sections
+    .flatMap((section) => section.list || [])
+    .map((item) => String(item || "").trim())
+    .filter(Boolean);
+
+  if (firstLists.length) {
+    return firstLists.slice(0, 3);
+  }
+
+  const shortParagraphs = insight.sections
+    .flatMap((section) => section.paragraphs || [])
+    .map((paragraph) => String(paragraph || "").trim())
+    .filter((paragraph) => paragraph.length > 0 && paragraph.length < 180);
+
+  return shortParagraphs.slice(0, 3);
+}
+
+function getLeadVisual(insight) {
+  for (const section of insight.sections || []) {
+    if (section.images?.length) {
+      return section.images[0];
+    }
+  }
+
+  return null;
+}
+
 function buildSchemas(insight) {
   const insightUrl = `https://adminops.cloud/insights/${insight.slug}`;
 
@@ -303,6 +341,12 @@ export default function InsightDetailPage({ params, searchParams }) {
   const { articleSchema, breadcrumbSchema, faqSchema, howToSchema } = buildSchemas(insight);
   const relatedInsights = getRelatedInsights(insight);
   const leadParagraph = getHumanLeadParagraph(insight);
+  const keyTakeaways = getKeyTakeaways(insight);
+  const leadVisual = getLeadVisual(insight);
+  const tocEntries = insight.sections.map((section, index) => ({
+    id: toSectionId(section.title, index),
+    title: section.title
+  }));
 
   return (
     <section className="section">
@@ -324,12 +368,52 @@ export default function InsightDetailPage({ params, searchParams }) {
           </Script>
         ) : null}
         {previewMode ? <p><strong>Preview mode enabled:</strong> viewing unpublished content.</p> : null}
+        <p className="article-meta">
+          <strong>Written by:</strong> AdminOps Editorial Team · <strong>Reviewed by:</strong> Operations Strategy Lead
+        </p>
         <h1>{insight.title}</h1>
-        <p><strong>Published:</strong> {insight.publishDate}</p>
-        <p>{leadParagraph}</p>
+        <p className="article-meta"><strong>Published:</strong> {insight.publishDate}</p>
 
-        {insight.sections.map((section) => (
-          <section key={section.title}>
+        {leadVisual ? (
+          <figure className="article-lead-visual card">
+            <img
+              src={leadVisual.src}
+              alt={leadVisual.alt}
+              loading="eager"
+              style={{ width: "100%", height: "auto", borderRadius: "0.75rem" }}
+            />
+            {leadVisual.caption ? <figcaption>{leadVisual.caption}</figcaption> : null}
+          </figure>
+        ) : null}
+
+        <p className="article-intro">{leadParagraph}</p>
+
+        {keyTakeaways.length ? (
+          <aside className="article-takeaways card" aria-label="Key takeaways">
+            <h2>Key takeaways</h2>
+            <ul>
+              {keyTakeaways.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+        ) : null}
+
+        {tocEntries.length ? (
+          <nav className="article-toc card" aria-label="In-article table of contents">
+            <h2>On this page</h2>
+            <ul>
+              {tocEntries.map((entry) => (
+                <li key={entry.id}>
+                  <a href={`#${entry.id}`}>{entry.title}</a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        ) : null}
+
+        {insight.sections.map((section, index) => (
+          <section key={section.title} id={toSectionId(section.title, index)}>
             <h2>{section.title}</h2>
             {section.paragraphs.map((paragraph) => (
               <p key={paragraph}>{paragraph}</p>

@@ -26,32 +26,58 @@ export default function HomePage() {
           <Script id="home-speakable-schema" type="application/ld+json" strategy="afterInteractive">
             {JSON.stringify(speakableSchema)}
           </Script>
-          <span className="badge">AdminOps · AI + Human Approval</span>
-          <h1 id="home-hero-heading">Automate 60–80% of routine admin work in 30 days.</h1>
-          <p id="home-hero-summary">
-            AdminOps builds AI agents that handle repetitive admin workflows end-to-end while your team keeps final approval.
-            You get cleaner operations, fewer errors, and faster reporting without adding headcount.
-          </p>
-          <div className="cta-row">
-            <a
-              className="btn btn-primary"
-              href="https://www.cal.eu/sieg-kamgo/30min"
-              target="_blank"
-              rel="noreferrer"
-              data-track="book-call"
-              data-cta-location="home-hero"
-            >
-              Book a free strategy call
-            </a>
-            <Link className="btn btn-secondary" href="/adminops-pilot">
-              Explore the 30-day pilot
-            </Link>
+          <div className="hero-shell">
+            <div className="hero-grid">
+              <div>
+                <span className="badge">AdminOps · AI + Human Approval</span>
+                <h1 id="home-hero-heading">Automate 60–80% of routine admin work in 30 days.</h1>
+                <p id="home-hero-summary">
+                  AdminOps builds AI agents that handle repetitive admin workflows end-to-end while your team keeps final approval.
+                  You get cleaner operations, fewer errors, and faster reporting without adding headcount.
+                </p>
+                <div className="cta-row">
+                  <a
+                    className="btn btn-primary"
+                    href="https://www.cal.eu/sieg-kamgo/30min"
+                    target="_blank"
+                    rel="noreferrer"
+                    data-track="book-call"
+                    data-cta-location="home-hero"
+                  >
+                    Book a free strategy call
+                  </a>
+                  <Link className="btn btn-secondary" href="/adminops-pilot">
+                    Explore the 30-day pilot
+                  </Link>
+                </div>
+              </div>
+              <aside className="card hero-proof" aria-label="AdminOps value snapshot">
+                <h3>Why teams switch to AdminOps</h3>
+                <ul>
+                  <li>Fewer repetitive admin handoffs across systems</li>
+                  <li>Human approval gates preserved for high-risk decisions</li>
+                  <li>Weekly KPI visibility on throughput and exceptions</li>
+                </ul>
+                <div className="stats-row">
+                  <div className="card">
+                    <strong>30 days</strong>
+                    <p>to first workflow launch</p>
+                  </div>
+                  <div className="card">
+                    <strong>60–80%</strong>
+                    <p>routine admin workload automated</p>
+                  </div>
+                </div>
+              </aside>
+            </div>
           </div>
         </div>
       </section>
 
       <section className="section section-alt">
-        <div className="container grid-3">
+        <div className="container">
+          <h2>Built for operations leaders under pressure</h2>
+          <div className="grid-3">
           <article className="card">
             <h3>Ideal Client Avatar</h3>
             <p><strong>Role:</strong> Owner, COO, Operations Manager</p>
@@ -66,6 +92,7 @@ export default function HomePage() {
             <h3>Desired Outcome</h3>
             <p>Fewer admin hours, clean reporting, and no extra hires, without losing control or compromising security.</p>
           </article>
+          </div>
         </div>
       </section>
 
@@ -216,7 +243,7 @@ export default function HomePage() {
       </section>
 
       <section className="section">
-        <div className="container card">
+        <div className="container card value-strip">
           <h2>Start with a Free Strategy Call</h2>
           <p>
             Tell us your most repetitive admin workflow. We will show you where automation can deliver visible gains in 30 days.
