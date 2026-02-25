@@ -96,13 +96,51 @@ export default function PropertyManagementPage() {
         <Script id="property-breadcrumb-schema" type="application/ld+json" strategy="afterInteractive">
           {JSON.stringify(breadcrumbSchema)}
         </Script>
-        <h1 id="property-heading">AI Agents for Property Management Operations</h1>
-        <p id="property-summary">
-          Property managers lose hours each week to reconciliations, tenant follow-ups, maintenance coordination, and report assembly.
-          AdminOps automates these repetitive workflows while keeping managers in control of final approvals.
-        </p>
+        <div className="hero-shell">
+          <div className="hero-grid">
+            <div>
+              <span className="badge">Property Management · AI + Human Approval</span>
+              <h1 id="property-heading">AI Agents for Property Management Operations</h1>
+              <p id="property-summary">
+                Property managers lose hours each week to reconciliations, tenant follow-ups, maintenance coordination, and report assembly.
+                AdminOps automates these repetitive workflows while keeping managers in control of final approvals.
+              </p>
+              <div className="cta-row">
+                <a
+                  className="btn btn-primary"
+                  href="https://www.cal.eu/sieg-kamgo/30min"
+                  target="_blank"
+                  rel="noreferrer"
+                  data-track="book-call"
+                  data-cta-location="property-hero"
+                >
+                  Book a free strategy call
+                </a>
+                <a className="btn btn-secondary" href="/adminops-pilot">See 30-day pilot</a>
+              </div>
+            </div>
+            <aside className="card hero-proof" aria-label="Property operations proof points">
+              <h3>What improves first</h3>
+              <ul>
+                <li>Rent and invoice reconciliation cycle times</li>
+                <li>Maintenance and arrears follow-up consistency</li>
+                <li>Owner reporting accuracy and timeliness</li>
+              </ul>
+              <div className="stats-row">
+                <div className="card">
+                  <strong>30 days</strong>
+                  <p>to first automated workflow</p>
+                </div>
+                <div className="card">
+                  <strong>Up to 70%</strong>
+                  <p>faster reconciliation cycles</p>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
 
-        <div className="grid-3" style={{ marginTop: "1rem" }}>
+        <div className="grid-3" style={{ marginTop: "1.25rem" }}>
           <article className="card">
             <h3>Common Pain Points</h3>
             <ul>

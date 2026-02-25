@@ -96,13 +96,51 @@ export default function ClinicOpsPage() {
         <Script id="clinic-breadcrumb-schema" type="application/ld+json" strategy="afterInteractive">
           {JSON.stringify(breadcrumbSchema)}
         </Script>
-        <h1 id="clinic-heading">AI Agents for Clinic Operations</h1>
-        <p id="clinic-summary">
-          Clinics need speed and precision across patient administration, referral handling, and billing workflows.
-          AdminOps agents reduce manual burden while clinical leaders keep final control and accountability.
-        </p>
+        <div className="hero-shell">
+          <div className="hero-grid">
+            <div>
+              <span className="badge">Clinics · AI + Human Approval</span>
+              <h1 id="clinic-heading">AI Agents for Clinic Operations</h1>
+              <p id="clinic-summary">
+                Clinics need speed and precision across patient administration, referral handling, and billing workflows.
+                AdminOps agents reduce manual burden while clinical leaders keep final control and accountability.
+              </p>
+              <div className="cta-row">
+                <a
+                  className="btn btn-primary"
+                  href="https://www.cal.eu/sieg-kamgo/30min"
+                  target="_blank"
+                  rel="noreferrer"
+                  data-track="book-call"
+                  data-cta-location="clinic-hero"
+                >
+                  Book a free strategy call
+                </a>
+                <a className="btn btn-secondary" href="/adminops-pilot">See 30-day pilot</a>
+              </div>
+            </div>
+            <aside className="card hero-proof" aria-label="Clinic operations proof points">
+              <h3>Where clinics see impact</h3>
+              <ul>
+                <li>Referral and claims intake consistency</li>
+                <li>Lower admin queue time and rework</li>
+                <li>Compliance-ready audit visibility</li>
+              </ul>
+              <div className="stats-row">
+                <div className="card">
+                  <strong>30 days</strong>
+                  <p>to first clinic workflow launch</p>
+                </div>
+                <div className="card">
+                  <strong>Weekly</strong>
+                  <p>KPI reviews with escalation controls</p>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
 
-        <div className="grid-3" style={{ marginTop: "1rem" }}>
+        <div className="grid-3" style={{ marginTop: "1.25rem" }}>
           <article className="card">
             <h3>Segment Pain Points</h3>
             <ul>

@@ -96,13 +96,51 @@ export default function RestaurantOpsPage() {
         <Script id="restaurant-breadcrumb-schema" type="application/ld+json" strategy="afterInteractive">
           {JSON.stringify(breadcrumbSchema)}
         </Script>
-        <h1 id="restaurant-heading">AI Agents for Restaurant Operations</h1>
-        <p id="restaurant-summary">
-          Restaurant teams should focus on service, not repetitive back-office admin.
-          AdminOps automates invoice processing, rota admin, and reporting workflows so operators can scale with less friction.
-        </p>
+        <div className="hero-shell">
+          <div className="hero-grid">
+            <div>
+              <span className="badge">Restaurants · AI + Human Approval</span>
+              <h1 id="restaurant-heading">AI Agents for Restaurant Operations</h1>
+              <p id="restaurant-summary">
+                Restaurant teams should focus on service, not repetitive back-office admin.
+                AdminOps automates invoice processing, rota admin, and reporting workflows so operators can scale with less friction.
+              </p>
+              <div className="cta-row">
+                <a
+                  className="btn btn-primary"
+                  href="https://www.cal.eu/sieg-kamgo/30min"
+                  target="_blank"
+                  rel="noreferrer"
+                  data-track="book-call"
+                  data-cta-location="restaurant-hero"
+                >
+                  Book a free strategy call
+                </a>
+                <a className="btn btn-secondary" href="/adminops-pilot">See 30-day pilot</a>
+              </div>
+            </div>
+            <aside className="card hero-proof" aria-label="Restaurant operations proof points">
+              <h3>Top operational wins</h3>
+              <ul>
+                <li>Faster invoice and back-office reconciliation</li>
+                <li>Cleaner multi-site reporting consistency</li>
+                <li>Manager control on critical exceptions</li>
+              </ul>
+              <div className="stats-row">
+                <div className="card">
+                  <strong>Multi-site</strong>
+                  <p>standardized reporting views</p>
+                </div>
+                <div className="card">
+                  <strong>Lower</strong>
+                  <p>admin hours per location</p>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
 
-        <div className="grid-3" style={{ marginTop: "1rem" }}>
+        <div className="grid-3" style={{ marginTop: "1.25rem" }}>
           <article className="card">
             <h3>Segment Pain Points</h3>
             <ul>
