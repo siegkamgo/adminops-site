@@ -67,7 +67,9 @@ export default function InsightsIndexPage({ searchParams }) {
           <div className="grid-2" style={{ marginTop: "1rem" }}>
             {insights.map((insight) => (
               <article className="card" key={insight.slug}>
-                <h2>{insight.title}</h2>
+                <h2>
+                  <Link href={`/insights/${insight.slug}`}>{insight.title}</Link>
+                </h2>
                 <p>{insight.metaDescription}</p>
                 <p><strong>Target keyword:</strong> {insight.targetKeyword}</p>
                 <p><strong>Published:</strong> {insight.publishDate}</p>
