@@ -1,0 +1,220 @@
+{
+  "generatedAt": "2026-02-26T00:00:00Z",
+  "batch": 1,
+  "titleCount": 20,
+  "cadence": "2 posts per day",
+  "dateRange": {
+    "start": "2026-02-27",
+    "end": "2026-03-08"
+  },
+  "researchSources": [
+    "openclaw-high-intent-curated.json",
+    "openclaw-high-intent-keywords.json",
+    "openclaw-agent-automation-keywords.json",
+    "openclaw-seo-property-management-software.json",
+    "openclaw-seo-property-management-accounting.json"
+  ],
+  "method": "Prioritized by commercial intent labels (BOFU/MOFU), monthly search volume, and keyword family deduplication to reduce cannibalization.",
+  "items": [
+    {
+      "publishDate": "2026-02-27",
+      "slot": "AM",
+      "segment": "Property Managers",
+      "title": "Best Accounts Payable Automation Software for Property Management Teams (2026)",
+      "primaryKeyword": "accounts payable automation software",
+      "searchVolume": 2900,
+      "intent": "BOFU",
+      "serpAngle": "comparison/alternatives"
+    },
+    {
+      "publishDate": "2026-02-27",
+      "slot": "PM",
+      "segment": "Property Managers",
+      "title": "Accounts Payable Automation in Property Ops: 30-Day Implementation Playbook",
+      "primaryKeyword": "automation accounts payable",
+      "searchVolume": 1900,
+      "intent": "MOFU-BOFU",
+      "serpAngle": "implementation guide"
+    },
+    {
+      "publishDate": "2026-02-28",
+      "slot": "AM",
+      "segment": "Property Managers",
+      "title": "Software for Property Management: Which Platform Fits SMB Operations Best?",
+      "primaryKeyword": "software for property management",
+      "searchVolume": 1900,
+      "intent": "BOFU",
+      "serpAngle": "buyer guide"
+    },
+    {
+      "publishDate": "2026-02-28",
+      "slot": "PM",
+      "segment": "Property Managers",
+      "title": "Property Management Computer Software with Reconciliation Workflows: What to Look For",
+      "primaryKeyword": "property management computer software",
+      "searchVolume": 1900,
+      "intent": "BOFU",
+      "serpAngle": "feature-led evaluation"
+    },
+    {
+      "publishDate": "2026-03-01",
+      "slot": "AM",
+      "segment": "Restaurants",
+      "title": "Restaurant Inventory Management Software: Best Options for Multi-Site Operators",
+      "primaryKeyword": "restaurant inventory management software",
+      "searchVolume": 1300,
+      "intent": "BOFU",
+      "serpAngle": "comparison/alternatives"
+    },
+    {
+      "publishDate": "2026-03-01",
+      "slot": "PM",
+      "segment": "Restaurants",
+      "title": "Inventory Management Software for Restaurant Chains: Rollout and KPI Checklist",
+      "primaryKeyword": "inventory management software for restaurant",
+      "searchVolume": 1300,
+      "intent": "BOFU",
+      "serpAngle": "implementation checklist"
+    },
+    {
+      "publishDate": "2026-03-02",
+      "slot": "AM",
+      "segment": "Clinics",
+      "title": "Dental Clinic Management Software: Best Tools for Admin Workflow Automation",
+      "primaryKeyword": "dental clinic management software",
+      "searchVolume": 880,
+      "intent": "BOFU",
+      "serpAngle": "comparison/alternatives"
+    },
+    {
+      "publishDate": "2026-03-02",
+      "slot": "PM",
+      "segment": "Clinics",
+      "title": "Clinic Management Software for Small Teams: How to Reduce Admin Queue Time",
+      "primaryKeyword": "clinic management software",
+      "searchVolume": 590,
+      "intent": "BOFU",
+      "serpAngle": "problem-solution guide"
+    },
+    {
+      "publishDate": "2026-03-03",
+      "slot": "AM",
+      "segment": "Property Managers",
+      "title": "Accounts Payable Automation Solution: Selection Criteria for Operations Leaders",
+      "primaryKeyword": "accounts payable automation solution",
+      "searchVolume": 720,
+      "intent": "BOFU",
+      "serpAngle": "selection framework"
+    },
+    {
+      "publishDate": "2026-03-03",
+      "slot": "PM",
+      "segment": "Property Managers",
+      "title": "Accounts Payable Automation in NetSuite: Workflow Design and Risk Controls",
+      "primaryKeyword": "accounts payable automation netsuite",
+      "searchVolume": 720,
+      "intent": "MOFU-BOFU",
+      "serpAngle": "platform-specific implementation"
+    },
+    {
+      "publishDate": "2026-03-04",
+      "slot": "AM",
+      "segment": "Property Managers",
+      "title": "Invoice Processing Automation: Best Practices for Property Finance Teams",
+      "primaryKeyword": "invoice processing automation",
+      "searchVolume": 590,
+      "intent": "MOFU-BOFU",
+      "serpAngle": "best-practice guide"
+    },
+    {
+      "publishDate": "2026-03-04",
+      "slot": "PM",
+      "segment": "Property Managers",
+      "title": "Invoice Processing Automation Software: Buyer Checklist and Comparison Criteria",
+      "primaryKeyword": "invoice processing automation software",
+      "searchVolume": 390,
+      "intent": "BOFU",
+      "serpAngle": "buyer checklist"
+    },
+    {
+      "publishDate": "2026-03-05",
+      "slot": "AM",
+      "segment": "Clinics",
+      "title": "Clinic Management System Software vs Generic Tools: What Actually Improves Throughput",
+      "primaryKeyword": "clinic management system software",
+      "searchVolume": 590,
+      "intent": "BOFU",
+      "serpAngle": "comparison"
+    },
+    {
+      "publishDate": "2026-03-05",
+      "slot": "PM",
+      "segment": "Clinics",
+      "title": "Software for Clinic Management with Claims Pre-Checks: 30-Day Rollout Plan",
+      "primaryKeyword": "software for clinic management",
+      "searchVolume": 590,
+      "intent": "BOFU",
+      "serpAngle": "implementation plan"
+    },
+    {
+      "publishDate": "2026-03-06",
+      "slot": "AM",
+      "segment": "Property Managers",
+      "title": "Property Management Accounting Software: All-in-One vs Specialized Stack",
+      "primaryKeyword": "property management accounting software",
+      "searchVolume": 320,
+      "intent": "BOFU",
+      "serpAngle": "comparison"
+    },
+    {
+      "publishDate": "2026-03-06",
+      "slot": "PM",
+      "segment": "Property Managers",
+      "title": "Accounting Software for Property Management: How to Prevent Reconciliation Bottlenecks",
+      "primaryKeyword": "accounting software for property management",
+      "searchVolume": 320,
+      "intent": "MOFU-BOFU",
+      "serpAngle": "problem-solution guide"
+    },
+    {
+      "publishDate": "2026-03-07",
+      "slot": "AM",
+      "segment": "Property Managers",
+      "title": "Computer Use Agent for Back-Office Operations: Best Platforms and Use Cases",
+      "primaryKeyword": "computer use agent",
+      "searchVolume": 1000,
+      "intent": "MOFU",
+      "serpAngle": "platform comparison"
+    },
+    {
+      "publishDate": "2026-03-07",
+      "slot": "PM",
+      "segment": "Property Managers",
+      "title": "AI Agent Browser Automation for Ops Teams: Controls, Risks, and KPI Benchmarks",
+      "primaryKeyword": "ai agent browser automation",
+      "searchVolume": 40,
+      "intent": "MOFU",
+      "serpAngle": "risk-and-controls playbook"
+    },
+    {
+      "publishDate": "2026-03-08",
+      "slot": "AM",
+      "segment": "Property Managers",
+      "title": "Property Management Rental Software for SMB Portfolios: Feature Scorecard",
+      "primaryKeyword": "property management rental software",
+      "searchVolume": 320,
+      "intent": "BOFU",
+      "serpAngle": "feature scorecard"
+    },
+    {
+      "publishDate": "2026-03-08",
+      "slot": "PM",
+      "segment": "Property Managers",
+      "title": "UK Property Management Software: Selection Framework for Growing Teams",
+      "primaryKeyword": "property management software uk",
+      "searchVolume": 260,
+      "intent": "BOFU",
+      "serpAngle": "regional buyer guide"
+    }
+  ]
+}
