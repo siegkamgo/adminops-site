@@ -1,7 +1,7 @@
 {
   "slug": "clinic-ops-admin-automation",
   "title": "Clinic Ops Admin Automation: Reducing Intake & Billing Backlogs with AI Agents",
-  "metaDescription": "How clinics in the UK and US use AI agents to cut intake and billing admin time, reduce errors, and keep compliance-ready approval controls.",
+  "metaDescription": "Clinic Ops Admin Automation: Reducing Intake & Billing Backlogs with AI Agents Learn how clinics can implement clinic admin automation with human approval co...",
   "targetKeyword": "clinic admin automation",
   "segment": "Clinics",
   "seedKeyword": "clinic admin automation",
@@ -65,7 +65,8 @@
       "paragraphs": [
         "Clinic automation must retain audit trails, role-based access, and explicit approval checkpoints.",
         "Region-aware controls help align with UK GDPR expectations and US HIPAA-adjacent operational practices."
-      ]
+      ],
+      "list": []
     }
   ],
   "cta": {

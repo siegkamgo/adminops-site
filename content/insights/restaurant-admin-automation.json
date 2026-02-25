@@ -1,7 +1,7 @@
 {
   "slug": "restaurant-admin-automation",
   "title": "Restaurant Admin Automation: Faster Reconciliation, Cleaner Supplier Invoices",
-  "metaDescription": "How restaurant operators use AI agents to reconcile daily sales, process supplier invoices, and audit delivery platform fees with human approval controls.",
+  "metaDescription": "Restaurant Admin Automation: Faster Reconciliation, Cleaner Supplier Invoices Learn how restaurants can implement restaurant admin automation with human appr...",
   "targetKeyword": "restaurant admin automation",
   "segment": "Restaurants",
   "seedKeyword": "restaurant admin automation",
@@ -64,7 +64,8 @@
       "paragraphs": [
         "AdminOps keeps a human approval step for payouts, supplier payments, and reporting sign-off.",
         "That control layer makes the system safe for multi-location operators and franchise groups."
-      ]
+      ],
+      "list": []
     }
   ],
   "cta": {

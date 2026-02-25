@@ -1,7 +1,7 @@
 {
   "slug": "property-managers-automation-accounts-payable",
-  "title": "Automation Accounts Payable: 30-Day Implementation Playbook for Property Management Teams",
-  "metaDescription": "Automation Accounts Payable: 30-Day Implementation Playbook for Property Management Teams Learn how property managers can apply automation accounts payable w...",
+  "title": "Accounts Payable Automation: 30-Day Implementation Playbook for Property Management Teams",
+  "metaDescription": "Accounts Payable Automation: 30-Day Implementation Playbook for Property Management Teams Learn how property managers can implement accounts payable automati...",
   "targetKeyword": "automation accounts payable",
   "segment": "Property Managers",
   "seedKeyword": "accounts payable automation",
@@ -22,7 +22,7 @@
     {
       "title": "Quick answer",
       "paragraphs": [
-        "automation accounts payable can reduce repetitive admin load when implemented as a controlled workflow with clear approvals and exception ownership.",
+        "accounts payable automation can reduce repetitive admin load when implemented as a controlled workflow with clear approvals and exception ownership.",
         "For property management operations teams, the fastest path is to automate repetitive checks first, route edge cases to the right owner, and keep final decisions with humans."
       ],
       "list": [
@@ -39,9 +39,9 @@
       ]
     },
     {
-      "title": "Why automation accounts payable matters now",
+      "title": "Why accounts payable automation matters now",
       "paragraphs": [
-        "Search demand for \"automation accounts payable\" indicates active buyer and implementation interest, especially among teams looking for operational leverage without increasing headcount.",
+        "Search demand for \"accounts payable automation\" indicates active buyer and implementation interest, especially among teams looking for operational leverage without increasing headcount.",
         "Most organizations already have the tools; the real gap is execution consistency across intake, validation, routing, and approvals."
       ],
       "list": [
@@ -78,7 +78,7 @@
       ]
     },
     {
-      "title": "How to implement automation accounts payable in 30 days",
+      "title": "How to implement accounts payable automation in 30 days",
       "paragraphs": [
         "Start with one high-friction process and run supervised automation in short weekly loops.",
         "Expand scope only after exception rates stabilize and the team trusts control policies."
@@ -163,7 +163,7 @@
     {
       "title": "FAQ",
       "paragraphs": [
-        "What is automation accounts payable? automation accounts payable is a practical operations workflow where automation handles repeatable steps and humans retain approval over high-risk decisions.",
+        "What is accounts payable automation? accounts payable automation is a practical operations workflow where automation handles repeatable steps and humans retain approval over high-risk decisions.",
         "How quickly can we see results? Most teams see measurable movement in 2–4 weeks when scope is narrow and KPIs are reviewed weekly.",
         "Does this replace managers? No. It removes repetitive manual work and keeps manager approvals in policy-defined checkpoints.",
         "What should we automate first? Start with high-volume, rules-based tasks that currently create queue delays and rework."
