@@ -1,0 +1,209 @@
+{
+  "generatedAt": "2026-02-26T00:36:56.258Z",
+  "batch": 2,
+  "total": 20,
+  "success": 20,
+  "failed": 0,
+  "results": [
+    {
+      "slug": "property-managers-software-for-property-management",
+      "status": "ok",
+      "image": "/images/insights/featured/property-managers-software-for-property-management.jpg",
+      "insightUpdated": true,
+      "photographer": "Mikhail Nilov",
+      "photographerUrl": "https://www.pexels.com/@mikhail-nilov",
+      "photoPage": "https://www.pexels.com/photo/man-in-brown-blazer-holding-white-tablet-computer-6893921/",
+      "source": "pexels"
+    },
+    {
+      "slug": "clinics-medical-billing-software",
+      "status": "ok",
+      "image": "/images/insights/featured/clinics-medical-billing-software.jpg",
+      "insightUpdated": true,
+      "photographer": "Los Muertos Crew",
+      "photographerUrl": "https://www.pexels.com/@cristian-rojas",
+      "photoPage": "https://www.pexels.com/photo/a-man-lying-on-bed-while-having-an-ecg-8460092/",
+      "source": "pexels"
+    },
+    {
+      "slug": "property-managers-accounts-payable-automation",
+      "status": "ok",
+      "image": "/images/insights/featured/property-managers-accounts-payable-automation.jpg",
+      "insightUpdated": true,
+      "photographer": "www.kaboompics.com",
+      "photographerUrl": "https://www.pexels.com/@karola-g",
+      "photoPage": "https://www.pexels.com/photo/employees-wearing-eyeglasses-looking-at-the-graph-on-the-board-7876660/",
+      "source": "pexels"
+    },
+    {
+      "slug": "property-managers-cloud-based-property-management-software",
+      "status": "ok",
+      "image": "/images/insights/featured/property-managers-cloud-based-property-management-software.jpg",
+      "insightUpdated": true,
+      "photographer": "Vlada Karpovich",
+      "photographerUrl": "https://www.pexels.com/@vlada-karpovich",
+      "photoPage": "https://www.pexels.com/photo/woman-drinking-coffee-while-working-with-laptop-4050289/",
+      "source": "pexels"
+    },
+    {
+      "slug": "restaurants-inventory-management-software-restaurant",
+      "status": "ok",
+      "image": "/images/insights/featured/restaurants-inventory-management-software-restaurant.jpg",
+      "insightUpdated": true,
+      "photographer": "William  Fortunato",
+      "photographerUrl": "https://www.pexels.com/@william-fortunato",
+      "photoPage": "https://www.pexels.com/photo/focused-young-multiethnic-colleagues-chatting-in-cafe-6140922/",
+      "source": "pexels"
+    },
+    {
+      "slug": "clinics-medical-billing-and-coding-software",
+      "status": "ok",
+      "image": "/images/insights/featured/clinics-medical-billing-and-coding-software.jpg",
+      "insightUpdated": true,
+      "photographer": "Damir K .",
+      "photographerUrl": "https://www.pexels.com/@damir",
+      "photoPage": "https://www.pexels.com/photo/dashboard-in-a-car-in-the-dark-20509593/",
+      "source": "pexels"
+    },
+    {
+      "slug": "restaurants-restaurant-accounting-software",
+      "status": "ok",
+      "image": "/images/insights/featured/restaurants-restaurant-accounting-software.jpg",
+      "insightUpdated": true,
+      "photographer": "RDNE Stock project",
+      "photographerUrl": "https://www.pexels.com/@rdne",
+      "photoPage": "https://www.pexels.com/photo/women-chatting-during-an-office-break-7491020/",
+      "source": "pexels"
+    },
+    {
+      "slug": "clinics-clinic-management-system-software",
+      "status": "ok",
+      "image": "/images/insights/featured/clinics-clinic-management-system-software.jpg",
+      "insightUpdated": true,
+      "photographer": "Andrea Piacquadio",
+      "photographerUrl": "https://www.pexels.com/@olly",
+      "photoPage": "https://www.pexels.com/photo/woman-in-white-tank-top-playing-an-accoustic-guitar-3931065/",
+      "source": "pexels"
+    },
+    {
+      "slug": "property-managers-invoice-processing-automation-software",
+      "status": "ok",
+      "image": "/images/insights/featured/property-managers-invoice-processing-automation-software.jpg",
+      "insightUpdated": true,
+      "photographer": "Edmond Dantès",
+      "photographerUrl": "https://www.pexels.com/@edmond-dantes",
+      "photoPage": "https://www.pexels.com/photo/woman-in-red-blazer-holding-a-paper-7103186/",
+      "source": "pexels"
+    },
+    {
+      "slug": "restaurants-best-accounting-software-for-restaurant",
+      "status": "ok",
+      "image": "/images/insights/featured/restaurants-best-accounting-software-for-restaurant.jpg",
+      "insightUpdated": true,
+      "photographer": "Aa Dil",
+      "photographerUrl": "https://www.pexels.com/@aadil",
+      "photoPage": "https://www.pexels.com/photo/photo-of-man-through-a-window-2598009/",
+      "source": "pexels"
+    },
+    {
+      "slug": "clinics-insurance-claims-processing-automation",
+      "status": "ok",
+      "image": "/images/insights/featured/clinics-insurance-claims-processing-automation.jpg",
+      "insightUpdated": true,
+      "photographer": "RDNE Stock project",
+      "photographerUrl": "https://www.pexels.com/@rdne",
+      "photoPage": "https://www.pexels.com/photo/doctor-writing-on-a-medical-chart-6129043/",
+      "source": "pexels"
+    },
+    {
+      "slug": "restaurants-restaurant-accounting-and-payroll-software",
+      "status": "ok",
+      "image": "/images/insights/featured/restaurants-restaurant-accounting-and-payroll-software.jpg",
+      "insightUpdated": true,
+      "photographer": "Ketut Subiyanto",
+      "photographerUrl": "https://www.pexels.com/@ketut-subiyanto",
+      "photoPage": "https://www.pexels.com/photo/bar-workers-surfing-internet-on-laptop-4353612/",
+      "source": "pexels"
+    },
+    {
+      "slug": "property-managers-buildium-property-management-software",
+      "status": "ok",
+      "image": "/images/insights/featured/property-managers-buildium-property-management-software.jpg",
+      "insightUpdated": true,
+      "photographer": "RDNE Stock project",
+      "photographerUrl": "https://www.pexels.com/@rdne",
+      "photoPage": "https://www.pexels.com/photo/man-and-woman-sitting-on-gray-couch-8069479/",
+      "source": "pexels"
+    },
+    {
+      "slug": "property-managers-property-management-software-best",
+      "status": "ok",
+      "image": "/images/insights/featured/property-managers-property-management-software-best.jpg",
+      "insightUpdated": true,
+      "photographer": "Yan Krukau",
+      "photographerUrl": "https://www.pexels.com/@yankrukov",
+      "photoPage": "https://www.pexels.com/photo/office-team-having-a-conversation-7640438/",
+      "source": "pexels"
+    },
+    {
+      "slug": "property-managers-property-rent-management-software",
+      "status": "ok",
+      "image": "/images/insights/featured/property-managers-property-rent-management-software.jpg",
+      "insightUpdated": true,
+      "photographer": "Peter  Vang",
+      "photographerUrl": "https://www.pexels.com/@peter-vang-2157328093",
+      "photoPage": "https://www.pexels.com/photo/spacious-living-room-with-natural-light-35419412/",
+      "source": "pexels"
+    },
+    {
+      "slug": "property-managers-property-rental-management-software",
+      "status": "ok",
+      "image": "/images/insights/featured/property-managers-property-rental-management-software.jpg",
+      "insightUpdated": true,
+      "photographer": "olia danilevich",
+      "photographerUrl": "https://www.pexels.com/@olia-danilevich",
+      "photoPage": "https://www.pexels.com/photo/man-sitting-in-front-of-three-computers-4974915/",
+      "source": "pexels"
+    },
+    {
+      "slug": "property-managers-accounting-property-management-software",
+      "status": "ok",
+      "image": "/images/insights/featured/property-managers-accounting-property-management-software.jpg",
+      "insightUpdated": true,
+      "photographer": "Green odette",
+      "photographerUrl": "https://www.pexels.com/@green-odette-232224115",
+      "photoPage": "https://www.pexels.com/photo/corporate-meeting-with-focused-professionals-32258108/",
+      "source": "pexels"
+    },
+    {
+      "slug": "property-managers-residential-property-management-software",
+      "status": "ok",
+      "image": "/images/insights/featured/property-managers-residential-property-management-software.jpg",
+      "insightUpdated": true,
+      "photographer": "Moe Magners",
+      "photographerUrl": "https://www.pexels.com/@moe-magners",
+      "photoPage": "https://www.pexels.com/photo/woman-holding-a-laptop-standing-near-her-co-workers-7495317/",
+      "source": "pexels"
+    },
+    {
+      "slug": "property-managers-accounts-payable-automation-solutions",
+      "status": "ok",
+      "image": "/images/insights/featured/property-managers-accounts-payable-automation-solutions.jpg",
+      "insightUpdated": true,
+      "photographer": "Mikhail Nilov",
+      "photographerUrl": "https://www.pexels.com/@mikhail-nilov",
+      "photoPage": "https://www.pexels.com/photo/photograph-of-a-man-in-a-white-shirt-wearing-a-black-headset-7681842/",
+      "source": "pexels"
+    },
+    {
+      "slug": "property-managers-netsuite-accounts-payable-automation",
+      "status": "ok",
+      "image": "/images/insights/featured/property-managers-netsuite-accounts-payable-automation.jpg",
+      "insightUpdated": true,
+      "photographer": "RDNE Stock project",
+      "photographerUrl": "https://www.pexels.com/@rdne",
+      "photoPage": "https://www.pexels.com/photo/two-women-holding-their-folders-on-pink-background-7845240/",
+      "source": "pexels"
+    }
+  ]
+}

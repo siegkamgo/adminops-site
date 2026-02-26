@@ -1,0 +1,30 @@
+{
+  "generatedAt": "2026-02-26T00:36:12.470Z",
+  "batch": 2,
+  "sourceBatch": "content/editorial-batches/batch-02-20-titles.json",
+  "total": 20,
+  "created": 20,
+  "updated": 0,
+  "slugs": [
+    "property-managers-software-for-property-management",
+    "clinics-medical-billing-software",
+    "property-managers-accounts-payable-automation",
+    "property-managers-cloud-based-property-management-software",
+    "restaurants-inventory-management-software-restaurant",
+    "clinics-medical-billing-and-coding-software",
+    "restaurants-restaurant-accounting-software",
+    "clinics-clinic-management-system-software",
+    "property-managers-invoice-processing-automation-software",
+    "restaurants-best-accounting-software-for-restaurant",
+    "clinics-insurance-claims-processing-automation",
+    "restaurants-restaurant-accounting-and-payroll-software",
+    "property-managers-buildium-property-management-software",
+    "property-managers-property-management-software-best",
+    "property-managers-property-rent-management-software",
+    "property-managers-property-rental-management-software",
+    "property-managers-accounting-property-management-software",
+    "property-managers-residential-property-management-software",
+    "property-managers-accounts-payable-automation-solutions",
+    "property-managers-netsuite-accounts-payable-automation"
+  ]
+}

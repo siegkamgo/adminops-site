@@ -265,6 +265,16 @@ async function run() {
     .filter((row) => isAllowedKeyword(row.keyword))
     .sort((a, b) => b.searchVolume - a.searchVolume);
 
+  const existingSlugs = new Set();
+  const insightsDir = path.join(root, "content", "insights");
+  if (fs.existsSync(insightsDir)) {
+    for (const fileName of fs.readdirSync(insightsDir)) {
+      if (fileName.endsWith(".json")) {
+        existingSlugs.add(fileName.replace(/\.json$/i, ""));
+      }
+    }
+  }
+
   const targetBySegment = {
     "Property Managers": 10,
     "Clinics": 6,
@@ -281,6 +291,7 @@ async function run() {
   for (const candidate of candidates) {
     if (selected.length >= 20) break;
     if ((countBySegment[candidate.segment] || 0) >= (targetBySegment[candidate.segment] || 20)) continue;
+    if (existingSlugs.has(toSlug(`${candidate.segment}-${candidate.keyword}`))) continue;
 
     const topicFamily = canonicalTopic(candidate.keyword);
     const tooClose = selected.some((item) => similarity(item.primaryKeyword, candidate.keyword) >= 0.72);
@@ -315,6 +326,7 @@ async function run() {
       if (selected.length >= 20) break;
       const exists = selected.some((item) => item.primaryKeyword.toLowerCase() === candidate.keyword.toLowerCase());
       if (exists) continue;
+      if (existingSlugs.has(toSlug(`${candidate.segment}-${candidate.keyword}`))) continue;
       const topicFamily = canonicalTopic(candidate.keyword);
       const tooClose = selected.some((item) => similarity(item.primaryKeyword, candidate.keyword) >= 0.8);
       if (tooClose) continue;
