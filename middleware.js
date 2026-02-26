@@ -1,5 +1,15 @@
 import { NextResponse } from "next/server";
 
+function getRequestHost(request) {
+  const hostHeader = request.headers.get("x-forwarded-host") || request.headers.get("host") || "";
+  const firstHost = hostHeader.split(",")[0].trim().toLowerCase();
+  return firstHost.split(":")[0];
+}
+
+function isLocalHost(host) {
+  return host === "localhost" || host === "127.0.0.1" || host === "::1";
+}
+
 function unauthorizedResponse() {
   return new NextResponse("Authentication required", {
     status: 401,
@@ -14,6 +24,16 @@ export function middleware(request) {
 
   if (!pathname.startsWith("/admin/seo-agent")) {
     return NextResponse.next();
+  }
+
+  const requestHost = getRequestHost(request);
+  const adminHost = String(process.env.ADMIN_DASHBOARD_HOST || "admin.adminops.cloud").toLowerCase();
+
+  if (requestHost && !isLocalHost(requestHost) && requestHost !== adminHost) {
+    const redirectUrl = request.nextUrl.clone();
+    redirectUrl.protocol = "https";
+    redirectUrl.host = adminHost;
+    return NextResponse.redirect(redirectUrl);
   }
 
   const adminUser = process.env.ADMIN_BASIC_AUTH_USER;
