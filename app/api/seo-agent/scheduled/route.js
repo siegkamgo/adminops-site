@@ -1,6 +1,5 @@
-import fs from "node:fs";
-import path from "node:path";
 import { NextResponse } from "next/server";
+import { listInsights } from "../../../../lib/insights-store";
 
 function utcTodayString() {
   const now = new Date();
@@ -12,17 +11,19 @@ function utcTodayString() {
 
 export async function GET() {
   try {
-    const calendarPath = path.join(process.cwd(), "content", "editorial-calendar-two-weeks.json");
-    if (!fs.existsSync(calendarPath)) {
-      return NextResponse.json({ items: [] });
-    }
-
-    const raw = fs.readFileSync(calendarPath, "utf8");
-    const parsed = JSON.parse(raw);
-    const items = Array.isArray(parsed.items) ? parsed.items : [];
-
     const previewToken = process.env.INSIGHTS_PREVIEW_TOKEN || "";
     const today = utcTodayString();
+
+    const items = listInsights()
+      .filter((item) => item?.slug && item?.publishDate)
+      .sort((a, b) => {
+        const dateCompare = String(a.publishDate).localeCompare(String(b.publishDate));
+        if (dateCompare !== 0) {
+          return dateCompare;
+        }
+
+        return String(a.slug).localeCompare(String(b.slug));
+      });
 
     const normalized = items.map((item) => {
       const isPublished = Boolean(item.publishDate && item.publishDate <= today);
@@ -31,11 +32,11 @@ export async function GET() {
         : null;
 
       return {
-        day: item.day,
+        day: item.day || null,
         publishDate: item.publishDate,
         slug: item.slug,
         title: item.title,
-        segment: item.segment,
+        segment: item.segment || "Insights",
         isPublished,
         insightPath: `/insights/${item.slug}`,
         previewPath
@@ -43,8 +44,8 @@ export async function GET() {
     });
 
     return NextResponse.json({
-      generatedAt: parsed.generatedAt || null,
-      timezone: parsed.timezone || "UTC",
+      generatedAt: new Date().toISOString(),
+      timezone: "UTC",
       items: normalized
     });
   } catch (error) {
