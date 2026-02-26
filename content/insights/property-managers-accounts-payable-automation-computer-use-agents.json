@@ -188,5 +188,11 @@
   "cta": {
     "label": "Book a free strategy call",
     "href": "https://www.cal.eu/sieg-kamgo/30min"
+  },
+  "featuredImage": {
+    "src": "/images/insights/featured/property-managers-accounts-payable-automation-computer-use-agents.jpg",
+    "alt": "Featured image for What does accounts payable automation look like with computer use agents?",
+    "caption": "Photo by Mikhail Nilov on Pexels",
+    "creditUrl": "https://www.pexels.com/photo/woman-holding-a-tablet-at-the-office-8101971/"
   }
 }

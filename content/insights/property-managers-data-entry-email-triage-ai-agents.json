@@ -188,5 +188,11 @@
   "cta": {
     "label": "Book a free strategy call",
     "href": "https://www.cal.eu/sieg-kamgo/30min"
+  },
+  "featuredImage": {
+    "src": "/images/insights/featured/property-managers-data-entry-email-triage-ai-agents.jpg",
+    "alt": "Featured image for How do data entry and email triage AI agents reduce admin overload for ops teams?",
+    "caption": "Photo by Google DeepMind on Pexels",
+    "creditUrl": "https://www.pexels.com/photo/an-artist-s-illustration-of-artificial-intelligence-ai-this-image-was-inspired-neural-networks-used-in-deep-learning-it-was-created-by-novoto-studio-as-part-of-the-visualising-ai-proje-17483871/"
   }
 }

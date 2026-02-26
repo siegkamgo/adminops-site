@@ -72,5 +72,11 @@
   "cta": {
     "label": "Book a free strategy call",
     "href": "https://www.cal.eu/sieg-kamgo/30min"
+  },
+  "featuredImage": {
+    "src": "/images/insights/featured/clinic-ops-admin-automation.jpg",
+    "alt": "Featured image for Clinic Ops Admin Automation: Reducing Intake & Billing Backlogs with AI Agents",
+    "caption": "Photo by Mikhail Nilov on Pexels",
+    "creditUrl": "https://www.pexels.com/photo/woman-in-red-blazer-holding-white-paper-7820379/"
   }
 }

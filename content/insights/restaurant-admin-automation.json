@@ -71,5 +71,11 @@
   "cta": {
     "label": "Book a free strategy call",
     "href": "https://www.cal.eu/sieg-kamgo/30min"
+  },
+  "featuredImage": {
+    "src": "/images/insights/featured/restaurant-admin-automation.jpg",
+    "alt": "Featured image for Restaurant Admin Automation: Faster Reconciliation, Cleaner Supplier Invoices",
+    "caption": "Photo by Ron Lach on Pexels",
+    "creditUrl": "https://www.pexels.com/photo/people-in-safety-vests-in-forest-10363540/"
   }
 }

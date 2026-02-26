@@ -188,5 +188,11 @@
   "cta": {
     "label": "Book a free strategy call",
     "href": "https://www.cal.eu/sieg-kamgo/30min"
+  },
+  "featuredImage": {
+    "src": "/images/insights/featured/restaurants-back-office-ai-agents-inventory-reporting.jpg",
+    "alt": "Featured image for How can restaurant teams use back-office AI agents to automate inventory and reporting?",
+    "caption": "Photo by Yan Krukau on Pexels",
+    "creditUrl": "https://www.pexels.com/photo/a-tired-woman-massaging-her-head-8867180/"
   }
 }

@@ -188,5 +188,11 @@
   "cta": {
     "label": "Book a free strategy call",
     "href": "https://www.cal.eu/sieg-kamgo/30min"
+  },
+  "featuredImage": {
+    "src": "/images/insights/featured/clinics-clinic-workflow-automation-ai-agents-playbook.jpg",
+    "alt": "Featured image for How can clinics automate admin workflows with AI agents while keeping control?",
+    "caption": "Photo by Cedric Fauntleroy on Pexels",
+    "creditUrl": "https://www.pexels.com/photo/a-receptionist-and-a-practitioner-at-the-reception-4269274/"
   }
 }

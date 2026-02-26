@@ -1,0 +1,180 @@
+{
+  "generatedAt": "2026-02-26T01:43:41.536Z",
+  "scope": "all-insights-missing-only",
+  "batch": null,
+  "total": 17,
+  "success": 17,
+  "failed": 0,
+  "results": [
+    {
+      "slug": "clinic-ops-admin-automation",
+      "status": "ok",
+      "image": "/images/insights/featured/clinic-ops-admin-automation.jpg",
+      "insightUpdated": true,
+      "photographer": "Mikhail Nilov",
+      "photographerUrl": "https://www.pexels.com/@mikhail-nilov",
+      "photoPage": "https://www.pexels.com/photo/woman-in-red-blazer-holding-white-paper-7820379/",
+      "source": "pexels"
+    },
+    {
+      "slug": "clinics-claims-processing-ai-agent-medical-billing-automation",
+      "status": "ok",
+      "image": "/images/insights/featured/clinics-claims-processing-ai-agent-medical-billing-automation.jpg",
+      "insightUpdated": true,
+      "photographer": "Ivan S",
+      "photographerUrl": "https://www.pexels.com/@ivan-s",
+      "photoPage": "https://www.pexels.com/photo/office-team-smiling-at-the-camera-7213603/",
+      "source": "pexels"
+    },
+    {
+      "slug": "clinics-clinic-workflow-automation-ai-agents-playbook",
+      "status": "ok",
+      "image": "/images/insights/featured/clinics-clinic-workflow-automation-ai-agents-playbook.jpg",
+      "insightUpdated": true,
+      "photographer": "Cedric Fauntleroy",
+      "photographerUrl": "https://www.pexels.com/@cedric-fauntleroy",
+      "photoPage": "https://www.pexels.com/photo/a-receptionist-and-a-practitioner-at-the-reception-4269274/",
+      "source": "pexels"
+    },
+    {
+      "slug": "clinics-software-for-medical-billing",
+      "status": "ok",
+      "image": "/images/insights/featured/clinics-software-for-medical-billing.jpg",
+      "insightUpdated": true,
+      "photographer": "Anete Lusina",
+      "photographerUrl": "https://www.pexels.com/@anete-lusina",
+      "photoPage": "https://www.pexels.com/photo/man-performing-diy-computer-maintenance-outdoors-31854238/",
+      "source": "pexels"
+    },
+    {
+      "slug": "clinics-software-medical-billing",
+      "status": "ok",
+      "image": "/images/insights/featured/clinics-software-medical-billing.jpg",
+      "insightUpdated": true,
+      "photographer": "Los Muertos Crew",
+      "photographerUrl": "https://www.pexels.com/@cristian-rojas",
+      "photoPage": "https://www.pexels.com/photo/man-in-doctor-office-8460122/",
+      "source": "pexels"
+    },
+    {
+      "slug": "property-managers-accounts-payable-automation-computer-use-agents",
+      "status": "ok",
+      "image": "/images/insights/featured/property-managers-accounts-payable-automation-computer-use-agents.jpg",
+      "insightUpdated": true,
+      "photographer": "Mikhail Nilov",
+      "photographerUrl": "https://www.pexels.com/@mikhail-nilov",
+      "photoPage": "https://www.pexels.com/photo/woman-holding-a-tablet-at-the-office-8101971/",
+      "source": "pexels"
+    },
+    {
+      "slug": "property-managers-accounts-payable-automation-software",
+      "status": "ok",
+      "image": "/images/insights/featured/property-managers-accounts-payable-automation-software.jpg",
+      "insightUpdated": true,
+      "photographer": "RDNE Stock project",
+      "photographerUrl": "https://www.pexels.com/@rdne",
+      "photoPage": "https://www.pexels.com/photo/a-woman-talking-on-the-phone-8279815/",
+      "source": "pexels"
+    },
+    {
+      "slug": "property-managers-automation-accounts-payable",
+      "status": "ok",
+      "image": "/images/insights/featured/property-managers-automation-accounts-payable.jpg",
+      "insightUpdated": true,
+      "photographer": "Yan Krukau",
+      "photographerUrl": "https://www.pexels.com/@yankrukov",
+      "photoPage": "https://www.pexels.com/photo/people-standing-beside-each-other-at-the-office-8866793/",
+      "source": "pexels"
+    },
+    {
+      "slug": "property-managers-browser-automation-ai-agent-rent-reconciliation",
+      "status": "ok",
+      "image": "/images/insights/featured/property-managers-browser-automation-ai-agent-rent-reconciliation.jpg",
+      "insightUpdated": true,
+      "photographer": "Andrea Piacquadio",
+      "photographerUrl": "https://www.pexels.com/@olly",
+      "photoPage": "https://www.pexels.com/photo/group-of-people-working-while-seated-on-the-floor-3863783/",
+      "source": "pexels"
+    },
+    {
+      "slug": "property-managers-computer-use-agent-invoice-reconciliation",
+      "status": "ok",
+      "image": "/images/insights/featured/property-managers-computer-use-agent-invoice-reconciliation.jpg",
+      "insightUpdated": true,
+      "photographer": "RDNE Stock project",
+      "photographerUrl": "https://www.pexels.com/@rdne",
+      "photoPage": "https://www.pexels.com/photo/man-and-woman-sitting-at-the-table-9034241/",
+      "source": "pexels"
+    },
+    {
+      "slug": "property-managers-computer-use-agents-workflow-automation",
+      "status": "ok",
+      "image": "/images/insights/featured/property-managers-computer-use-agents-workflow-automation.jpg",
+      "insightUpdated": true,
+      "photographer": "Thirdman",
+      "photographerUrl": "https://www.pexels.com/@thirdman",
+      "photoPage": "https://www.pexels.com/photo/a-realtor-looking-at-a-floor-plan-with-a-couple-8469993/",
+      "source": "pexels"
+    },
+    {
+      "slug": "property-managers-data-entry-email-triage-ai-agents",
+      "status": "ok",
+      "image": "/images/insights/featured/property-managers-data-entry-email-triage-ai-agents.jpg",
+      "insightUpdated": true,
+      "photographer": "Google DeepMind",
+      "photographerUrl": "https://www.pexels.com/@googledeepmind",
+      "photoPage": "https://www.pexels.com/photo/an-artist-s-illustration-of-artificial-intelligence-ai-this-image-was-inspired-neural-networks-used-in-deep-learning-it-was-created-by-novoto-studio-as-part-of-the-visualising-ai-proje-17483871/",
+      "source": "pexels"
+    },
+    {
+      "slug": "property-managers-property-management-admin-automation",
+      "status": "ok",
+      "image": "/images/insights/featured/property-managers-property-management-admin-automation.jpg",
+      "insightUpdated": true,
+      "photographer": "Mikhail Nilov",
+      "photographerUrl": "https://www.pexels.com/@mikhail-nilov",
+      "photoPage": "https://www.pexels.com/photo/man-in-brown-blazer-holding-white-tablet-computer-6893921/",
+      "source": "pexels"
+    },
+    {
+      "slug": "property-managers-property-management-bookkeeping-software",
+      "status": "ok",
+      "image": "/images/insights/featured/property-managers-property-management-bookkeeping-software.jpg",
+      "insightUpdated": true,
+      "photographer": "RDNE Stock project",
+      "photographerUrl": "https://www.pexels.com/@rdne",
+      "photoPage": "https://www.pexels.com/photo/doctor-talking-to-a-nurse-6129153/",
+      "source": "pexels"
+    },
+    {
+      "slug": "property-managers-property-management-computer-software",
+      "status": "ok",
+      "image": "/images/insights/featured/property-managers-property-management-computer-software.jpg",
+      "insightUpdated": true,
+      "photographer": "Thirdman",
+      "photographerUrl": "https://www.pexels.com/@thirdman",
+      "photoPage": "https://www.pexels.com/photo/a-group-of-people-having-a-meeting-in-the-office-7652049/",
+      "source": "pexels"
+    },
+    {
+      "slug": "restaurant-admin-automation",
+      "status": "ok",
+      "image": "/images/insights/featured/restaurant-admin-automation.jpg",
+      "insightUpdated": true,
+      "photographer": "Ron Lach",
+      "photographerUrl": "https://www.pexels.com/@ron-lach",
+      "photoPage": "https://www.pexels.com/photo/people-in-safety-vests-in-forest-10363540/",
+      "source": "pexels"
+    },
+    {
+      "slug": "restaurants-back-office-ai-agents-inventory-reporting",
+      "status": "ok",
+      "image": "/images/insights/featured/restaurants-back-office-ai-agents-inventory-reporting.jpg",
+      "insightUpdated": true,
+      "photographer": "Yan Krukau",
+      "photographerUrl": "https://www.pexels.com/@yankrukov",
+      "photoPage": "https://www.pexels.com/photo/a-tired-woman-massaging-her-head-8867180/",
+      "source": "pexels"
+    }
+  ]
+}

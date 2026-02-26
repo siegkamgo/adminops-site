@@ -196,8 +196,9 @@
     "href": "https://www.cal.eu/sieg-kamgo/30min"
   },
   "featuredImage": {
-    "src": "/images/insights/featured/clinics-software-medical-billing.svg",
-    "alt": "Featured illustration for Best Medical Billing Software for Clinic Operations Teams (2026)",
-    "caption": "Featured visual generated for this insight"
+    "src": "/images/insights/featured/clinics-software-medical-billing.jpg",
+    "alt": "Featured image for Best Medical Billing Software for Clinic Operations Teams (2026)",
+    "caption": "Photo by Los Muertos Crew on Pexels",
+    "creditUrl": "https://www.pexels.com/photo/man-in-doctor-office-8460122/"
   }
 }

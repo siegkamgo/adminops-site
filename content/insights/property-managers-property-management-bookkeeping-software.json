@@ -196,8 +196,9 @@
     "href": "https://www.cal.eu/sieg-kamgo/30min"
   },
   "featuredImage": {
-    "src": "/images/insights/featured/property-managers-property-management-bookkeeping-software.svg",
-    "alt": "Featured illustration for Best Property Management Bookkeeping Software for Property Management Teams (2026)",
-    "caption": "Featured visual generated for this insight"
+    "src": "/images/insights/featured/property-managers-property-management-bookkeeping-software.jpg",
+    "alt": "Featured image for Best Property Management Bookkeeping Software for Property Management Teams (2026)",
+    "caption": "Photo by RDNE Stock project on Pexels",
+    "creditUrl": "https://www.pexels.com/photo/doctor-talking-to-a-nurse-6129153/"
   }
 }

@@ -188,5 +188,11 @@
   "cta": {
     "label": "Book a free strategy call",
     "href": "https://www.cal.eu/sieg-kamgo/30min"
+  },
+  "featuredImage": {
+    "src": "/images/insights/featured/property-managers-computer-use-agent-invoice-reconciliation.jpg",
+    "alt": "Featured image for How can property managers automate invoice reconciliation with a computer use agent?",
+    "caption": "Photo by RDNE Stock project on Pexels",
+    "creditUrl": "https://www.pexels.com/photo/man-and-woman-sitting-at-the-table-9034241/"
   }
 }

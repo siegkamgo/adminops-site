@@ -188,5 +188,11 @@
   "cta": {
     "label": "Book a free strategy call",
     "href": "https://www.cal.eu/sieg-kamgo/30min"
+  },
+  "featuredImage": {
+    "src": "/images/insights/featured/clinics-claims-processing-ai-agent-medical-billing-automation.jpg",
+    "alt": "Featured image for What is the best way to use a claims processing AI agent for medical billing automation?",
+    "caption": "Photo by Ivan S on Pexels",
+    "creditUrl": "https://www.pexels.com/photo/office-team-smiling-at-the-camera-7213603/"
   }
 }

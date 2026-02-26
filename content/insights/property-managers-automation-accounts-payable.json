@@ -196,8 +196,9 @@
     "href": "https://www.cal.eu/sieg-kamgo/30min"
   },
   "featuredImage": {
-    "src": "/images/insights/featured/property-managers-automation-accounts-payable.svg",
-    "alt": "Featured illustration for Accounts Payable Automation: 30-Day Implementation Playbook for Property Management Teams",
-    "caption": "Featured visual generated for this insight"
+    "src": "/images/insights/featured/property-managers-automation-accounts-payable.jpg",
+    "alt": "Featured image for Accounts Payable Automation: 30-Day Implementation Playbook for Property Management Teams",
+    "caption": "Photo by Yan Krukau on Pexels",
+    "creditUrl": "https://www.pexels.com/photo/people-standing-beside-each-other-at-the-office-8866793/"
   }
 }

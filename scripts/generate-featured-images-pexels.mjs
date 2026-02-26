@@ -7,7 +7,13 @@ const envPath = path.join(root, ".env.local");
 const insightsDir = path.join(root, "content", "insights");
 const outputDir = path.join(root, "public", "images", "insights", "featured");
 
+function hasFlag(flag) {
+  return process.argv.slice(2).includes(flag);
+}
+
 function getBatchNumber() {
+  if (hasFlag("--all")) return null;
+
   const cliValue = Number(process.argv[2] || "");
   if (Number.isInteger(cliValue) && cliValue > 0) return cliValue;
 
@@ -83,6 +89,34 @@ function buildSearchQueries(item) {
   ];
 }
 
+function toItemsFromAllInsights({ missingOnly }) {
+  if (!fs.existsSync(insightsDir)) {
+    return [];
+  }
+
+  const files = fs
+    .readdirSync(insightsDir)
+    .filter((name) => name.endsWith(".json"))
+    .map((name) => path.join(insightsDir, name));
+
+  return files
+    .map((filePath) => JSON.parse(fs.readFileSync(filePath, "utf8")))
+    .filter((insight) => insight?.slug)
+    .filter((insight) => {
+      if (!missingOnly) return true;
+      const src = insight?.featuredImage?.src;
+      if (!src) return true;
+      const ext = path.extname(src).toLowerCase();
+      return ext !== ".jpg" && ext !== ".jpeg";
+    })
+    .map((insight) => ({
+      suggestedSlug: insight.slug,
+      title: insight.title || insight.slug,
+      primaryKeyword: insight.targetKeyword || insight.seedKeyword || insight.title || insight.slug,
+      segment: insight.segment || "Operations"
+    }));
+}
+
 function scorePhoto(photo) {
   const width = Number(photo?.width || 0);
   const height = Number(photo?.height || 0);
@@ -131,6 +165,26 @@ function pickRandomUniquePhoto(photos, usedPhotoIds) {
     .map((photo) => ({ photo, score: scorePhoto(photo) }))
     .sort((a, b) => b.score - a.score)
     .slice(0, Math.min(8, uniquePool.length));
+
+  return scored[randomInt(0, scored.length - 1)]?.photo || null;
+}
+
+function pickFallbackPhoto(photos) {
+  if (!Array.isArray(photos) || photos.length === 0) return null;
+
+  const pool = photos.filter((photo) => {
+    const width = Number(photo?.width || 0);
+    const height = Number(photo?.height || 0);
+    if (width < 1200 || height < 700) return false;
+    const ratio = width / height;
+    return ratio >= 1.3 && ratio <= 2.4;
+  });
+
+  if (!pool.length) return null;
+  const scored = pool
+    .map((photo) => ({ photo, score: scorePhoto(photo) }))
+    .sort((a, b) => b.score - a.score)
+    .slice(0, Math.min(8, pool.length));
 
   return scored[randomInt(0, scored.length - 1)]?.photo || null;
 }
@@ -198,22 +252,33 @@ async function run() {
   loadEnv(envPath);
 
   const batchNumber = getBatchNumber();
-  const batchPath = path.join(root, "content", "editorial-batches", batchFileName(batchNumber, "20-titles.json"));
-  const reportPath = path.join(root, "content", "editorial-batches", batchFileName(batchNumber, "featured-images-report.json"));
+  const runAllInsights = hasFlag("--all");
+  const missingOnly = !hasFlag("--refresh-all");
+
+  const batchPath = batchNumber
+    ? path.join(root, "content", "editorial-batches", batchFileName(batchNumber, "20-titles.json"))
+    : null;
+  const reportPath = runAllInsights
+    ? path.join(root, "content", "editorial-batches", "all-insights-featured-images-report.json")
+    : path.join(root, "content", "editorial-batches", batchFileName(batchNumber, "featured-images-report.json"));
 
   const apiKey = process.env.PEXELS_API_KEY;
   if (!apiKey) {
     throw new Error("Missing PEXELS_API_KEY in .env.local");
   }
 
-  if (!fs.existsSync(batchPath)) {
-    throw new Error(`Batch file not found: ${batchPath}`);
-  }
+  const items = runAllInsights
+    ? toItemsFromAllInsights({ missingOnly })
+    : (() => {
+      if (!batchPath || !fs.existsSync(batchPath)) {
+        throw new Error(`Batch file not found: ${batchPath}`);
+      }
+      const batch = JSON.parse(fs.readFileSync(batchPath, "utf8"));
+      return Array.isArray(batch.items) ? batch.items : [];
+    })();
 
-  const batch = JSON.parse(fs.readFileSync(batchPath, "utf8"));
-  const items = Array.isArray(batch.items) ? batch.items : [];
   if (!items.length) {
-    throw new Error("No batch items found");
+    throw new Error(runAllInsights ? "No insight items to process" : "No batch items found");
   }
 
   const baseDelayMs = Number(process.env.PEXELS_DELAY_MS || 900);
@@ -242,6 +307,12 @@ async function run() {
           const candidate = pickRandomUniquePhoto(searchResult?.photos || [], usedPhotoIds);
           if (candidate) {
             chosenPhoto = candidate;
+            break;
+          }
+
+          const fallback = pickFallbackPhoto(searchResult?.photos || []);
+          if (fallback) {
+            chosenPhoto = fallback;
             break;
           }
         }
@@ -290,6 +361,7 @@ async function run() {
     JSON.stringify(
       {
         generatedAt: new Date().toISOString(),
+        scope: runAllInsights ? (missingOnly ? "all-insights-missing-only" : "all-insights-refresh-all") : "batch",
         batch: batchNumber,
         total: items.length,
         success: results.filter((r) => r.status === "ok").length,
