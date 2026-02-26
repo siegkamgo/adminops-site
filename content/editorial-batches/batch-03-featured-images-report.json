@@ -1,0 +1,209 @@
+{
+  "generatedAt": "2026-02-26T00:46:33.214Z",
+  "batch": 3,
+  "total": 20,
+  "success": 20,
+  "failed": 0,
+  "results": [
+    {
+      "slug": "property-managers-best-software-property-management",
+      "status": "ok",
+      "image": "/images/insights/featured/property-managers-best-software-property-management.jpg",
+      "insightUpdated": true,
+      "photographer": "Ketut Subiyanto",
+      "photographerUrl": "https://www.pexels.com/@ketut-subiyanto",
+      "photoPage": "https://www.pexels.com/photo/smiling-woman-sitting-in-office-4623358/",
+      "source": "pexels"
+    },
+    {
+      "slug": "property-managers-accounting-software-for-property-management",
+      "status": "ok",
+      "image": "/images/insights/featured/property-managers-accounting-software-for-property-management.jpg",
+      "insightUpdated": true,
+      "photographer": "Moe Magners",
+      "photographerUrl": "https://www.pexels.com/@moe-magners",
+      "photoPage": "https://www.pexels.com/photo/people-at-the-office-displaying-teamwork-7495199/",
+      "source": "pexels"
+    },
+    {
+      "slug": "property-managers-property-management-software-cloud-based",
+      "status": "ok",
+      "image": "/images/insights/featured/property-managers-property-management-software-cloud-based.jpg",
+      "insightUpdated": true,
+      "photographer": "Pavel Danilyuk",
+      "photographerUrl": "https://www.pexels.com/@pavel-danilyuk",
+      "photoPage": "https://www.pexels.com/photo/a-group-of-businessmen-in-black-suit-having-conversation-5520293/",
+      "source": "pexels"
+    },
+    {
+      "slug": "restaurants-restaurant-inventory-management-software",
+      "status": "ok",
+      "image": "/images/insights/featured/restaurants-restaurant-inventory-management-software.jpg",
+      "insightUpdated": true,
+      "photographer": "RDNE Stock project",
+      "photographerUrl": "https://www.pexels.com/@rdne",
+      "photoPage": "https://www.pexels.com/photo/elegant-man-listening-women-at-business-meeting-8068809/",
+      "source": "pexels"
+    },
+    {
+      "slug": "clinics-medical-billing-coding-software",
+      "status": "ok",
+      "image": "/images/insights/featured/clinics-medical-billing-coding-software.jpg",
+      "insightUpdated": true,
+      "photographer": "www.kaboompics.com",
+      "photographerUrl": "https://www.pexels.com/@karola-g",
+      "photoPage": "https://www.pexels.com/photo/a-dentist-holding-a-dental-shade-guide-in-front-of-a-patient-6627575/",
+      "source": "pexels"
+    },
+    {
+      "slug": "property-managers-accounts-payable-automation-netsuite",
+      "status": "ok",
+      "image": "/images/insights/featured/property-managers-accounts-payable-automation-netsuite.jpg",
+      "insightUpdated": true,
+      "photographer": "Thirdman",
+      "photographerUrl": "https://www.pexels.com/@thirdman",
+      "photoPage": "https://www.pexels.com/photo/a-woman-talking-to-her-colleague-while-holding-a-tablet-7993950/",
+      "source": "pexels"
+    },
+    {
+      "slug": "restaurants-accounting-software-for-restaurant",
+      "status": "ok",
+      "image": "/images/insights/featured/restaurants-accounting-software-for-restaurant.jpg",
+      "insightUpdated": true,
+      "photographer": "Sarabjeet Singh",
+      "photographerUrl": "https://www.pexels.com/@sarabjeet-singh-1227495373",
+      "photoPage": "https://www.pexels.com/photo/a-group-of-chefs-posing-together-in-a-garden-23830927/",
+      "source": "pexels"
+    },
+    {
+      "slug": "clinics-software-for-clinic-management",
+      "status": "ok",
+      "image": "/images/insights/featured/clinics-software-for-clinic-management.jpg",
+      "insightUpdated": true,
+      "photographer": "www.kaboompics.com",
+      "photographerUrl": "https://www.pexels.com/@karola-g",
+      "photoPage": "https://www.pexels.com/photo/a-woman-computing-bills-while-holding-a-pencil-7680742/",
+      "source": "pexels"
+    },
+    {
+      "slug": "restaurants-best-accounting-software-for-small-restaurant",
+      "status": "ok",
+      "image": "/images/insights/featured/restaurants-best-accounting-software-for-small-restaurant.jpg",
+      "insightUpdated": true,
+      "photographer": "George Sultan",
+      "photographerUrl": "https://www.pexels.com/@georgesultan",
+      "photoPage": "https://www.pexels.com/photo/luxury-car-interior-11877384/",
+      "source": "pexels"
+    },
+    {
+      "slug": "property-managers-ap-invoice-processing-automation",
+      "status": "ok",
+      "image": "/images/insights/featured/property-managers-ap-invoice-processing-automation.jpg",
+      "insightUpdated": true,
+      "photographer": "cottonbro studio",
+      "photographerUrl": "https://www.pexels.com/@cottonbro",
+      "photoPage": "https://www.pexels.com/photo/people-sitting-looking-at-a-laptop-7437491/",
+      "source": "pexels"
+    },
+    {
+      "slug": "clinics-automation-in-claims-processing",
+      "status": "ok",
+      "image": "/images/insights/featured/clinics-automation-in-claims-processing.jpg",
+      "insightUpdated": true,
+      "photographer": "Luděk Maděryč",
+      "photographerUrl": "https://www.pexels.com/@ludek-maderyc-17302",
+      "photoPage": "https://www.pexels.com/photo/yellow-car-steering-wheel-102992/",
+      "source": "pexels"
+    },
+    {
+      "slug": "property-managers-rent-property-management-software",
+      "status": "ok",
+      "image": "/images/insights/featured/property-managers-rent-property-management-software.jpg",
+      "insightUpdated": true,
+      "photographer": "Thirdman",
+      "photographerUrl": "https://www.pexels.com/@thirdman",
+      "photoPage": "https://www.pexels.com/photo/new-house-owners-checking-the-wall-levels-8470030/",
+      "source": "pexels"
+    },
+    {
+      "slug": "property-managers-property-management-rental-software",
+      "status": "ok",
+      "image": "/images/insights/featured/property-managers-property-management-rental-software.jpg",
+      "insightUpdated": true,
+      "photographer": "Matheus Bertelli",
+      "photographerUrl": "https://www.pexels.com/@bertellifotografia",
+      "photoPage": "https://www.pexels.com/photo/standing-woman-presenting-in-meeting-15141521/",
+      "source": "pexels"
+    },
+    {
+      "slug": "property-managers-accounts-payable-automation-solution",
+      "status": "ok",
+      "image": "/images/insights/featured/property-managers-accounts-payable-automation-solution.jpg",
+      "insightUpdated": true,
+      "photographer": "MART  PRODUCTION",
+      "photographerUrl": "https://www.pexels.com/@mart-production",
+      "photoPage": "https://www.pexels.com/photo/a-man-looking-at-files-8872363/",
+      "source": "pexels"
+    },
+    {
+      "slug": "clinics-medical-billing-training-software",
+      "status": "ok",
+      "image": "/images/insights/featured/clinics-medical-billing-training-software.jpg",
+      "insightUpdated": true,
+      "photographer": "RDNE Stock project",
+      "photographerUrl": "https://www.pexels.com/@rdne",
+      "photoPage": "https://www.pexels.com/photo/men-and-women-standing-in-room-holding-folders-7845463/",
+      "source": "pexels"
+    },
+    {
+      "slug": "clinics-clinic-management-software",
+      "status": "ok",
+      "image": "/images/insights/featured/clinics-clinic-management-software.jpg",
+      "insightUpdated": true,
+      "photographer": "Monstera Production",
+      "photographerUrl": "https://www.pexels.com/@gabby-k",
+      "photoPage": "https://www.pexels.com/photo/focused-diverse-colleagues-working-on-computer-5273610/",
+      "source": "pexels"
+    },
+    {
+      "slug": "clinics-kareo-medical-billing-software",
+      "status": "ok",
+      "image": "/images/insights/featured/clinics-kareo-medical-billing-software.jpg",
+      "insightUpdated": true,
+      "photographer": "cottonbro studio",
+      "photographerUrl": "https://www.pexels.com/@cottonbro",
+      "photoPage": "https://www.pexels.com/photo/employees-playing-foosball-in-office-recreation-area-6804589/",
+      "source": "pexels"
+    },
+    {
+      "slug": "clinics-advancedmd-medical-billing-software",
+      "status": "ok",
+      "image": "/images/insights/featured/clinics-advancedmd-medical-billing-software.jpg",
+      "insightUpdated": true,
+      "photographer": "www.kaboompics.com",
+      "photographerUrl": "https://www.pexels.com/@karola-g",
+      "photoPage": "https://www.pexels.com/photo/dentist-showing-a-dental-chair-6627350/",
+      "source": "pexels"
+    },
+    {
+      "slug": "clinics-massage-medical-billing-software",
+      "status": "ok",
+      "image": "/images/insights/featured/clinics-massage-medical-billing-software.jpg",
+      "insightUpdated": true,
+      "photographer": "Cedric Fauntleroy",
+      "photographerUrl": "https://www.pexels.com/@cedric-fauntleroy",
+      "photoPage": "https://www.pexels.com/photo/an-ipad-showing-the-x-ray-of-teeth-4270367/",
+      "source": "pexels"
+    },
+    {
+      "slug": "clinics-medical-billing-software-for-small-business",
+      "status": "ok",
+      "image": "/images/insights/featured/clinics-medical-billing-software-for-small-business.jpg",
+      "insightUpdated": true,
+      "photographer": "RDNE Stock project",
+      "photographerUrl": "https://www.pexels.com/@rdne",
+      "photoPage": "https://www.pexels.com/photo/women-in-business-attire-sitting-on-white-chair-7490768/",
+      "source": "pexels"
+    }
+  ]
+}

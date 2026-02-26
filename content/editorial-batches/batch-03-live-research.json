@@ -1,0 +1,697 @@
+{
+  "generatedAt": "2026-02-26T00:45:53.258Z",
+  "seeds": [
+    {
+      "seed": "accounts payable automation",
+      "segment": "Property Managers"
+    },
+    {
+      "seed": "property management software",
+      "segment": "Property Managers"
+    },
+    {
+      "seed": "property management accounting software",
+      "segment": "Property Managers"
+    },
+    {
+      "seed": "invoice processing automation",
+      "segment": "Property Managers"
+    },
+    {
+      "seed": "rent reconciliation",
+      "segment": "Property Managers"
+    },
+    {
+      "seed": "clinic management software",
+      "segment": "Clinics"
+    },
+    {
+      "seed": "medical billing automation",
+      "segment": "Clinics"
+    },
+    {
+      "seed": "restaurant inventory management software",
+      "segment": "Restaurants"
+    },
+    {
+      "seed": "restaurant back office automation",
+      "segment": "Restaurants"
+    },
+    {
+      "seed": "restaurant accounting software",
+      "segment": "Restaurants"
+    },
+    {
+      "seed": "medical billing software",
+      "segment": "Clinics"
+    },
+    {
+      "seed": "claims processing automation",
+      "segment": "Clinics"
+    }
+  ],
+  "pulledKeywordRows": 260,
+  "uniqueCandidates": 156,
+  "topCandidates": [
+    {
+      "keyword": "property management computer software",
+      "searchVolume": 22200,
+      "cpc": 106.37,
+      "competitionLevel": "LOW",
+      "segment": "Property Managers",
+      "seed": "property management software"
+    },
+    {
+      "keyword": "software for property management",
+      "searchVolume": 22200,
+      "cpc": 106.37,
+      "competitionLevel": "LOW",
+      "segment": "Property Managers",
+      "seed": "property management software"
+    },
+    {
+      "keyword": "property management software",
+      "searchVolume": 22200,
+      "cpc": 106.37,
+      "competitionLevel": "LOW",
+      "segment": "Property Managers",
+      "seed": "property management software"
+    },
+    {
+      "keyword": "property management software buildium",
+      "searchVolume": 4400,
+      "cpc": 55.55,
+      "competitionLevel": "LOW",
+      "segment": "Property Managers",
+      "seed": "property management software"
+    },
+    {
+      "keyword": "buildium property management software",
+      "searchVolume": 4400,
+      "cpc": 55.55,
+      "competitionLevel": "LOW",
+      "segment": "Property Managers",
+      "seed": "property management software"
+    },
+    {
+      "keyword": "software for medical billing",
+      "searchVolume": 4400,
+      "cpc": 62.3,
+      "competitionLevel": "LOW",
+      "segment": "Clinics",
+      "seed": "medical billing software"
+    },
+    {
+      "keyword": "software medical billing",
+      "searchVolume": 4400,
+      "cpc": 62.3,
+      "competitionLevel": "LOW",
+      "segment": "Clinics",
+      "seed": "medical billing software"
+    },
+    {
+      "keyword": "medical billing software",
+      "searchVolume": 4400,
+      "cpc": 62.3,
+      "competitionLevel": "LOW",
+      "segment": "Clinics",
+      "seed": "medical billing software"
+    },
+    {
+      "keyword": "accounts payable automation software",
+      "searchVolume": 2900,
+      "cpc": 313.65,
+      "competitionLevel": "LOW",
+      "segment": "Property Managers",
+      "seed": "accounts payable automation"
+    },
+    {
+      "keyword": "best software for property management",
+      "searchVolume": 2400,
+      "cpc": 135.11,
+      "competitionLevel": "MEDIUM",
+      "segment": "Property Managers",
+      "seed": "property management software"
+    },
+    {
+      "keyword": "property management software best",
+      "searchVolume": 2400,
+      "cpc": 135.11,
+      "competitionLevel": "MEDIUM",
+      "segment": "Property Managers",
+      "seed": "property management software"
+    },
+    {
+      "keyword": "best software property management",
+      "searchVolume": 2400,
+      "cpc": 135.11,
+      "competitionLevel": "MEDIUM",
+      "segment": "Property Managers",
+      "seed": "property management software"
+    },
+    {
+      "keyword": "best management property software",
+      "searchVolume": 2400,
+      "cpc": 135.11,
+      "competitionLevel": "MEDIUM",
+      "segment": "Property Managers",
+      "seed": "property management software"
+    },
+    {
+      "keyword": "best property management software",
+      "searchVolume": 2400,
+      "cpc": 135.11,
+      "competitionLevel": "MEDIUM",
+      "segment": "Property Managers",
+      "seed": "property management software"
+    },
+    {
+      "keyword": "automation accounts payable",
+      "searchVolume": 1900,
+      "cpc": 176.87,
+      "competitionLevel": "MEDIUM",
+      "segment": "Property Managers",
+      "seed": "accounts payable automation"
+    },
+    {
+      "keyword": "accounts payable automation",
+      "searchVolume": 1900,
+      "cpc": 176.87,
+      "competitionLevel": "MEDIUM",
+      "segment": "Property Managers",
+      "seed": "accounts payable automation"
+    },
+    {
+      "keyword": "property management cloud-based software",
+      "searchVolume": 1900,
+      "cpc": 8.58,
+      "competitionLevel": "LOW",
+      "segment": "Property Managers",
+      "seed": "property management software"
+    },
+    {
+      "keyword": "property management cloud based software",
+      "searchVolume": 1900,
+      "cpc": 8.58,
+      "competitionLevel": "LOW",
+      "segment": "Property Managers",
+      "seed": "property management software"
+    },
+    {
+      "keyword": "property management bookkeeping software",
+      "searchVolume": 1900,
+      "cpc": 97.11,
+      "competitionLevel": "LOW",
+      "segment": "Property Managers",
+      "seed": "property management software"
+    },
+    {
+      "keyword": "property rent management software",
+      "searchVolume": 1900,
+      "cpc": 80.87,
+      "competitionLevel": "MEDIUM",
+      "segment": "Property Managers",
+      "seed": "property management software"
+    },
+    {
+      "keyword": "cloud-based property management software",
+      "searchVolume": 1900,
+      "cpc": 8.58,
+      "competitionLevel": "LOW",
+      "segment": "Property Managers",
+      "seed": "property management software"
+    },
+    {
+      "keyword": "rent property management software",
+      "searchVolume": 1900,
+      "cpc": 80.87,
+      "competitionLevel": "MEDIUM",
+      "segment": "Property Managers",
+      "seed": "property management software"
+    },
+    {
+      "keyword": "property rental management software",
+      "searchVolume": 1900,
+      "cpc": 80.87,
+      "competitionLevel": "MEDIUM",
+      "segment": "Property Managers",
+      "seed": "property management software"
+    },
+    {
+      "keyword": "accounting software for property management",
+      "searchVolume": 1900,
+      "cpc": 97.11,
+      "competitionLevel": "LOW",
+      "segment": "Property Managers",
+      "seed": "property management software"
+    },
+    {
+      "keyword": "property management rental software",
+      "searchVolume": 1900,
+      "cpc": 80.87,
+      "competitionLevel": "MEDIUM",
+      "segment": "Property Managers",
+      "seed": "property management software"
+    },
+    {
+      "keyword": "cloud based property management software",
+      "searchVolume": 1900,
+      "cpc": 8.58,
+      "competitionLevel": "LOW",
+      "segment": "Property Managers",
+      "seed": "property management software"
+    },
+    {
+      "keyword": "property management software rental",
+      "searchVolume": 1900,
+      "cpc": 80.87,
+      "competitionLevel": "MEDIUM",
+      "segment": "Property Managers",
+      "seed": "property management software"
+    },
+    {
+      "keyword": "software for residential property management",
+      "searchVolume": 1900,
+      "cpc": 80.87,
+      "competitionLevel": "MEDIUM",
+      "segment": "Property Managers",
+      "seed": "property management software"
+    },
+    {
+      "keyword": "accounting property management software",
+      "searchVolume": 1900,
+      "cpc": 97.11,
+      "competitionLevel": "LOW",
+      "segment": "Property Managers",
+      "seed": "property management software"
+    },
+    {
+      "keyword": "property management accounting software",
+      "searchVolume": 1900,
+      "cpc": 97.11,
+      "competitionLevel": "LOW",
+      "segment": "Property Managers",
+      "seed": "property management software"
+    },
+    {
+      "keyword": "software for property management rental",
+      "searchVolume": 1900,
+      "cpc": 80.87,
+      "competitionLevel": "MEDIUM",
+      "segment": "Property Managers",
+      "seed": "property management software"
+    },
+    {
+      "keyword": "residential property management software",
+      "searchVolume": 1900,
+      "cpc": 80.87,
+      "competitionLevel": "MEDIUM",
+      "segment": "Property Managers",
+      "seed": "property management software"
+    },
+    {
+      "keyword": "property management software cloud based",
+      "searchVolume": 1900,
+      "cpc": 8.58,
+      "competitionLevel": "LOW",
+      "segment": "Property Managers",
+      "seed": "property management software"
+    },
+    {
+      "keyword": "property management software accounting",
+      "searchVolume": 1900,
+      "cpc": 97.11,
+      "competitionLevel": "LOW",
+      "segment": "Property Managers",
+      "seed": "property management software"
+    },
+    {
+      "keyword": "software for rental property management",
+      "searchVolume": 1900,
+      "cpc": 80.87,
+      "competitionLevel": "MEDIUM",
+      "segment": "Property Managers",
+      "seed": "property management software"
+    },
+    {
+      "keyword": "property management and accounting software",
+      "searchVolume": 1900,
+      "cpc": 97.11,
+      "competitionLevel": "LOW",
+      "segment": "Property Managers",
+      "seed": "property management software"
+    },
+    {
+      "keyword": "accounting software property management",
+      "searchVolume": 1900,
+      "cpc": 97.11,
+      "competitionLevel": "LOW",
+      "segment": "Property Managers",
+      "seed": "property management accounting software"
+    },
+    {
+      "keyword": "inventory management software for restaurant",
+      "searchVolume": 1300,
+      "cpc": 84.11,
+      "competitionLevel": "LOW",
+      "segment": "Restaurants",
+      "seed": "restaurant inventory management software"
+    },
+    {
+      "keyword": "inventory management software restaurant",
+      "searchVolume": 1300,
+      "cpc": 84.11,
+      "competitionLevel": "LOW",
+      "segment": "Restaurants",
+      "seed": "restaurant inventory management software"
+    },
+    {
+      "keyword": "restaurant inventory management software",
+      "searchVolume": 1300,
+      "cpc": 84.11,
+      "competitionLevel": "LOW",
+      "segment": "Restaurants",
+      "seed": "restaurant inventory management software"
+    },
+    {
+      "keyword": "medical billing coding software",
+      "searchVolume": 1000,
+      "cpc": 46.21,
+      "competitionLevel": "LOW",
+      "segment": "Clinics",
+      "seed": "medical billing software"
+    },
+    {
+      "keyword": "software for medical billing and coding",
+      "searchVolume": 1000,
+      "cpc": 46.21,
+      "competitionLevel": "LOW",
+      "segment": "Clinics",
+      "seed": "medical billing software"
+    },
+    {
+      "keyword": "medical billing and coding software",
+      "searchVolume": 1000,
+      "cpc": 46.21,
+      "competitionLevel": "LOW",
+      "segment": "Clinics",
+      "seed": "medical billing software"
+    },
+    {
+      "keyword": "dental clinic management software",
+      "searchVolume": 880,
+      "cpc": 28.71,
+      "competitionLevel": "MEDIUM",
+      "segment": "Clinics",
+      "seed": "clinic management software"
+    },
+    {
+      "keyword": "accounts payable automation solutions",
+      "searchVolume": 720,
+      "cpc": 196.76,
+      "competitionLevel": "LOW",
+      "segment": "Property Managers",
+      "seed": "accounts payable automation"
+    },
+    {
+      "keyword": "netsuite accounts payable automation",
+      "searchVolume": 720,
+      "cpc": 100.51,
+      "competitionLevel": "MEDIUM",
+      "segment": "Property Managers",
+      "seed": "accounts payable automation"
+    },
+    {
+      "keyword": "accounts payable automation netsuite",
+      "searchVolume": 720,
+      "cpc": 100.51,
+      "competitionLevel": "MEDIUM",
+      "segment": "Property Managers",
+      "seed": "accounts payable automation"
+    },
+    {
+      "keyword": "accounts payable automation solution",
+      "searchVolume": 720,
+      "cpc": 196.76,
+      "competitionLevel": "LOW",
+      "segment": "Property Managers",
+      "seed": "accounts payable automation"
+    },
+    {
+      "keyword": "software accounting restaurant",
+      "searchVolume": 720,
+      "cpc": 86.61,
+      "competitionLevel": "MEDIUM",
+      "segment": "Restaurants",
+      "seed": "restaurant accounting software"
+    },
+    {
+      "keyword": "restaurant accounting software",
+      "searchVolume": 720,
+      "cpc": 86.61,
+      "competitionLevel": "MEDIUM",
+      "segment": "Restaurants",
+      "seed": "restaurant accounting software"
+    },
+    {
+      "keyword": "accounting software for restaurant",
+      "searchVolume": 720,
+      "cpc": 86.61,
+      "competitionLevel": "MEDIUM",
+      "segment": "Restaurants",
+      "seed": "restaurant accounting software"
+    },
+    {
+      "keyword": "software for restaurant accounting",
+      "searchVolume": 720,
+      "cpc": 86.61,
+      "competitionLevel": "MEDIUM",
+      "segment": "Restaurants",
+      "seed": "restaurant accounting software"
+    },
+    {
+      "keyword": "medical billing training software",
+      "searchVolume": 720,
+      "cpc": 20.64,
+      "competitionLevel": "LOW",
+      "segment": "Clinics",
+      "seed": "medical billing software"
+    },
+    {
+      "keyword": "invoice processing automation",
+      "searchVolume": 590,
+      "cpc": 171.29,
+      "competitionLevel": "MEDIUM",
+      "segment": "Property Managers",
+      "seed": "invoice processing automation"
+    },
+    {
+      "keyword": "software for clinic management",
+      "searchVolume": 590,
+      "cpc": 38.77,
+      "competitionLevel": "LOW",
+      "segment": "Clinics",
+      "seed": "clinic management software"
+    },
+    {
+      "keyword": "clinic management system software",
+      "searchVolume": 590,
+      "cpc": 38.77,
+      "competitionLevel": "LOW",
+      "segment": "Clinics",
+      "seed": "clinic management software"
+    },
+    {
+      "keyword": "clinic management software",
+      "searchVolume": 590,
+      "cpc": 38.77,
+      "competitionLevel": "LOW",
+      "segment": "Clinics",
+      "seed": "clinic management software"
+    },
+    {
+      "keyword": "kareo medical billing software",
+      "searchVolume": 590,
+      "cpc": 95.72,
+      "competitionLevel": "LOW",
+      "segment": "Clinics",
+      "seed": "medical billing software"
+    },
+    {
+      "keyword": "advancedmd medical billing software",
+      "searchVolume": 480,
+      "cpc": null,
+      "competitionLevel": "LOW",
+      "segment": "Clinics",
+      "seed": "medical billing software"
+    },
+    {
+      "keyword": "massage medical billing software",
+      "searchVolume": 480,
+      "cpc": null,
+      "competitionLevel": "LOW",
+      "segment": "Clinics",
+      "seed": "medical billing software"
+    },
+    {
+      "keyword": "medical billing software for small business",
+      "searchVolume": 480,
+      "cpc": 88.21,
+      "competitionLevel": "LOW",
+      "segment": "Clinics",
+      "seed": "medical billing software"
+    },
+    {
+      "keyword": "accounts payable process automation",
+      "searchVolume": 390,
+      "cpc": 179.07,
+      "competitionLevel": "LOW",
+      "segment": "Property Managers",
+      "seed": "accounts payable automation"
+    },
+    {
+      "keyword": "accounts payable automation tools",
+      "searchVolume": 390,
+      "cpc": 87.83,
+      "competitionLevel": "LOW",
+      "segment": "Property Managers",
+      "seed": "accounts payable automation"
+    },
+    {
+      "keyword": "best accounts payable automation software",
+      "searchVolume": 390,
+      "cpc": 231.07,
+      "competitionLevel": "MEDIUM",
+      "segment": "Property Managers",
+      "seed": "accounts payable automation"
+    },
+    {
+      "keyword": "automation of accounts payable process",
+      "searchVolume": 390,
+      "cpc": 179.07,
+      "competitionLevel": "LOW",
+      "segment": "Property Managers",
+      "seed": "accounts payable automation"
+    },
+    {
+      "keyword": "invoice processing automation software",
+      "searchVolume": 390,
+      "cpc": 57.95,
+      "competitionLevel": "LOW",
+      "segment": "Property Managers",
+      "seed": "invoice processing automation"
+    },
+    {
+      "keyword": "benefits of accounts payable automation",
+      "searchVolume": 320,
+      "cpc": null,
+      "competitionLevel": "LOW",
+      "segment": "Property Managers",
+      "seed": "accounts payable automation"
+    },
+    {
+      "keyword": "automation of accounts payable",
+      "searchVolume": 320,
+      "cpc": 1297.93,
+      "competitionLevel": "LOW",
+      "segment": "Property Managers",
+      "seed": "accounts payable automation"
+    },
+    {
+      "keyword": "accounts payable ap automation",
+      "searchVolume": 320,
+      "cpc": 1297.93,
+      "competitionLevel": "LOW",
+      "segment": "Property Managers",
+      "seed": "accounts payable automation"
+    },
+    {
+      "keyword": "what is accounts payable automation",
+      "searchVolume": 320,
+      "cpc": 63.63,
+      "competitionLevel": "LOW",
+      "segment": "Property Managers",
+      "seed": "accounts payable automation"
+    },
+    {
+      "keyword": "accounts payable automation benefits",
+      "searchVolume": 320,
+      "cpc": null,
+      "competitionLevel": "LOW",
+      "segment": "Property Managers",
+      "seed": "accounts payable automation"
+    },
+    {
+      "keyword": "accounts payable automation systems",
+      "searchVolume": 320,
+      "cpc": 68.21,
+      "competitionLevel": "LOW",
+      "segment": "Property Managers",
+      "seed": "accounts payable automation"
+    },
+    {
+      "keyword": "accounts payable automation system",
+      "searchVolume": 320,
+      "cpc": 68.21,
+      "competitionLevel": "LOW",
+      "segment": "Property Managers",
+      "seed": "accounts payable automation"
+    },
+    {
+      "keyword": "drchrono medical billing software",
+      "searchVolume": 320,
+      "cpc": 48.29,
+      "competitionLevel": "LOW",
+      "segment": "Clinics",
+      "seed": "medical billing software"
+    },
+    {
+      "keyword": "best restaurant inventory management software",
+      "searchVolume": 260,
+      "cpc": 117.38,
+      "competitionLevel": "MEDIUM",
+      "segment": "Restaurants",
+      "seed": "restaurant inventory management software"
+    },
+    {
+      "keyword": "best medical billing software",
+      "searchVolume": 260,
+      "cpc": 66.38,
+      "competitionLevel": "LOW",
+      "segment": "Clinics",
+      "seed": "medical billing software"
+    },
+    {
+      "keyword": "best software for medical billing",
+      "searchVolume": 260,
+      "cpc": 66.38,
+      "competitionLevel": "LOW",
+      "segment": "Clinics",
+      "seed": "medical billing software"
+    },
+    {
+      "keyword": "accounts payable automation process",
+      "searchVolume": 210,
+      "cpc": null,
+      "competitionLevel": "LOW",
+      "segment": "Property Managers",
+      "seed": "accounts payable automation"
+    },
+    {
+      "keyword": "accounts payable automation companies",
+      "searchVolume": 210,
+      "cpc": 137.08,
+      "competitionLevel": "LOW",
+      "segment": "Property Managers",
+      "seed": "accounts payable automation"
+    },
+    {
+      "keyword": "accounts payable automation platform",
+      "searchVolume": 210,
+      "cpc": 1426.33,
+      "competitionLevel": "LOW",
+      "segment": "Property Managers",
+      "seed": "accounts payable automation"
+    }
+  ]
+}

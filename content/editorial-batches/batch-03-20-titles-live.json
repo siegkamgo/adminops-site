@@ -1,0 +1,344 @@
+{
+  "generatedAt": "2026-02-26T00:45:53.258Z",
+  "batch": 3,
+  "source": "live-dataforseo",
+  "titleCount": 20,
+  "cadence": "2 posts per day",
+  "dateRange": {
+    "start": "2026-03-19",
+    "end": "2026-03-28"
+  },
+  "seeds": [
+    {
+      "seed": "accounts payable automation",
+      "segment": "Property Managers"
+    },
+    {
+      "seed": "property management software",
+      "segment": "Property Managers"
+    },
+    {
+      "seed": "property management accounting software",
+      "segment": "Property Managers"
+    },
+    {
+      "seed": "invoice processing automation",
+      "segment": "Property Managers"
+    },
+    {
+      "seed": "rent reconciliation",
+      "segment": "Property Managers"
+    },
+    {
+      "seed": "clinic management software",
+      "segment": "Clinics"
+    },
+    {
+      "seed": "medical billing automation",
+      "segment": "Clinics"
+    },
+    {
+      "seed": "restaurant inventory management software",
+      "segment": "Restaurants"
+    },
+    {
+      "seed": "restaurant back office automation",
+      "segment": "Restaurants"
+    },
+    {
+      "seed": "restaurant accounting software",
+      "segment": "Restaurants"
+    },
+    {
+      "seed": "medical billing software",
+      "segment": "Clinics"
+    },
+    {
+      "seed": "claims processing automation",
+      "segment": "Clinics"
+    }
+  ],
+  "notes": "Fresh live pull from DataForSEO keyword suggestions endpoint with deduplication by semantic overlap.",
+  "items": [
+    {
+      "publishDate": "2026-03-19",
+      "slot": "AM",
+      "segment": "Property Managers",
+      "title": "Best Software Property Management for Property Management Teams (2026)",
+      "primaryKeyword": "best software property management",
+      "searchVolume": 2400,
+      "intent": "BOFU",
+      "serpAngle": "buyer guide",
+      "cpc": 135.11,
+      "competitionLevel": "MEDIUM",
+      "seed": "property management software",
+      "suggestedSlug": "property-managers-best-software-property-management"
+    },
+    {
+      "publishDate": "2026-03-19",
+      "slot": "PM",
+      "segment": "Property Managers",
+      "title": "Best Accounting Software For Property Management for Property Management Teams (2026)",
+      "primaryKeyword": "accounting software for property management",
+      "searchVolume": 1900,
+      "intent": "BOFU",
+      "serpAngle": "buyer guide",
+      "cpc": 97.11,
+      "competitionLevel": "LOW",
+      "seed": "property management software",
+      "suggestedSlug": "property-managers-accounting-software-for-property-management"
+    },
+    {
+      "publishDate": "2026-03-20",
+      "slot": "AM",
+      "segment": "Property Managers",
+      "title": "Best Property Management Software Cloud Based for Property Management Teams (2026)",
+      "primaryKeyword": "property management software cloud based",
+      "searchVolume": 1900,
+      "intent": "BOFU",
+      "serpAngle": "buyer guide",
+      "cpc": 8.58,
+      "competitionLevel": "LOW",
+      "seed": "property management software",
+      "suggestedSlug": "property-managers-property-management-software-cloud-based"
+    },
+    {
+      "publishDate": "2026-03-20",
+      "slot": "PM",
+      "segment": "Restaurants",
+      "title": "Best Restaurant Inventory Management Software for Restaurant Operations Teams (2026)",
+      "primaryKeyword": "restaurant inventory management software",
+      "searchVolume": 1300,
+      "intent": "BOFU",
+      "serpAngle": "buyer guide",
+      "cpc": 84.11,
+      "competitionLevel": "LOW",
+      "seed": "restaurant inventory management software",
+      "suggestedSlug": "restaurants-restaurant-inventory-management-software"
+    },
+    {
+      "publishDate": "2026-03-21",
+      "slot": "AM",
+      "segment": "Clinics",
+      "title": "Best Medical Billing Coding Software for Clinic Operations Teams (2026)",
+      "primaryKeyword": "medical billing coding software",
+      "searchVolume": 1000,
+      "intent": "BOFU",
+      "serpAngle": "buyer guide",
+      "cpc": 46.21,
+      "competitionLevel": "LOW",
+      "seed": "medical billing software",
+      "suggestedSlug": "clinics-medical-billing-coding-software"
+    },
+    {
+      "publishDate": "2026-03-21",
+      "slot": "PM",
+      "segment": "Property Managers",
+      "title": "Accounts Payable Automation Netsuite: 30-Day Implementation Playbook for Property Management Teams",
+      "primaryKeyword": "accounts payable automation netsuite",
+      "searchVolume": 720,
+      "intent": "MOFU-BOFU",
+      "serpAngle": "problem-solution guide",
+      "cpc": 100.51,
+      "competitionLevel": "MEDIUM",
+      "seed": "accounts payable automation",
+      "suggestedSlug": "property-managers-accounts-payable-automation-netsuite"
+    },
+    {
+      "publishDate": "2026-03-22",
+      "slot": "AM",
+      "segment": "Restaurants",
+      "title": "Best Accounting Software For Restaurant for Restaurant Operations Teams (2026)",
+      "primaryKeyword": "accounting software for restaurant",
+      "searchVolume": 720,
+      "intent": "BOFU",
+      "serpAngle": "buyer guide",
+      "cpc": 86.61,
+      "competitionLevel": "MEDIUM",
+      "seed": "restaurant accounting software",
+      "suggestedSlug": "restaurants-accounting-software-for-restaurant"
+    },
+    {
+      "publishDate": "2026-03-22",
+      "slot": "PM",
+      "segment": "Clinics",
+      "title": "Best Software For Clinic Management for Clinic Operations Teams (2026)",
+      "primaryKeyword": "software for clinic management",
+      "searchVolume": 590,
+      "intent": "BOFU",
+      "serpAngle": "buyer guide",
+      "cpc": 38.77,
+      "competitionLevel": "LOW",
+      "seed": "clinic management software",
+      "suggestedSlug": "clinics-software-for-clinic-management"
+    },
+    {
+      "publishDate": "2026-03-23",
+      "slot": "AM",
+      "segment": "Restaurants",
+      "title": "Best Accounting Software For Small Restaurant for Restaurant Operations Teams (2026)",
+      "primaryKeyword": "best accounting software for small restaurant",
+      "searchVolume": 90,
+      "intent": "BOFU",
+      "serpAngle": "buyer guide",
+      "cpc": 45.35,
+      "competitionLevel": "HIGH",
+      "seed": "restaurant accounting software",
+      "suggestedSlug": "restaurants-best-accounting-software-for-small-restaurant"
+    },
+    {
+      "publishDate": "2026-03-23",
+      "slot": "PM",
+      "segment": "Property Managers",
+      "title": "Ap Invoice Processing Automation: 30-Day Implementation Playbook for Property Management Teams",
+      "primaryKeyword": "ap invoice processing automation",
+      "searchVolume": 30,
+      "intent": "MOFU-BOFU",
+      "serpAngle": "implementation guide",
+      "cpc": null,
+      "competitionLevel": "LOW",
+      "seed": "invoice processing automation",
+      "suggestedSlug": "property-managers-ap-invoice-processing-automation"
+    },
+    {
+      "publishDate": "2026-03-24",
+      "slot": "AM",
+      "segment": "Clinics",
+      "title": "Automation In Claims Processing: 30-Day Implementation Playbook for Clinic Operations Teams",
+      "primaryKeyword": "automation in claims processing",
+      "searchVolume": 20,
+      "intent": "MOFU-BOFU",
+      "serpAngle": "implementation guide",
+      "cpc": null,
+      "competitionLevel": "LOW",
+      "seed": "claims processing automation",
+      "suggestedSlug": "clinics-automation-in-claims-processing"
+    },
+    {
+      "publishDate": "2026-03-24",
+      "slot": "PM",
+      "segment": "Property Managers",
+      "title": "Best Rent Property Management Software for Property Management Teams (2026)",
+      "primaryKeyword": "rent property management software",
+      "searchVolume": 1900,
+      "intent": "BOFU",
+      "serpAngle": "buyer guide",
+      "cpc": 80.87,
+      "competitionLevel": "MEDIUM",
+      "seed": "property management software",
+      "suggestedSlug": "property-managers-rent-property-management-software"
+    },
+    {
+      "publishDate": "2026-03-25",
+      "slot": "AM",
+      "segment": "Property Managers",
+      "title": "Best Property Management Rental Software for Property Management Teams (2026)",
+      "primaryKeyword": "property management rental software",
+      "searchVolume": 1900,
+      "intent": "BOFU",
+      "serpAngle": "buyer guide",
+      "cpc": 80.87,
+      "competitionLevel": "MEDIUM",
+      "seed": "property management software",
+      "suggestedSlug": "property-managers-property-management-rental-software"
+    },
+    {
+      "publishDate": "2026-03-25",
+      "slot": "PM",
+      "segment": "Property Managers",
+      "title": "Best Accounts Payable Automation Solution for Property Management Teams (2026)",
+      "primaryKeyword": "accounts payable automation solution",
+      "searchVolume": 720,
+      "intent": "BOFU",
+      "serpAngle": "conversion-focused guide",
+      "cpc": 196.76,
+      "competitionLevel": "LOW",
+      "seed": "accounts payable automation",
+      "suggestedSlug": "property-managers-accounts-payable-automation-solution"
+    },
+    {
+      "publishDate": "2026-03-26",
+      "slot": "AM",
+      "segment": "Clinics",
+      "title": "Best Medical Billing Training Software for Clinic Operations Teams (2026)",
+      "primaryKeyword": "medical billing training software",
+      "searchVolume": 720,
+      "intent": "BOFU",
+      "serpAngle": "buyer guide",
+      "cpc": 20.64,
+      "competitionLevel": "LOW",
+      "seed": "medical billing software",
+      "suggestedSlug": "clinics-medical-billing-training-software"
+    },
+    {
+      "publishDate": "2026-03-26",
+      "slot": "PM",
+      "segment": "Clinics",
+      "title": "Best Clinic Management Software for Clinic Operations Teams (2026)",
+      "primaryKeyword": "clinic management software",
+      "searchVolume": 590,
+      "intent": "BOFU",
+      "serpAngle": "buyer guide",
+      "cpc": 38.77,
+      "competitionLevel": "LOW",
+      "seed": "clinic management software",
+      "suggestedSlug": "clinics-clinic-management-software"
+    },
+    {
+      "publishDate": "2026-03-27",
+      "slot": "AM",
+      "segment": "Clinics",
+      "title": "Best Kareo Medical Billing Software for Clinic Operations Teams (2026)",
+      "primaryKeyword": "kareo medical billing software",
+      "searchVolume": 590,
+      "intent": "BOFU",
+      "serpAngle": "buyer guide",
+      "cpc": 95.72,
+      "competitionLevel": "LOW",
+      "seed": "medical billing software",
+      "suggestedSlug": "clinics-kareo-medical-billing-software"
+    },
+    {
+      "publishDate": "2026-03-27",
+      "slot": "PM",
+      "segment": "Clinics",
+      "title": "Best Advancedmd Medical Billing Software for Clinic Operations Teams (2026)",
+      "primaryKeyword": "advancedmd medical billing software",
+      "searchVolume": 480,
+      "intent": "BOFU",
+      "serpAngle": "buyer guide",
+      "cpc": null,
+      "competitionLevel": "LOW",
+      "seed": "medical billing software",
+      "suggestedSlug": "clinics-advancedmd-medical-billing-software"
+    },
+    {
+      "publishDate": "2026-03-28",
+      "slot": "AM",
+      "segment": "Clinics",
+      "title": "Best Massage Medical Billing Software for Clinic Operations Teams (2026)",
+      "primaryKeyword": "massage medical billing software",
+      "searchVolume": 480,
+      "intent": "BOFU",
+      "serpAngle": "buyer guide",
+      "cpc": null,
+      "competitionLevel": "LOW",
+      "seed": "medical billing software",
+      "suggestedSlug": "clinics-massage-medical-billing-software"
+    },
+    {
+      "publishDate": "2026-03-28",
+      "slot": "PM",
+      "segment": "Clinics",
+      "title": "Best Medical Billing Software For Small Business for Clinic Operations Teams (2026)",
+      "primaryKeyword": "medical billing software for small business",
+      "searchVolume": 480,
+      "intent": "BOFU",
+      "serpAngle": "buyer guide",
+      "cpc": 88.21,
+      "competitionLevel": "LOW",
+      "seed": "medical billing software",
+      "suggestedSlug": "clinics-medical-billing-software-for-small-business"
+    }
+  ]
+}

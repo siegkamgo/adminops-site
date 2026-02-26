@@ -1,0 +1,30 @@
+{
+  "generatedAt": "2026-02-26T00:45:53.467Z",
+  "batch": 3,
+  "sourceBatch": "content/editorial-batches/batch-03-20-titles.json",
+  "total": 20,
+  "created": 20,
+  "updated": 0,
+  "slugs": [
+    "property-managers-best-software-property-management",
+    "property-managers-accounting-software-for-property-management",
+    "property-managers-property-management-software-cloud-based",
+    "restaurants-restaurant-inventory-management-software",
+    "clinics-medical-billing-coding-software",
+    "property-managers-accounts-payable-automation-netsuite",
+    "restaurants-accounting-software-for-restaurant",
+    "clinics-software-for-clinic-management",
+    "restaurants-best-accounting-software-for-small-restaurant",
+    "property-managers-ap-invoice-processing-automation",
+    "clinics-automation-in-claims-processing",
+    "property-managers-rent-property-management-software",
+    "property-managers-property-management-rental-software",
+    "property-managers-accounts-payable-automation-solution",
+    "clinics-medical-billing-training-software",
+    "clinics-clinic-management-software",
+    "clinics-kareo-medical-billing-software",
+    "clinics-advancedmd-medical-billing-software",
+    "clinics-massage-medical-billing-software",
+    "clinics-medical-billing-software-for-small-business"
+  ]
+}
