@@ -203,6 +203,10 @@ function getKeyTakeaways(insight) {
 }
 
 function getLeadVisual(insight) {
+  if (insight.featuredImage?.src) {
+    return insight.featuredImage;
+  }
+
   for (const section of insight.sections || []) {
     if (section.images?.length) {
       return section.images[0];

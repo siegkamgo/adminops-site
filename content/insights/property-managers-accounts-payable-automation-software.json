@@ -194,5 +194,10 @@
   "cta": {
     "label": "Book a free strategy call",
     "href": "https://www.cal.eu/sieg-kamgo/30min"
+  },
+  "featuredImage": {
+    "src": "/images/insights/featured/property-managers-accounts-payable-automation-software.svg",
+    "alt": "Featured illustration for Best Accounts Payable Automation Software for Property Management Teams (2026)",
+    "caption": "Featured visual generated for this insight"
   }
 }

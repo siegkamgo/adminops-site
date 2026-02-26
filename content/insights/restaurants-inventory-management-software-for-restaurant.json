@@ -194,5 +194,11 @@
   "cta": {
     "label": "Book a free strategy call",
     "href": "https://www.cal.eu/sieg-kamgo/30min"
+  },
+  "featuredImage": {
+    "src": "/images/insights/featured/restaurants-inventory-management-software-for-restaurant.jpg",
+    "alt": "Featured image for Best Restaurant Inventory Management Software for Restaurant Operations Teams (2026)",
+    "caption": "Photo by Yan Krukau on Pexels",
+    "creditUrl": "https://www.pexels.com/photo/three-people-working-in-the-office-7640486/"
   }
 }

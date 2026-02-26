@@ -5,6 +5,21 @@ import { fetchKeywordSuggestions } from "../lib/dataforseo.js";
 
 const root = process.cwd();
 
+function getBatchNumber() {
+  const cliValue = Number(process.argv[2] || "");
+  if (Number.isInteger(cliValue) && cliValue > 0) return cliValue;
+
+  const envValue = Number(process.env.BATCH_NUMBER || "");
+  if (Number.isInteger(envValue) && envValue > 0) return envValue;
+
+  return 1;
+}
+
+function batchFileName(batchNumber, suffix) {
+  const label = String(batchNumber).padStart(2, "0");
+  return `batch-${label}-${suffix}`;
+}
+
 function loadEnvFile(filePath) {
   if (!fs.existsSync(filePath)) return;
   const lines = fs.readFileSync(filePath, "utf8").split(/\r?\n/);
@@ -140,8 +155,63 @@ function nextDate(startDate, index) {
   return `${year}-${month}-${day}`;
 }
 
+function parseDate(value) {
+  const date = new Date(`${value}T00:00:00Z`);
+  if (Number.isNaN(date.getTime())) return null;
+  return date;
+}
+
+function formatDate(date) {
+  const year = date.getUTCFullYear();
+  const month = String(date.getUTCMonth() + 1).padStart(2, "0");
+  const day = String(date.getUTCDate()).padStart(2, "0");
+  return `${year}-${month}-${day}`;
+}
+
+function getNextBatchStartDate() {
+  const explicitStart = process.env.BATCH_START_DATE;
+  if (explicitStart) {
+    const parsed = parseDate(explicitStart);
+    if (parsed) return parsed;
+  }
+
+  const batchesDir = path.join(root, "content", "editorial-batches");
+  if (!fs.existsSync(batchesDir)) {
+    return new Date("2026-02-27T00:00:00Z");
+  }
+
+  const files = fs.readdirSync(batchesDir).filter((name) => /^batch-\d{2}-20-titles\.json$/i.test(name));
+  let maxDate = null;
+
+  for (const fileName of files) {
+    const filePath = path.join(batchesDir, fileName);
+    try {
+      const batch = JSON.parse(fs.readFileSync(filePath, "utf8"));
+      const items = Array.isArray(batch?.items) ? batch.items : [];
+      for (const item of items) {
+        const parsed = parseDate(item.publishDate);
+        if (!parsed) continue;
+        if (!maxDate || parsed > maxDate) {
+          maxDate = parsed;
+        }
+      }
+    } catch {
+      // Ignore malformed files and continue.
+    }
+  }
+
+  if (!maxDate) {
+    return new Date("2026-02-27T00:00:00Z");
+  }
+
+  const next = new Date(maxDate);
+  next.setUTCDate(next.getUTCDate() + 1);
+  return next;
+}
+
 async function run() {
   loadEnvFile(path.join(root, ".env.local"));
+  const batchNumber = getBatchNumber();
 
   const seeds = [
     { seed: "accounts payable automation", segment: "Property Managers" },
@@ -271,7 +341,7 @@ async function run() {
     }
   }
 
-  const startDate = new Date("2026-02-27T00:00:00Z");
+  const startDate = getNextBatchStartDate();
   const scheduled = selected.slice(0, 20).map((item, index) => ({
     publishDate: nextDate(startDate, index),
     slot: index % 2 === 0 ? "AM" : "PM",
@@ -280,7 +350,7 @@ async function run() {
 
   const output = {
     generatedAt: new Date().toISOString(),
-    batch: 1,
+    batch: batchNumber,
     source: "live-dataforseo",
     titleCount: scheduled.length,
     cadence: "2 posts per day",
@@ -304,8 +374,9 @@ async function run() {
   const outDir = path.join(root, "content", "editorial-batches");
   fs.mkdirSync(outDir, { recursive: true });
 
-  fs.writeFileSync(path.join(outDir, "batch-01-20-titles-live.json"), JSON.stringify(output, null, 2));
-  fs.writeFileSync(path.join(outDir, "batch-01-live-research.json"), JSON.stringify(research, null, 2));
+  fs.writeFileSync(path.join(outDir, batchFileName(batchNumber, "20-titles-live.json")), JSON.stringify(output, null, 2));
+  fs.writeFileSync(path.join(outDir, batchFileName(batchNumber, "20-titles.json")), JSON.stringify(output, null, 2));
+  fs.writeFileSync(path.join(outDir, batchFileName(batchNumber, "live-research.json")), JSON.stringify(research, null, 2));
 
   console.log(`Generated ${scheduled.length} titles from ${pulled.length} live keyword rows.`);
 }

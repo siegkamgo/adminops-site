@@ -194,5 +194,11 @@
   "cta": {
     "label": "Book a free strategy call",
     "href": "https://www.cal.eu/sieg-kamgo/30min"
+  },
+  "featuredImage": {
+    "src": "/images/insights/featured/clinics-software-for-medical-billing-and-coding.jpg",
+    "alt": "Featured image for Best Medical Billing and Coding Software for Clinic Operations Teams (2026)",
+    "caption": "Photo by Los Muertos Crew on Pexels",
+    "creditUrl": "https://www.pexels.com/photo/medical-practitioners-wearing-their-uniforms-8460372/"
   }
 }

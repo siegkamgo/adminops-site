@@ -194,5 +194,11 @@
   "cta": {
     "label": "Book a free strategy call",
     "href": "https://www.cal.eu/sieg-kamgo/30min"
+  },
+  "featuredImage": {
+    "src": "/images/insights/featured/clinics-claims-processing-automation.jpg",
+    "alt": "Featured image for Claims Processing Automation: 30-Day Implementation Playbook for Clinic Operations Teams",
+    "caption": "Photo by RDNE Stock project on Pexels",
+    "creditUrl": "https://www.pexels.com/photo/doctor-talking-to-a-patient-6129655/"
   }
 }

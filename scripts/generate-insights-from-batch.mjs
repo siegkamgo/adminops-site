@@ -3,8 +3,22 @@ import fs from "node:fs";
 import path from "node:path";
 
 const root = process.cwd();
-const batchPath = path.join(root, "content", "editorial-batches", "batch-01-20-titles.json");
 const insightsDir = path.join(root, "content", "insights");
+
+function getBatchNumber() {
+  const cliValue = Number(process.argv[2] || "");
+  if (Number.isInteger(cliValue) && cliValue > 0) return cliValue;
+
+  const envValue = Number(process.env.BATCH_NUMBER || "");
+  if (Number.isInteger(envValue) && envValue > 0) return envValue;
+
+  return 1;
+}
+
+function batchFileName(batchNumber, suffix) {
+  const label = String(batchNumber).padStart(2, "0");
+  return `batch-${label}-${suffix}`;
+}
 
 const cta = {
   label: "Book a free strategy call",
@@ -258,6 +272,9 @@ function buildInsight(item) {
 }
 
 function run() {
+  const batchNumber = getBatchNumber();
+  const batchPath = path.join(root, "content", "editorial-batches", batchFileName(batchNumber, "20-titles.json"));
+
   if (!fs.existsSync(batchPath)) {
     throw new Error(`Batch file not found: ${batchPath}`);
   }
@@ -288,6 +305,7 @@ function run() {
 
   const report = {
     generatedAt: new Date().toISOString(),
+    batch: batchNumber,
     sourceBatch: path.relative(root, batchPath).replace(/\\/g, "/"),
     total: items.length,
     created,
@@ -296,7 +314,7 @@ function run() {
   };
 
   fs.writeFileSync(
-    path.join(root, "content", "editorial-batches", "batch-01-20-generation-report.json"),
+    path.join(root, "content", "editorial-batches", batchFileName(batchNumber, "20-generation-report.json")),
     JSON.stringify(report, null, 2)
   );
 

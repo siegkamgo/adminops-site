@@ -194,5 +194,11 @@
   "cta": {
     "label": "Book a free strategy call",
     "href": "https://www.cal.eu/sieg-kamgo/30min"
+  },
+  "featuredImage": {
+    "src": "/images/insights/featured/clinics-dental-clinic-management-software.jpg",
+    "alt": "Featured image for Best Dental Clinic Management Software for Clinic Operations Teams (2026)",
+    "caption": "Photo by Tima Miroshnichenko on Pexels",
+    "creditUrl": "https://www.pexels.com/photo/close-up-photo-of-person-writing-on-a-paper-6170173/"
   }
 }

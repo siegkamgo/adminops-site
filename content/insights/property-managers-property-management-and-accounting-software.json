@@ -194,5 +194,11 @@
   "cta": {
     "label": "Book a free strategy call",
     "href": "https://www.cal.eu/sieg-kamgo/30min"
+  },
+  "featuredImage": {
+    "src": "/images/insights/featured/property-managers-property-management-and-accounting-software.jpg",
+    "alt": "Featured image for Best Property Management And Accounting Software for Property Management Teams (2026)",
+    "caption": "Photo by Thirdman on Pexels",
+    "creditUrl": "https://www.pexels.com/photo/people-working-in-the-office-7653462/"
   }
 }

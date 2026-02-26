@@ -194,5 +194,10 @@
   "cta": {
     "label": "Book a free strategy call",
     "href": "https://www.cal.eu/sieg-kamgo/30min"
+  },
+  "featuredImage": {
+    "src": "/images/insights/featured/clinics-software-for-medical-billing.svg",
+    "alt": "Featured illustration for Software for Medical Billing: Buyer Guide for Clinic Operations Teams (2026)",
+    "caption": "Featured visual generated for this insight"
   }
 }

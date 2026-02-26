@@ -194,5 +194,11 @@
   "cta": {
     "label": "Book a free strategy call",
     "href": "https://www.cal.eu/sieg-kamgo/30min"
+  },
+  "featuredImage": {
+    "src": "/images/insights/featured/restaurants-software-accounting-restaurant.jpg",
+    "alt": "Featured image for Best Restaurant Accounting Software for Restaurant Operations Teams (2026)",
+    "caption": "Photo by Atlantic Ambience on Pexels",
+    "creditUrl": "https://www.pexels.com/photo/close-up-shot-of-a-laptop-computer-12969403/"
   }
 }

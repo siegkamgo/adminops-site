@@ -194,5 +194,11 @@
   "cta": {
     "label": "Book a free strategy call",
     "href": "https://www.cal.eu/sieg-kamgo/30min"
+  },
+  "featuredImage": {
+    "src": "/images/insights/featured/property-managers-best-software-for-property-management.jpg",
+    "alt": "Featured image for Best Software for Property Management: SMB Buyer Guide (2026)",
+    "caption": "Photo by RDNE Stock project on Pexels",
+    "creditUrl": "https://www.pexels.com/photo/woman-in-red-writing-on-a-whiteboard-10375997/"
   }
 }

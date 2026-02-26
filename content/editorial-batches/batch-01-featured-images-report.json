@@ -1,0 +1,148 @@
+{
+  "generatedAt": "2026-02-26T00:31:59.622Z",
+  "total": 20,
+  "success": 20,
+  "failed": 0,
+  "results": [
+    {
+      "slug": "property-managers-property-management-computer-software",
+      "status": "ok",
+      "image": "/images/insights/featured/property-managers-property-management-computer-software.svg",
+      "insightUpdated": true,
+      "source": "gemini"
+    },
+    {
+      "slug": "clinics-software-for-medical-billing",
+      "status": "ok",
+      "image": "/images/insights/featured/clinics-software-for-medical-billing.svg",
+      "insightUpdated": true,
+      "source": "gemini"
+    },
+    {
+      "slug": "property-managers-accounts-payable-automation-software",
+      "status": "ok",
+      "image": "/images/insights/featured/property-managers-accounts-payable-automation-software.svg",
+      "insightUpdated": true,
+      "source": "gemini"
+    },
+    {
+      "slug": "property-managers-best-software-for-property-management",
+      "status": "ok",
+      "image": "/images/insights/featured/property-managers-best-software-for-property-management.svg",
+      "insightUpdated": true,
+      "source": "gemini"
+    },
+    {
+      "slug": "property-managers-property-management-cloud-based-software",
+      "status": "ok",
+      "image": "/images/insights/featured/property-managers-property-management-cloud-based-software.svg",
+      "insightUpdated": true,
+      "source": "gemini"
+    },
+    {
+      "slug": "property-managers-property-management-and-accounting-software",
+      "status": "ok",
+      "image": "/images/insights/featured/property-managers-property-management-and-accounting-software.svg",
+      "insightUpdated": true,
+      "source": "gemini"
+    },
+    {
+      "slug": "restaurants-inventory-management-software-for-restaurant",
+      "status": "ok",
+      "image": "/images/insights/featured/restaurants-inventory-management-software-for-restaurant.svg",
+      "insightUpdated": true,
+      "source": "local-fallback"
+    },
+    {
+      "slug": "clinics-software-for-medical-billing-and-coding",
+      "status": "ok",
+      "image": "/images/insights/featured/clinics-software-for-medical-billing-and-coding.svg",
+      "insightUpdated": true,
+      "source": "gemini"
+    },
+    {
+      "slug": "clinics-dental-clinic-management-software",
+      "status": "ok",
+      "image": "/images/insights/featured/clinics-dental-clinic-management-software.svg",
+      "insightUpdated": true,
+      "source": "local-fallback"
+    },
+    {
+      "slug": "restaurants-software-accounting-restaurant",
+      "status": "ok",
+      "image": "/images/insights/featured/restaurants-software-accounting-restaurant.svg",
+      "insightUpdated": true,
+      "source": "gemini"
+    },
+    {
+      "slug": "property-managers-invoice-processing-automation",
+      "status": "ok",
+      "image": "/images/insights/featured/property-managers-invoice-processing-automation.svg",
+      "insightUpdated": true,
+      "source": "gemini"
+    },
+    {
+      "slug": "restaurants-best-software-for-restaurant-accounting",
+      "status": "ok",
+      "image": "/images/insights/featured/restaurants-best-software-for-restaurant-accounting.svg",
+      "insightUpdated": true,
+      "source": "gemini"
+    },
+    {
+      "slug": "clinics-claims-processing-automation",
+      "status": "ok",
+      "image": "/images/insights/featured/clinics-claims-processing-automation.svg",
+      "insightUpdated": true,
+      "source": "gemini"
+    },
+    {
+      "slug": "property-managers-rent-reconciliation",
+      "status": "ok",
+      "image": "/images/insights/featured/property-managers-rent-reconciliation.svg",
+      "insightUpdated": true,
+      "source": "gemini"
+    },
+    {
+      "slug": "restaurants-bar-and-restaurant-accounting-software",
+      "status": "ok",
+      "image": "/images/insights/featured/restaurants-bar-and-restaurant-accounting-software.svg",
+      "insightUpdated": true,
+      "source": "gemini"
+    },
+    {
+      "slug": "property-managers-property-management-software",
+      "status": "ok",
+      "image": "/images/insights/featured/property-managers-property-management-software.svg",
+      "insightUpdated": true,
+      "source": "gemini"
+    },
+    {
+      "slug": "property-managers-property-management-software-buildium",
+      "status": "ok",
+      "image": "/images/insights/featured/property-managers-property-management-software-buildium.svg",
+      "insightUpdated": true,
+      "source": "gemini"
+    },
+    {
+      "slug": "clinics-software-medical-billing",
+      "status": "ok",
+      "image": "/images/insights/featured/clinics-software-medical-billing.svg",
+      "insightUpdated": true,
+      "source": "gemini"
+    },
+    {
+      "slug": "property-managers-automation-accounts-payable",
+      "status": "ok",
+      "image": "/images/insights/featured/property-managers-automation-accounts-payable.svg",
+      "insightUpdated": true,
+      "source": "gemini"
+    },
+    {
+      "slug": "property-managers-property-management-bookkeeping-software",
+      "status": "ok",
+      "image": "/images/insights/featured/property-managers-property-management-bookkeeping-software.svg",
+      "insightUpdated": true,
+      "source": "gemini"
+    }
+  ]
+}

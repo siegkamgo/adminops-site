@@ -194,5 +194,11 @@
   "cta": {
     "label": "Book a free strategy call",
     "href": "https://www.cal.eu/sieg-kamgo/30min"
+  },
+  "featuredImage": {
+    "src": "/images/insights/featured/property-managers-rent-reconciliation.jpg",
+    "alt": "Featured image for Rent Reconciliation: 30-Day Implementation Playbook for Property Management Teams",
+    "caption": "Photo by Tima Miroshnichenko on Pexels",
+    "creditUrl": "https://www.pexels.com/photo/two-people-sitting-on-chairs-using-computers-5380582/"
   }
 }

@@ -194,5 +194,11 @@
   "cta": {
     "label": "Book a free strategy call",
     "href": "https://www.cal.eu/sieg-kamgo/30min"
+  },
+  "featuredImage": {
+    "src": "/images/insights/featured/restaurants-bar-and-restaurant-accounting-software.jpg",
+    "alt": "Featured image for Best Bar And Restaurant Accounting Software for Restaurant Operations Teams (2026)",
+    "caption": "Photo by Aleksandar Andreev on Pexels",
+    "creditUrl": "https://www.pexels.com/photo/interior-of-bmw-x3-25189115/"
   }
 }
