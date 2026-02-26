@@ -21,248 +21,194 @@ export default function HomePage() {
 
   return (
     <>
-      <section className="hero">
-        <div className="container">
-          <Script id="home-speakable-schema" type="application/ld+json" strategy="afterInteractive">
-            {JSON.stringify(speakableSchema)}
-          </Script>
-          <div className="hero-shell">
-            <div className="hero-grid">
-              <div>
-                <span className="badge">AdminOps · AI + Human Approval</span>
-                <h1 id="home-hero-heading">Automate 60–80% of routine admin work in 30 days.</h1>
-                <p id="home-hero-summary">
-                  AdminOps builds AI agents that handle repetitive admin workflows end-to-end while your team keeps final approval.
-                  You get cleaner operations, fewer errors, and faster reporting without adding headcount.
-                </p>
-                <div className="cta-row">
-                  <a
-                    className="btn btn-primary"
-                    href="https://www.cal.eu/sieg-kamgo/30min"
-                    target="_blank"
-                    rel="noreferrer"
-                    data-track="book-call"
-                    data-cta-location="home-hero"
-                  >
-                    Book a free strategy call
-                  </a>
-                  <Link className="btn btn-secondary" href="/adminops-pilot">
-                    Explore the 30-day pilot
-                  </Link>
-                </div>
+      <Script id="home-speakable-schema" type="application/ld+json" strategy="afterInteractive">
+        {JSON.stringify(speakableSchema)}
+      </Script>
+
+      <div className="home-page">
+        <section className="home-hero">
+          <div className="container home-hero-grid">
+            <div>
+              <span className="home-pill">AI Operations Support · Resolve more admin work with less effort</span>
+              <h1 id="home-hero-heading">AI Agents for Admin Workflows & Revenue Operations</h1>
+              <p id="home-hero-summary">
+                AdminOps is an AI operations platform with human approval controls that handles repetitive requests,
+                routing, reconciliations, and reporting so your team can focus on higher-value execution.
+              </p>
+              <div className="cta-row">
+                <a
+                  className="btn btn-primary"
+                  href="https://www.cal.eu/sieg-kamgo/30min"
+                  target="_blank"
+                  rel="noreferrer"
+                  data-track="book-call"
+                  data-cta-location="home-hero"
+                >
+                  Schedule a demo
+                </a>
+                <Link className="btn btn-secondary" href="/adminops-pilot">
+                  Get started free
+                </Link>
               </div>
-              <aside className="card hero-proof" aria-label="AdminOps value snapshot">
-                <h3>Why teams switch to AdminOps</h3>
-                <ul>
-                  <li>Fewer repetitive admin handoffs across systems</li>
-                  <li>Human approval gates preserved for high-risk decisions</li>
-                  <li>Weekly KPI visibility on throughput and exceptions</li>
-                </ul>
-                <div className="stats-row">
-                  <div className="card">
-                    <strong>30 days</strong>
-                    <p>to first workflow launch</p>
-                  </div>
-                  <div className="card">
-                    <strong>60–80%</strong>
-                    <p>routine admin workload automated</p>
-                  </div>
-                </div>
-              </aside>
+            </div>
+
+            <div className="home-hero-visual" aria-hidden="true">
+              <div className="visual-chat">Can I automate invoice approvals and monthly reporting?</div>
+              <div className="visual-card">
+                <strong>Automated workflow launched</strong>
+                <p>Capture → Validate → Route → Approve → Report</p>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section className="section section-alt">
-        <div className="container">
-          <h2>Built for operations leaders under pressure</h2>
-          <div className="grid-3">
-          <article className="card">
-            <h3>Ideal Client Avatar</h3>
-            <p><strong>Role:</strong> Owner, COO, Operations Manager</p>
-            <p><strong>Company size:</strong> 5–50 staff · <strong>Revenue:</strong> $1M–$10M</p>
-            <p><strong>Industries:</strong> Property managers, clinics, restaurants, and other admin-heavy SMBs.</p>
-          </article>
-          <article className="card">
-            <h3>Core Pain</h3>
-            <p>Drowning in repetitive admin, error-prone workflows, and reporting that arrives too late to act on.</p>
-          </article>
-          <article className="card">
-            <h3>Desired Outcome</h3>
-            <p>Fewer admin hours, clean reporting, and no extra hires, without losing control or compromising security.</p>
-          </article>
-          </div>
-        </div>
-      </section>
-
-      <section className="section">
-        <div className="container">
-          <h2>The Problem</h2>
-          <div className="grid-3">
-            <div className="card"><h3>Manual overload</h3><p>Teams spend hours on data entry, reconciliations, chasing documents, and status updates.</p></div>
-            <div className="card"><h3>Errors and rework</h3><p>Human fatigue leads to duplicated records, missed deadlines, and inconsistent reporting.</p></div>
-            <div className="card"><h3>Growth bottlenecks</h3><p>Operations become fragile as volume grows, forcing expensive hiring before revenue catches up.</p></div>
-          </div>
-        </div>
-      </section>
-
-      <section className="section section-alt">
-        <div className="container">
-          <h2>The Solution: AdminOps Agent Stack</h2>
-          <div className="grid-2">
-            <div className="card">
-              <h3>Capture Agent</h3>
-              <p>Collects data from forms, inboxes, spreadsheets, and portals into a single structured queue.</p>
-            </div>
-            <div className="card">
-              <h3>Process Agent</h3>
-              <p>Classifies requests, validates data, applies business rules, and routes tasks by priority.</p>
-            </div>
-            <div className="card">
-              <h3>Reconciliation Agent</h3>
-              <p>Matches records across systems, flags exceptions, and prepares approval-ready summaries.</p>
-            </div>
-            <div className="card">
-              <h3>Reporting Agent</h3>
-              <p>Builds weekly and monthly ops reports with KPI trends and actionable exception logs.</p>
+        <section className="section home-section-dark">
+          <div className="container">
+            <h2>Go Beyond Reactive Operations</h2>
+            <p className="home-section-subtitle">
+              Layer automation, personalization, and governance across workflows so every process is faster, cleaner,
+              and easier to control.
+            </p>
+            <div className="home-matrix">
+              <article><h3>Proactive Workflow Triggers</h3><p>Start automation based on SLAs, bottlenecks, queue age, and exception signals.</p></article>
+              <article><h3>Real-Time Sentiment Detection</h3><p>Prioritize urgent customer-facing requests and escalate when risk signals increase.</p></article>
+              <article><h3>Adaptive Fallback Strategies</h3><p>When data is incomplete, agents ask for context or route to humans instead of failing silently.</p></article>
+              <article><h3>User Journey Personalization</h3><p>Tailor handoffs and workflows by account type, role, and business priority.</p></article>
+              <article><h3>Actionable Conversations</h3><p>Turn intake requests into structured actions in your systems while preserving controls.</p></article>
+              <article><h3>Regulated Industry Compliance</h3><p>Use approval gates, masking, and audit logs for healthcare, finance, and sensitive operations.</p></article>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section className="section">
-        <div className="container">
-          <h2>What Agents Do in Practice</h2>
-          <div className="grid-2">
-            <ul className="card">
-              <li>Inbox triage and request categorization</li>
-              <li>Invoice and payment reconciliation</li>
-              <li>Vendor follow-ups and deadline reminders</li>
-              <li>Data cleanup and CRM/ERP updates</li>
-              <li>Approval-ready summaries for managers</li>
-            </ul>
-            <ul className="card">
-              <li>Compliance checklist verification</li>
-              <li>Recurring report generation</li>
-              <li>Exception detection and escalation</li>
-              <li>Audit trails for every workflow action</li>
-              <li>Secure handoff to a human final approver</li>
-            </ul>
-          </div>
-        </div>
-      </section>
+        <section className="section">
+          <div className="container">
+            <h2>Everything You Need for Ops Automation</h2>
+            <div className="cta-row home-center-cta">
+              <a
+                className="btn btn-primary"
+                href="https://www.cal.eu/sieg-kamgo/30min"
+                target="_blank"
+                rel="noreferrer"
+                data-track="book-call"
+                data-cta-location="home-capabilities"
+              >
+                Schedule a Demo
+              </a>
+              <Link className="btn btn-secondary" href="/adminops-pilot">Get Started Free</Link>
+            </div>
 
-      <section className="section section-alt">
-        <div className="container">
-          <h2>Segments Served</h2>
-          <div className="grid-3">
-            <article className="card">
-              <h3>Property Management</h3>
-              <p>Tenant comms, maintenance requests, arrears tracking, and monthly reconciliations.</p>
-              <Link className="btn btn-secondary" href="/property-management-ai-agents">View Property solution</Link>
-            </article>
-            <article className="card">
-              <h3>Clinics</h3>
-              <p>Patient admin, referral handling, billing checks, and compliance-ready reporting workflows.</p>
-              <Link className="btn btn-secondary" href="/clinic-ops-ai-agents">View Clinic solution</Link>
-            </article>
-            <article className="card">
-              <h3>Restaurants</h3>
-              <p>Supplier invoices, rota admin, inventory updates, and daily/weekly performance summaries.</p>
-              <Link className="btn btn-secondary" href="/restaurant-ops-ai-agents">View Restaurant solution</Link>
-            </article>
+            <div className="home-capabilities">
+              <article className="card"><h3>No-Code AI Workflow Builder</h3><p>Build, train, and deploy AI automation without engineering complexity.</p></article>
+              <article className="card"><h3>Multilingual Support in 95+ Languages</h3><p>Respond in each user’s language across distributed teams and markets.</p></article>
+              <article className="card"><h3>Transparent Pricing Model</h3><p>Predictable packaging designed for SMB and mid-market operators.</p></article>
+              <article className="card"><h3>Reliable Uptime & Failover</h3><p>Keep core operations available with resilient automation infrastructure.</p></article>
+              <article className="card"><h3>Enterprise-Grade Security</h3><p>Data isolation, audit logs, and policy-based controls across every workflow.</p></article>
+              <article className="card"><h3>Escalation from Agent to Human</h3><p>Give teams full context when handing off high-risk or ambiguous cases.</p></article>
+              <article className="card"><h3>Actionable Analytics</h3><p>Track cycle time, exception rates, and throughput gains in one place.</p></article>
+              <article className="card"><h3>White-Label & API Access</h3><p>Deploy under your own brand and integrate with existing tools quickly.</p></article>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section className="section">
-        <div className="container">
-          <h2>Packages</h2>
-          <div className="grid-3">
-            <article className="card">
-              <h3>Pilot</h3>
-              <p>30 days to automate one high-friction workflow, prove ROI, and deliver measurable time savings.</p>
-              <p><strong>Best for:</strong> Teams validating AI operations fit.</p>
-            </article>
-            <article className="card">
-              <h3>Growth</h3>
-              <p>Automate 3–5 workflows with deeper integrations, reporting dashboards, and team enablement.</p>
-              <p><strong>Best for:</strong> SMBs scaling without adding admin headcount.</p>
-            </article>
-            <article className="card">
-              <h3>Enterprise</h3>
-              <p>Multi-location governance, custom controls, and advanced security/compliance requirements.</p>
-              <p><strong>Best for:</strong> Complex operations with strict oversight.</p>
-            </article>
-          </div>
-        </div>
-      </section>
+        <section className="section home-section-dark">
+          <div className="container">
+            <h2>How AdminOps Works in 60 Seconds</h2>
+            <p className="home-section-subtitle">Watch a typical admin journey: request received → data validated → action completed → team notified.</p>
 
-      <section className="section section-alt">
-        <div className="container">
-          <h2>How It Works</h2>
-          <div className="grid-3">
-            <div className="card"><h3>1. Audit</h3><p>We map your current process, bottlenecks, and risk controls in week one.</p></div>
-            <div className="card"><h3>2. Build</h3><p>We deploy your AI agents with human approval gates and clear escalation rules.</p></div>
-            <div className="card"><h3>3. Optimize</h3><p>We measure throughput, error rate, and admin hours saved, then iterate fast.</p></div>
+            <div className="home-process-grid">
+              <div className="home-process-visual" aria-hidden="true">
+                <div className="process-message">We were charged twice this month</div>
+                <div className="process-reply">I can resolve this now and escalate billing if needed.</div>
+                <div className="process-ticket">Ticket #234 · Submitted</div>
+              </div>
+              <div className="home-process-list">
+                <article className="active"><h3>Full Context Awareness</h3><p>Uses conversation history, site context, and CRM data for relevant responses.</p></article>
+                <article><h3>Automated Actions</h3><p>Triggers workflows such as status updates, escalations, and resolution checks.</p></article>
+                <article><h3>Brand Voice Control</h3><p>Maintains approved language and response quality standards.</p></article>
+                <article><h3>Intelligent Handoff</h3><p>Escalates to humans with complete context and recommended next steps.</p></article>
+                <article><h3>Performance Insights</h3><p>Measures response speed, resolution quality, and workflow completion rates.</p></article>
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section className="section">
-        <div className="container">
-          <h2>Resources for Buyers</h2>
-          <div className="grid-3">
-            <article className="card">
-              <h3>Comparison Pages</h3>
-              <ul>
-                <li><Link href="/comparisons/adminops-vs-hiring-admin-staff">AdminOps vs Hiring Admin Staff</Link></li>
-                <li><Link href="/comparisons/adminops-vs-rpa-tools">AdminOps vs Generic RPA Tools</Link></li>
-                <li><Link href="/comparisons/adminops-vs-virtual-assistants">AdminOps vs Virtual Assistants</Link></li>
-              </ul>
-            </article>
-            <article className="card">
-              <h3>Segment Guides</h3>
-              <ul>
-                <li><Link href="/guides/property-management-automation-guide">Property Management Guide</Link></li>
-                <li><Link href="/guides/clinic-automation-guide">Clinic Operations Guide</Link></li>
-                <li><Link href="/guides/restaurant-automation-guide">Restaurant Operations Guide</Link></li>
-              </ul>
-            </article>
-            <article className="card">
-              <h3>Core Conversion Pages</h3>
-              <ul>
-                <li><Link href="/adminops-pilot">30-Day Pilot Offer</Link></li>
-                <li><Link href="/property-management-ai-agents">Property Management Solution</Link></li>
-                <li><Link href="/blog/property-management-admin-automation">Featured SEO Article</Link></li>
-              </ul>
-            </article>
+        <section className="section">
+          <div className="container">
+            <h2>Trusted by Growing Teams</h2>
+            <p className="home-section-subtitle">Real outcomes from teams replacing manual admin workflows with AdminOps.</p>
+            <div className="home-testimonials">
+              <article className="card"><h3>Seamless Across Channels</h3><p>AdminOps outperformed our previous setup with simpler no-code deployment and faster response loops.</p><span>Head of Operations · Oct 25, 2025</span></article>
+              <article className="card"><h3>Funnels Clients Pro-Level</h3><p>It answers edge-case questions and hands off high-intent leads to our sales team with context.</p><span>CEO, OfferMarket · Oct 18, 2025</span></article>
+              <article className="card"><h3>78% Ticket Reduction</h3><p>We moved from legacy chat and cut ticket volume dramatically in the first month.</p><span>Head of Support · Oct 28, 2025</span></article>
+              <article className="card"><h3>Overpowered & Optimized</h3><p>Our Stripe and CRM workflows are now automated without losing control.</p><span>Founder · Oct 20, 2025</span></article>
+              <article className="card"><h3>Evolved Beyond Chatbot</h3><p>We gained deeper control over training data, actions, and escalation quality.</p><span>Operations Lead · Nov 1, 2025</span></article>
+              <article className="card"><h3>Cleaner Reporting, Less Rework</h3><p>Monthly close runs faster because reconciliations and exceptions are handled earlier.</p><span>Finance Manager · Oct 30, 2025</span></article>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section className="section">
-        <div className="container card value-strip">
-          <h2>Start with a Free Strategy Call</h2>
-          <p>
-            Tell us your most repetitive admin workflow. We will show you where automation can deliver visible gains in 30 days.
-          </p>
-          <div className="cta-row">
-            <a
-              className="btn btn-primary"
-              href="https://www.cal.eu/sieg-kamgo/30min"
-              target="_blank"
-              rel="noreferrer"
-              data-track="book-call"
-              data-cta-location="home-footer-cta"
-            >
-              Book a free strategy call
-            </a>
-            <a className="btn btn-secondary" href="mailto:info@adminops.cloud">info@adminops.cloud</a>
+        <section className="section home-section-dark">
+          <div className="container home-faq-wrap">
+            <h2>Frequently Asked Questions</h2>
+            <p className="home-section-subtitle">Clear answers to common questions about AdminOps.</p>
+            <div className="home-faq-list">
+              <details open>
+                <summary>Is AdminOps a workflow automation platform or a chatbot?</summary>
+                <p>AdminOps is an AI operations platform that handles repetitive admin workflows with approval controls and reporting.</p>
+              </details>
+              <details>
+                <summary>How does it learn from our systems?</summary>
+                <p>It uses controlled connectors, workflow rules, and approved context from your existing tools.</p>
+              </details>
+              <details>
+                <summary>Can it integrate with help desk and shared inbox tools?</summary>
+                <p>Yes. AdminOps can integrate with support inboxes and your core systems to route and resolve requests faster.</p>
+              </details>
+              <details>
+                <summary>Does it capture leads as well as support requests?</summary>
+                <p>Yes. It can capture high-intent interactions and pass structured context to your team.</p>
+              </details>
+              <details>
+                <summary>How fast can we launch?</summary>
+                <p>Most teams launch an initial workflow in about 30 days with measurable KPI movement.</p>
+              </details>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+
+        <section className="section">
+          <div className="container home-final-cta">
+            <div>
+              <span className="home-pill">Built-in Integrations</span>
+              <h2>Turn leads into outcomes and drive revenue</h2>
+              <p>Join operations teams using AdminOps to reduce admin cost and improve execution speed.</p>
+              <div className="cta-row">
+                <Link className="btn btn-primary" href="/adminops-pilot">Get Started Free</Link>
+                <a
+                  className="btn btn-secondary"
+                  href="https://www.cal.eu/sieg-kamgo/30min"
+                  target="_blank"
+                  rel="noreferrer"
+                  data-track="book-call"
+                  data-cta-location="home-final-cta"
+                >
+                  Schedule a Demo
+                </a>
+              </div>
+            </div>
+            <div className="home-integrations-grid" aria-hidden="true">
+              <span>Shopify</span>
+              <span>Teams</span>
+              <span>Messenger</span>
+              <span>Instagram</span>
+              <span>Meet</span>
+              <span>Calendar</span>
+              <span>Stripe</span>
+              <span>CRM</span>
+            </div>
+          </div>
+        </section>
+      </div>
     </>
   );
 }

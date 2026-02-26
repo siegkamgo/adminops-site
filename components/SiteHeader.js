@@ -1,11 +1,10 @@
 import Link from "next/link";
 
 const navItems = [
-  { href: "/restaurant-ops-ai-agents", label: "Restaurants" },
-  { href: "/property-management-ai-agents", label: "Property Managers" },
-  { href: "/clinic-ops-ai-agents", label: "Clinics" },
-  { href: "/adminops-pilot", label: "Pilot" },
-  { href: "/insights", label: "Insights" }
+  { href: "/#features", label: "Features" },
+  { href: "/#integrations", label: "Integrations" },
+  { href: "/insights", label: "Blog" },
+  { href: "/#faq", label: "FAQ" }
 ];
 
 export default function SiteHeader() {
@@ -31,7 +30,7 @@ export default function SiteHeader() {
           data-track="book-call"
           data-cta-location="header"
         >
-          Book a free strategy call
+          Book a call
         </a>
       </div>
     </header>

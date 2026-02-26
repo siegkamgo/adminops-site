@@ -1,8 +1,11 @@
 import Script from "next/script";
+import { Manrope } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 import SiteHeader from "../components/SiteHeader";
+
+const manrope = Manrope({ subsets: ["latin"], weight: ["400", "500", "600", "700", "800"] });
 
 export const metadata = {
   metadataBase: new URL("https://adminops.cloud"),
@@ -104,7 +107,7 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en">
-      <body>
+      <body className={manrope.className}>
         {gaId ? (
           <>
             <Script src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`} strategy="afterInteractive" />
@@ -154,21 +157,52 @@ export default function RootLayout({ children }) {
 
         <SiteHeader />
         <main>{children}</main>
-        <footer className="footer">
-          <div className="container footer-links">
-            <div><strong>AdminOps</strong> · Automate 60–80% of routine admin work in 30 days</div>
-            <div className="footer-nav">
-              <a href="/accounts-payable-automation">AP Automation</a>
-              <a href="/accounts-receivable-automation">AR Automation</a>
-              <a href="/inventory-vendor-ops-automation">Inventory Ops</a>
-              <a href="/customer-support-triage-automation">Support Triage</a>
-              <a href="/work-order-triage-automation">Work Orders</a>
-              <a href="/lightweight-support-triage">Lightweight Triage</a>
-              <a href="/msp-workflow-autopilot">MSP Autopilot</a>
-              <a href="/blog/property-management-computer-use-agents">Blog</a>
-              <a href="/insights">Insights</a>
+        <footer className="footer footer-rich">
+          <div className="container footer-rich-grid">
+            <div>
+              <div className="brand footer-brand">
+                <span className="ops-dot" />
+                <span>AdminOps</span>
+              </div>
+              <p>AI agents for customer support, admin operations, and lead capture workflows.</p>
               <a href="mailto:info@adminops.cloud">info@adminops.cloud</a>
             </div>
+
+            <div>
+              <h4>Product</h4>
+              <a href="/adminops-pilot">Pilot</a>
+              <a href="/accounts-payable-automation">AP Automation</a>
+              <a href="/accounts-receivable-automation">AR Automation</a>
+              <a href="/customer-support-triage-automation">Support Triage</a>
+            </div>
+
+            <div>
+              <h4>Solutions</h4>
+              <a href="/property-management-ai-agents">Property Managers</a>
+              <a href="/clinic-ops-ai-agents">Clinics</a>
+              <a href="/restaurant-ops-ai-agents">Restaurants</a>
+              <a href="/inventory-vendor-ops-automation">Inventory Ops</a>
+            </div>
+
+            <div>
+              <h4>Resources</h4>
+              <a href="/insights">Insights</a>
+              <a href="/blog/property-management-computer-use-agents">Blog</a>
+              <a href="/comparisons/adminops-vs-rpa-tools">Comparisons</a>
+              <a href="/guides/property-management-automation-guide">Guides</a>
+            </div>
+
+            <div>
+              <h4>Company</h4>
+              <a href="https://www.cal.eu/sieg-kamgo/30min" target="_blank" rel="noreferrer">Book a Demo</a>
+              <a href="/analytics-setup">Analytics Setup</a>
+              <a href="/llms.txt">LLMs Manifest</a>
+              <a href="/robots.txt">Robots</a>
+            </div>
+          </div>
+          <div className="container footer-bottom">
+            <span>© {new Date().getFullYear()} AdminOps. All rights reserved.</span>
+            <span>Built for modern operations teams.</span>
           </div>
         </footer>
         <Analytics />
