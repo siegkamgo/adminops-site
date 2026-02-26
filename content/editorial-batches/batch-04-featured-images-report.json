@@ -1,0 +1,209 @@
+{
+  "generatedAt": "2026-02-26T01:04:34.959Z",
+  "batch": 4,
+  "total": 20,
+  "success": 20,
+  "failed": 0,
+  "results": [
+    {
+      "slug": "property-managers-best-management-property-software",
+      "status": "ok",
+      "image": "/images/insights/featured/property-managers-best-management-property-software.jpg",
+      "insightUpdated": true,
+      "photographer": "Cedric Fauntleroy",
+      "photographerUrl": "https://www.pexels.com/@cedric-fauntleroy",
+      "photoPage": "https://www.pexels.com/photo/women-wearing-a-hijab-using-a-laptop-8154346/",
+      "source": "pexels"
+    },
+    {
+      "slug": "property-managers-software-for-residential-property-management",
+      "status": "ok",
+      "image": "/images/insights/featured/property-managers-software-for-residential-property-management.jpg",
+      "insightUpdated": true,
+      "photographer": "RDNE Stock project",
+      "photographerUrl": "https://www.pexels.com/@rdne",
+      "photoPage": "https://www.pexels.com/photo/a-woman-and-a-man-working-together-in-an-office-5921552/",
+      "source": "pexels"
+    },
+    {
+      "slug": "restaurants-software-for-restaurant-accounting",
+      "status": "ok",
+      "image": "/images/insights/featured/restaurants-software-for-restaurant-accounting.jpg",
+      "insightUpdated": true,
+      "photographer": "Srattha Nualsate",
+      "photographerUrl": "https://www.pexels.com/@srattha-nualsate-2695613",
+      "photoPage": "https://www.pexels.com/photo/a-fuel-guage-in-close-up-shot-13060769/",
+      "source": "pexels"
+    },
+    {
+      "slug": "property-managers-accounts-payable-process-automation",
+      "status": "ok",
+      "image": "/images/insights/featured/property-managers-accounts-payable-process-automation.jpg",
+      "insightUpdated": true,
+      "photographer": "fauxels",
+      "photographerUrl": "https://www.pexels.com/@fauxels",
+      "photoPage": "https://www.pexels.com/photo/man-wearing-brown-suit-jacket-3184339/",
+      "source": "pexels"
+    },
+    {
+      "slug": "clinics-drchrono-medical-billing-software",
+      "status": "ok",
+      "image": "/images/insights/featured/clinics-drchrono-medical-billing-software.jpg",
+      "insightUpdated": true,
+      "photographer": "cottonbro studio",
+      "photographerUrl": "https://www.pexels.com/@cottonbro",
+      "photoPage": "https://www.pexels.com/photo/people-looking-at-color-samples-6567816/",
+      "source": "pexels"
+    },
+    {
+      "slug": "restaurants-best-restaurant-inventory-management-software",
+      "status": "ok",
+      "image": "/images/insights/featured/restaurants-best-restaurant-inventory-management-software.jpg",
+      "insightUpdated": true,
+      "photographer": "Yan Krukau",
+      "photographerUrl": "https://www.pexels.com/@yankrukov",
+      "photoPage": "https://www.pexels.com/photo/man-wearing-face-mask-taking-order-at-the-restaurant-6816365/",
+      "source": "pexels"
+    },
+    {
+      "slug": "restaurants-best-small-restaurant-accounting-software",
+      "status": "ok",
+      "image": "/images/insights/featured/restaurants-best-small-restaurant-accounting-software.jpg",
+      "insightUpdated": true,
+      "photographer": "MART  PRODUCTION",
+      "photographerUrl": "https://www.pexels.com/@mart-production",
+      "photoPage": "https://www.pexels.com/photo/colleagues-busy-using-their-laptops-7550310/",
+      "source": "pexels"
+    },
+    {
+      "slug": "clinics-clinic-practice-management-software",
+      "status": "ok",
+      "image": "/images/insights/featured/clinics-clinic-practice-management-software.jpg",
+      "insightUpdated": true,
+      "photographer": "Anna Shvets",
+      "photographerUrl": "https://www.pexels.com/@shvetsa",
+      "photoPage": "https://www.pexels.com/photo/doctor-looking-at-x-ray-photo-4225925/",
+      "source": "pexels"
+    },
+    {
+      "slug": "restaurants-best-accounting-software-for-restaurant-business",
+      "status": "ok",
+      "image": "/images/insights/featured/restaurants-best-accounting-software-for-restaurant-business.jpg",
+      "insightUpdated": true,
+      "photographer": "DΛVΞ GΛRCIΛ",
+      "photographerUrl": "https://www.pexels.com/@davegarcia",
+      "photoPage": "https://www.pexels.com/photo/busy-hospital-operating-room-with-surgeons-33916268/",
+      "source": "pexels"
+    },
+    {
+      "slug": "property-managers-property-management-software-rental",
+      "status": "ok",
+      "image": "/images/insights/featured/property-managers-property-management-software-rental.jpg",
+      "insightUpdated": true,
+      "photographer": "Tima Miroshnichenko",
+      "photographerUrl": "https://www.pexels.com/@tima-miroshnichenko",
+      "photoPage": "https://www.pexels.com/photo/a-businessman-reading-document-on-a-clipboard-5439448/",
+      "source": "pexels"
+    },
+    {
+      "slug": "property-managers-property-management-accounting-software",
+      "status": "ok",
+      "image": "/images/insights/featured/property-managers-property-management-accounting-software.jpg",
+      "insightUpdated": true,
+      "photographer": "Peter  Vang",
+      "photographerUrl": "https://www.pexels.com/@peter-vang-2157328093",
+      "photoPage": "https://www.pexels.com/photo/bright-empty-room-with-open-closet-and-doors-35539073/",
+      "source": "pexels"
+    },
+    {
+      "slug": "property-managers-accounts-payable-automation-tools",
+      "status": "ok",
+      "image": "/images/insights/featured/property-managers-accounts-payable-automation-tools.jpg",
+      "insightUpdated": true,
+      "photographer": "ANTONI SHKRABA production",
+      "photographerUrl": "https://www.pexels.com/@anthonyshkraba-production",
+      "photoPage": "https://www.pexels.com/photo/male-and-female-professionals-8278897/",
+      "source": "pexels"
+    },
+    {
+      "slug": "property-managers-best-accounts-payable-automation-software",
+      "status": "ok",
+      "image": "/images/insights/featured/property-managers-best-accounts-payable-automation-software.jpg",
+      "insightUpdated": true,
+      "photographer": "Stéf -b.",
+      "photographerUrl": "https://www.pexels.com/@titus-fr",
+      "photoPage": "https://www.pexels.com/photo/operating-room-seen-through-window-10292620/",
+      "source": "pexels"
+    },
+    {
+      "slug": "property-managers-benefits-of-accounts-payable-automation",
+      "status": "ok",
+      "image": "/images/insights/featured/property-managers-benefits-of-accounts-payable-automation.jpg",
+      "insightUpdated": true,
+      "photographer": "Mikhail Nilov",
+      "photographerUrl": "https://www.pexels.com/@mikhail-nilov",
+      "photoPage": "https://www.pexels.com/photo/colleagues-standing-and-holding-books-inside-an-office-8297454/",
+      "source": "pexels"
+    },
+    {
+      "slug": "property-managers-automation-of-accounts-payable",
+      "status": "ok",
+      "image": "/images/insights/featured/property-managers-automation-of-accounts-payable.jpg",
+      "insightUpdated": true,
+      "photographer": "Alwyn Dias",
+      "photographerUrl": "https://www.pexels.com/@alwyn-dias-175407065",
+      "photoPage": "https://www.pexels.com/photo/a-businesswoman-sitting-at-the-desk-with-a-laptop-26692094/",
+      "source": "pexels"
+    },
+    {
+      "slug": "property-managers-what-is-accounts-payable-automation",
+      "status": "ok",
+      "image": "/images/insights/featured/property-managers-what-is-accounts-payable-automation.jpg",
+      "insightUpdated": true,
+      "photographer": "Theo  Decker",
+      "photographerUrl": "https://www.pexels.com/@theo-decker",
+      "photoPage": "https://www.pexels.com/photo/a-man-and-woman-having-a-meeting-in-the-office-5955097/",
+      "source": "pexels"
+    },
+    {
+      "slug": "property-managers-accounts-payable-automation-systems",
+      "status": "ok",
+      "image": "/images/insights/featured/property-managers-accounts-payable-automation-systems.jpg",
+      "insightUpdated": true,
+      "photographer": "Long Bà Mùi",
+      "photographerUrl": "https://www.pexels.com/@long-ba-mui-1130557677",
+      "photoPage": "https://www.pexels.com/photo/rescue-worker-navigating-flooded-streets-at-night-34959205/",
+      "source": "pexels"
+    },
+    {
+      "slug": "property-managers-accounts-payable-automation-system",
+      "status": "ok",
+      "image": "/images/insights/featured/property-managers-accounts-payable-automation-system.jpg",
+      "insightUpdated": true,
+      "photographer": "MART  PRODUCTION",
+      "photographerUrl": "https://www.pexels.com/@mart-production",
+      "photoPage": "https://www.pexels.com/photo/a-woman-in-blue-coat-inside-the-office-7222310/",
+      "source": "pexels"
+    },
+    {
+      "slug": "restaurants-restaurant-365-accounting-software",
+      "status": "ok",
+      "image": "/images/insights/featured/restaurants-restaurant-365-accounting-software.jpg",
+      "insightUpdated": true,
+      "photographer": "Brett Sayles",
+      "photographerUrl": "https://www.pexels.com/@brett-sayles",
+      "photoPage": "https://www.pexels.com/photo/server-racks-on-data-center-5480781/",
+      "source": "pexels"
+    },
+    {
+      "slug": "restaurants-restaurant-accounting-software-free",
+      "status": "ok",
+      "image": "/images/insights/featured/restaurants-restaurant-accounting-software-free.jpg",
+      "insightUpdated": true,
+      "photographer": "Tom Fisk",
+      "photographerUrl": "https://www.pexels.com/@tomfisk",
+      "photoPage": "https://www.pexels.com/photo/vintage-truck-interior-at-car-show-in-nelson-28930276/",
+      "source": "pexels"
+    }
+  ]
+}

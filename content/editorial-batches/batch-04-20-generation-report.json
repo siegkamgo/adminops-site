@@ -1,0 +1,30 @@
+{
+  "generatedAt": "2026-02-26T01:03:48.569Z",
+  "batch": 4,
+  "sourceBatch": "content/editorial-batches/batch-04-20-titles.json",
+  "total": 20,
+  "created": 20,
+  "updated": 0,
+  "slugs": [
+    "property-managers-best-management-property-software",
+    "property-managers-software-for-residential-property-management",
+    "restaurants-software-for-restaurant-accounting",
+    "property-managers-accounts-payable-process-automation",
+    "clinics-drchrono-medical-billing-software",
+    "restaurants-best-restaurant-inventory-management-software",
+    "restaurants-best-small-restaurant-accounting-software",
+    "clinics-clinic-practice-management-software",
+    "restaurants-best-accounting-software-for-restaurant-business",
+    "property-managers-property-management-software-rental",
+    "property-managers-property-management-accounting-software",
+    "property-managers-accounts-payable-automation-tools",
+    "property-managers-best-accounts-payable-automation-software",
+    "property-managers-benefits-of-accounts-payable-automation",
+    "property-managers-automation-of-accounts-payable",
+    "property-managers-what-is-accounts-payable-automation",
+    "property-managers-accounts-payable-automation-systems",
+    "property-managers-accounts-payable-automation-system",
+    "restaurants-restaurant-365-accounting-software",
+    "restaurants-restaurant-accounting-software-free"
+  ]
+}
