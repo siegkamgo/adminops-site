@@ -28,7 +28,7 @@ const posts = [
 ];
 
 export const metadata = {
-  title: "AdminOps Blog",
+  title: "AdminOps Insights",
   description: "AdminOps insights on AI automation for admin-heavy teams."
 };
 
@@ -36,7 +36,7 @@ export default function BlogIndexPage() {
   return (
     <section className="section">
       <div className="container">
-        <h1>AdminOps Blog</h1>
+        <h1>AdminOps Insights</h1>
         <p>Insights on automating admin workflows for property managers, clinics, and restaurants.</p>
         <div className="grid-2" style={{ marginTop: "1.5rem" }}>
           {posts.map((post) => (
