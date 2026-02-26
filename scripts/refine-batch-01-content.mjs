@@ -3,12 +3,23 @@ import fs from "node:fs";
 import path from "node:path";
 
 const root = process.cwd();
-const batchFiles = [
-  path.join(root, "content", "editorial-batches", "batch-01-20-titles.json"),
-  path.join(root, "content", "editorial-batches", "batch-01-20-titles-live.json")
-].filter((filePath) => fs.existsSync(filePath));
 
 const insightsDir = path.join(root, "content", "insights");
+
+function getBatchNumber() {
+  const cliValue = Number(process.argv[2] || "");
+  if (Number.isInteger(cliValue) && cliValue > 0) return cliValue;
+
+  const envValue = Number(process.env.BATCH_NUMBER || "");
+  if (Number.isInteger(envValue) && envValue > 0) return envValue;
+
+  return 1;
+}
+
+function batchFileName(batchNumber, suffix) {
+  const label = String(batchNumber).padStart(2, "0");
+  return `batch-${label}-${suffix}`;
+}
 
 const phraseReplacements = [
   ["software accounting restaurant", "restaurant accounting software"],
@@ -98,15 +109,29 @@ function refineInsightFile(filePath) {
 }
 
 function run() {
+  const batchNumber = getBatchNumber();
+  const batchFiles = [
+    path.join(root, "content", "editorial-batches", batchFileName(batchNumber, "20-titles.json")),
+    path.join(root, "content", "editorial-batches", batchFileName(batchNumber, "20-titles-live.json"))
+  ].filter((filePath) => fs.existsSync(filePath));
+
+  if (!batchFiles.length) {
+    throw new Error(`No batch files found for batch ${batchNumber}`);
+  }
+
+  const targetSlugs = new Set();
   let batchTouched = 0;
   for (const filePath of batchFiles) {
+    const batch = JSON.parse(fs.readFileSync(filePath, "utf8"));
+    for (const item of batch.items || []) {
+      if (item?.suggestedSlug) targetSlugs.add(item.suggestedSlug);
+    }
     batchTouched += refineBatch(filePath);
   }
 
-  const insightFiles = fs
-    .readdirSync(insightsDir)
-    .filter((name) => name.endsWith(".json"))
-    .map((name) => path.join(insightsDir, name));
+  const insightFiles = Array.from(targetSlugs)
+    .map((slug) => path.join(insightsDir, `${slug}.json`))
+    .filter((filePath) => fs.existsSync(filePath));
 
   let insightsTouched = 0;
   for (const filePath of insightFiles) {
@@ -114,7 +139,7 @@ function run() {
     if (changed) insightsTouched += 1;
   }
 
-  console.log(`Refinement complete. Batch titles touched: ${batchTouched}. Insight files updated: ${insightsTouched}.`);
+  console.log(`Refinement complete for batch ${batchNumber}. Batch titles touched: ${batchTouched}. Insight files updated: ${insightsTouched}.`);
 }
 
 run();
