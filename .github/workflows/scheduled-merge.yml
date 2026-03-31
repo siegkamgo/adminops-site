@@ -1,0 +1,44 @@
+name: Scheduled PR Merge (10:00 CET)
+
+on:
+  schedule:
+    # 10:00 CET = 09:00 UTC (winter time)
+    - cron: "0 9 * * *"
+  workflow_dispatch:
+
+jobs:
+  merge:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Merge scheduled PRs
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const branchesToMerge = [
+              "scheduled-rent-reconciliation",
+              "scheduled-pm-accounting"
+            ];
+
+            for (const head of branchesToMerge) {
+              const prs = await github.rest.pulls.list({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                state: "open",
+                head: `${context.repo.owner}:${head}`
+              });
+
+              if (!prs.data.length) {
+                core.info(`No open PR for ${head}`);
+                continue;
+              }
+
+              const pr = prs.data[0];
+              core.info(`Merging PR #${pr.number} (${head})`);
+              await github.rest.pulls.merge({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                pull_number: pr.number,
+                merge_method: "squash"
+              });
+            }
